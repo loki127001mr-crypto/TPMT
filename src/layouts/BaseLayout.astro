@@ -1,0 +1,46 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  currentPage?: string;
+}
+
+const { title, description = 'Tripower Mold Tech - Advanced Tooling & Precision Injection Mold Solutions. ISO 9001:2015 certified toolroom in Thirumudivakkam, Chennai.', currentPage = '' } = Astro.props;
+
+import GlobalHeader from '../components/GlobalHeader.astro';
+import GlobalFooter from '../components/GlobalFooter.astro';
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <style is:global>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased">
+  <GlobalHeader currentPage={currentPage} />
+  <main class="w-full pt-[116px] bg-background min-h-screen">
+    <div class="flex flex-col w-full">
+      <slot />
+    </div>
+  </main>
+  <GlobalFooter />
+</body>
+</html>
