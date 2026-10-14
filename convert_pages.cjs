@@ -14,7 +14,7 @@ const pageConfig = {
   'about-us.html': {
     out: ['about-us.astro'],
     title: 'About Us | Tripower Mold Tech - Precision Engineering Excellence',
-    description: 'Learn about Tripower Mold Tech, our history, ISO 9001:2015 certified toolroom in Thirumudivakkam, Chennai, leadership team, and precision engineering philosophy.',
+    description: 'Learn about Tripower Mold Tech, our history, precision toolroom in Thirumudivakkam, Chennai, leadership team, and precision engineering philosophy.',
     currentPage: 'about-us'
   },
   'services-d3-solutions.html': {
