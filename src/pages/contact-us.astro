@@ -198,25 +198,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
 </div>
 </div>
-<!-- Location Map Card -->
-<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md overflow-hidden">
-<div class="flex items-center justify-between mb-space-sm">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-precision-teal text-[18px]">near_me</span>
-<span class="font-headline-sm text-body-md text-slate-900 font-semibold">Location &amp; Logistics Access</span>
-</div>
-<span class="font-data-mono text-label-caps text-slate-400">SIDCO CORRIDOR</span>
-</div>
-<div class="w-full h-56 rounded-lg bg-cover bg-center relative overflow-hidden shadow-sm" data-location="Thirumudivakkam, Chennai, Tamil Nadu, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWPx87F3LbaDc34plgQ6Irb2U-QBpStyRFly1LG84z1Va6iymhaRIc0B7X2HyF3CsZ-z_N18vt-hxwxAq32bUkIrBPnHGWjj-uh7s_hPDohJgmFkVqO-jiIANQvArLq9qdBaKb5aPwIZanspULeNqZIo9ESCniubDMDNeGjgb8Q3D8taJWnsAL6s-YgojYbPJXOFMEmeVSjc3pb2U2AiZqbuEfYRTdpCZRT1MKEFHl')">
-<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent flex flex-col justify-end p-space-md">
-<span class="text-white font-headline-sm text-body-md font-semibold">Tripower Mold Tech Toolroom</span>
-<span class="text-precision-teal font-data-mono text-label-caps">12.9818° N, 80.0984° E • Thirumudivakkam Industrial Estate</span>
-</div>
-</div>
-<div class="mt-space-sm text-slate-700 font-body-sm text-body-sm leading-relaxed">
-            Conveniently situated 8.5 km from Chennai Outer Ring Road (ORR) and 14 km from Chennai International Airport cargo terminal, enabling rapid national freight dispatch.
-          </div>
-</div>
 </div>
 <!-- RIGHT COLUMN: Minimalist Modern RFQ & Specification Portal -->
 <div class="lg:col-span-7">
@@ -371,6 +352,240 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </div>
 </form>
 </div>
+</div>
+
+<!-- FULL-WIDTH SECTION: Location Map, Freight Logistics & Toolroom Visit Hub -->
+<div class="lg:col-span-12 mt-space-2xl pt-space-xl border-t border-slate-200">
+  <!-- Section Title Banner -->
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+    <div>
+      <div class="inline-flex items-center gap-space-xs px-2.5 py-1 rounded bg-slate-100 text-precision-teal font-data-mono text-label-caps mb-2 shadow-xs">
+        <span class="material-symbols-outlined text-[14px]">pin_drop</span>
+        <span>THIRUMUDIVAKKAM INDUSTRIAL CORRIDOR • GPS: 12.9818° N, 80.0984° E</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md text-slate-900 tracking-tight">Toolroom Facility Location &amp; Logistics Hub</h3>
+      <p class="font-body-md text-body-md text-slate-600 mt-1 max-w-3xl">
+        Strategically located in Chennai's premier tooling corridor with rapid transit to the Outer Ring Road (ORR), container seaports, and air cargo terminals.
+      </p>
+    </div>
+    <div class="flex items-center gap-2">
+      <a
+        href="https://www.google.com/maps/dir/?api=1&destination=No+29,30+Sri+Jeynanthi+Nagar,+Thirumudivakkam,+Chennai,+Tamil+Nadu+600044"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 px-4 py-2 bg-navy-surface hover:bg-slate-900 text-white font-headline-sm text-body-sm font-semibold rounded-lg shadow-md transition-all hover:scale-[1.02]"
+      >
+        <span class="material-symbols-outlined text-[18px] text-precision-teal">directions</span>
+        <span>Navigate via Google Maps</span>
+        <span class="material-symbols-outlined text-[14px] text-slate-400">open_in_new</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 12-Column Grid: Left Map (7 cols) + Right Logistics & Plant Visit Telemetry (5 cols) -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-stretch">
+    <!-- LEFT: Interactive Workable Google Map (7 cols) -->
+    <div class="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-md border border-slate-200/80 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between mb-space-sm pb-space-xs border-b border-slate-100">
+          <div class="flex items-center gap-space-xs">
+            <div class="w-7 h-7 rounded-md bg-navy-surface text-precision-teal flex items-center justify-center">
+              <span class="material-symbols-outlined text-[16px]">map</span>
+            </div>
+            <div>
+              <h4 class="font-headline-sm text-body-md text-slate-900 font-bold leading-tight">Interactive Toolroom Map</h4>
+              <span class="font-data-mono text-[10px] text-slate-400 uppercase tracking-wider block">Live Street &amp; Satellite Geometry</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 px-2.5 py-1 bg-emerald-50 text-status-success rounded-full font-data-mono text-label-caps border border-emerald-200/60">
+            <span class="w-1.5 h-1.5 rounded-full bg-status-success animate-pulse"></span>
+            <span>GPS VERIFIED PLANT</span>
+          </div>
+        </div>
+
+        <!-- Interactive Google Maps Frame -->
+        <div class="w-full relative rounded-lg overflow-hidden border border-slate-300/80 shadow-inner group">
+          <iframe
+            title="Tripower Mold Tech Toolroom Location Map"
+            class="w-full h-80 sm:h-96 md:h-[420px] border-0 filter contrast-[1.02]"
+            loading="lazy"
+            allowfullscreen=""
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=No%2029%2C30%20Sri%20Jeynanthi%20Nagar%2C%20Thirumudivakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600044&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          ></iframe>
+
+          <!-- Floating Directions Link -->
+          <div class="absolute top-2.5 right-2.5 flex items-center gap-1.5 z-10">
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=No+29,30+Sri+Jeynanthi+Nagar,+Thirumudivakkam,+Chennai,+Tamil+Nadu+600044"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 px-3 py-1.5 bg-navy-surface/90 hover:bg-slate-900 text-white font-data-mono text-label-caps rounded shadow-md backdrop-blur-md transition-all hover:scale-[1.02] border border-slate-700/80"
+              title="Open driving directions in Google Maps"
+            >
+              <span class="material-symbols-outlined text-[15px] text-precision-teal">directions</span>
+              <span>Get Directions</span>
+              <span class="material-symbols-outlined text-[12px] text-slate-400">open_in_new</span>
+            </a>
+          </div>
+
+          <!-- Floating Coordinate Telemetry HUD -->
+          <div class="absolute bottom-2 left-2 right-2 bg-navy-surface/90 backdrop-blur-md text-white p-space-xs px-space-sm rounded border border-slate-700/80 flex items-center justify-between text-label-caps font-data-mono">
+            <div class="flex items-center gap-1.5 truncate">
+              <span class="material-symbols-outlined text-[14px] text-precision-teal shrink-0">my_location</span>
+              <span class="text-slate-200 truncate">12.9818° N, 80.0984° E</span>
+            </div>
+            <button
+              type="button"
+              onclick="navigator.clipboard.writeText('12.9818, 80.0984'); const t = this.querySelector('span:last-child'); const orig = t.textContent; t.textContent = 'COPIED!'; setTimeout(() => t.textContent = orig, 1500);"
+              class="text-precision-teal hover:text-electric-cyan font-bold transition-colors shrink-0 flex items-center gap-1 text-[10px]"
+              title="Copy GPS coordinates to clipboard"
+            >
+              <span class="material-symbols-outlined text-[12px]">content_copy</span>
+              <span>COPY GPS</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Address & Landmark Bar Below Map -->
+      <div class="mt-space-md p-space-sm bg-slate-50 rounded-lg border border-slate-200/70 flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+        <div class="flex items-start gap-2">
+          <span class="material-symbols-outlined text-precision-teal text-[18px] mt-0.5 shrink-0">location_city</span>
+          <div>
+            <span class="font-headline-sm text-body-sm font-bold text-slate-900 block">No 29, 30 Sri Jeynanthi Nagar, Thirumudivakkam, Chennai – 600044</span>
+            <span class="font-body-sm text-[12px] text-slate-500">Landmark: Thirumudivakkam SIDCO Industrial Estate • Near Outer Ring Road (ORR) Junction</span>
+          </div>
+        </div>
+        <a
+          href="https://maps.google.com/maps?q=No%2029%2C30%20Sri%20Jeynanthi%20Nagar%2C%20Thirumudivakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600044"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="shrink-0 text-precision-teal hover:text-navy-surface font-data-mono text-label-caps font-semibold flex items-center gap-1"
+        >
+          <span>FULLSCREEN MAP</span>
+          <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT: Freight Logistics Telemetry & On-Site Plant Visit Hub (5 cols) -->
+    <div class="lg:col-span-5 space-y-space-md flex flex-col justify-between">
+      <!-- Card 1: Multi-Modal Freight Transit Matrix -->
+      <div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md border border-slate-200/80">
+        <div class="flex items-center justify-between mb-space-sm pb-space-xs border-b border-slate-100">
+          <div class="flex items-center gap-space-xs">
+            <div class="w-7 h-7 rounded-md bg-navy-surface text-machined-gold flex items-center justify-center">
+              <span class="material-symbols-outlined text-[16px]">local_shipping</span>
+            </div>
+            <div>
+              <h4 class="font-headline-sm text-body-md text-slate-900 font-bold leading-tight">Strategic Freight Corridors</h4>
+              <span class="font-data-mono text-[10px] text-slate-400 uppercase tracking-wider block">Multi-Modal Logistics Distances</span>
+            </div>
+          </div>
+          <span class="font-data-mono text-[10px] text-precision-teal bg-teal-50 px-2 py-0.5 rounded border border-teal-200/60 font-semibold">FREIGHT READY</span>
+        </div>
+
+        <!-- 4-Grid Distance Indicators -->
+        <div class="grid grid-cols-2 gap-2.5">
+          <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200/60">
+            <span class="font-data-mono text-[10px] text-slate-500 uppercase block">ORR Expressway</span>
+            <span class="font-headline-sm text-body-md font-bold text-navy-surface">8.5 km</span>
+            <span class="font-data-mono text-[10px] text-precision-teal block mt-0.5">Direct 6-Lane Haulage</span>
+          </div>
+          <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200/60">
+            <span class="font-data-mono text-[10px] text-slate-500 uppercase block">Int'l Air Cargo</span>
+            <span class="font-headline-sm text-body-md font-bold text-navy-surface">14 km</span>
+            <span class="font-data-mono text-[10px] text-machined-gold block mt-0.5">MAA Air Terminal</span>
+          </div>
+          <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200/60">
+            <span class="font-data-mono text-[10px] text-slate-500 uppercase block">Chennai Seaport</span>
+            <span class="font-headline-sm text-body-md font-bold text-navy-surface">32 km</span>
+            <span class="font-data-mono text-[10px] text-secondary block mt-0.5">Global Container Port</span>
+          </div>
+          <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200/60">
+            <span class="font-data-mono text-[10px] text-slate-500 uppercase block">Rail Freight Hub</span>
+            <span class="font-headline-sm text-body-md font-bold text-navy-surface">6.5 km</span>
+            <span class="font-data-mono text-[10px] text-slate-600 block mt-0.5">Tambaram Yard</span>
+          </div>
+        </div>
+
+        <!-- Toolroom Heavy Transport Capabilities -->
+        <div class="mt-space-sm pt-space-xs border-t border-slate-100 space-y-1.5 font-body-sm text-[12px] text-slate-700">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-precision-teal text-[15px] shrink-0">check_circle</span>
+            <span><strong>10-Ton Overhead Crane Bay:</strong> Effortless loading of heavy mold bases.</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-precision-teal text-[15px] shrink-0">check_circle</span>
+            <span><strong>Articulated Trailer Apron:</strong> 40ft container flatbed turning radius.</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-precision-teal text-[15px] shrink-0">check_circle</span>
+            <span><strong>24/7 SIDCO Security:</strong> Gated industrial zone &amp; continuous HT power.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Plant Audits & Toolroom Visitation Protocol -->
+      <div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md border border-slate-200/80">
+        <div class="flex items-center justify-between mb-space-sm pb-space-xs border-b border-slate-100">
+          <div class="flex items-center gap-space-xs">
+            <div class="w-7 h-7 rounded-md bg-navy-surface text-electric-cyan flex items-center justify-center">
+              <span class="material-symbols-outlined text-[16px]">domain_verification</span>
+            </div>
+            <div>
+              <h4 class="font-headline-sm text-body-md text-slate-900 font-bold leading-tight">Plant Audits &amp; Facility Visits</h4>
+              <span class="font-data-mono text-[10px] text-slate-400 uppercase tracking-wider block">Customer Toolroom Inspections</span>
+            </div>
+          </div>
+          <span class="font-data-mono text-[10px] text-slate-500 bg-slate-100 px-2 py-0.5 rounded font-medium">GATE 1 ENTRY</span>
+        </div>
+
+        <div class="space-y-space-xs font-body-sm text-[12px] text-slate-700">
+          <div class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-precision-teal text-[16px] shrink-0 mt-0.5">schedule</span>
+            <div>
+              <strong class="text-slate-900">Toolroom Working Hours:</strong>
+              <p class="text-slate-600">Monday – Saturday: 08:30 AM – 08:00 PM IST (Sunday by appointment)</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-machined-gold text-[16px] shrink-0 mt-0.5">safety_check</span>
+            <div>
+              <strong class="text-slate-900">Safety &amp; Compliance Protocol:</strong>
+              <p class="text-slate-600">Visitor badges issued at security; protective eyewear and tooling floor PPE provided.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-electric-cyan text-[16px] shrink-0 mt-0.5">verified_user</span>
+            <div>
+              <strong class="text-slate-900">T1 Trial &amp; Buyoff Attendance:</strong>
+              <p class="text-slate-600">OEM teams welcomed to witness sample injection trials and dimensional CMM audits.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Plant Visit Contact Buttons -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-space-sm pt-space-xs border-t border-slate-100">
+          <a
+            href="tel:+919176729970"
+            class="flex items-center justify-center gap-1.5 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-900 rounded font-data-mono text-label-caps font-semibold transition-colors text-center"
+          >
+            <span class="material-symbols-outlined text-[15px] text-precision-teal">call</span>
+            <span>+91 91767 29970</span>
+          </a>
+          <a
+            href="mailto:tripowermouldtec@gmail.com?subject=Schedule%20Toolroom%20Facility%20Visit"
+            class="flex items-center justify-center gap-1.5 py-2 px-3 bg-navy-surface hover:bg-slate-900 text-white rounded font-data-mono text-label-caps font-semibold transition-colors text-center"
+          >
+            <span class="material-symbols-outlined text-[15px] text-machined-gold">calendar_month</span>
+            <span>Book Plant Visit</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 </section>
