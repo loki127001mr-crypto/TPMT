@@ -387,17 +387,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- 12-Column Grid: Left Map (7 cols) + Right Logistics & Plant Visit Telemetry (5 cols) -->
   <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-stretch">
-    <!-- LEFT: Interactive Workable Google Map (7 cols) -->
-    <div class="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-md border border-slate-200/80 flex flex-col justify-between">
-      <div>
+    <!-- LEFT: Interactive Workable Map & Direction Hub (7 cols) -->
+    <div class="lg:col-span-7 space-y-space-md flex flex-col justify-between">
+      <!-- Main Map Card -->
+      <div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md border border-slate-200/80">
         <div class="flex items-center justify-between mb-space-sm pb-space-xs border-b border-slate-100">
           <div class="flex items-center gap-space-xs">
             <div class="w-7 h-7 rounded-md bg-navy-surface text-precision-teal flex items-center justify-center">
               <span class="material-symbols-outlined text-[16px]">map</span>
             </div>
             <div>
-              <h4 class="font-headline-sm text-body-md text-slate-900 font-bold leading-tight">Interactive Toolroom Map</h4>
-              <span class="font-data-mono text-[10px] text-slate-400 uppercase tracking-wider block">Live Street &amp; Satellite Geometry</span>
+              <h4 class="font-headline-sm text-body-md text-slate-900 font-bold leading-tight">Interactive Toolroom Map &amp; Transit Route</h4>
+              <span class="font-data-mono text-[10px] text-slate-400 uppercase tracking-wider block">Real-time Road Geometry &amp; Direct ORR Transit Corridor</span>
             </div>
           </div>
           <div class="flex items-center gap-1.5 px-2.5 py-1 bg-emerald-50 text-status-success rounded-full font-data-mono text-label-caps border border-emerald-200/60">
@@ -406,21 +407,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
 
-        <!-- Modern Precision Engineering Radar Map (Zero Unwanted Popups) -->
+        <!-- Modern Precision Engineering Radar Map (100% Free, No Watermark, No Popups) -->
         <div class="w-full relative rounded-lg overflow-hidden border border-slate-300 shadow-inner group">
           <!-- Leaflet Map Canvas Container -->
-          <div id="toolroom-map" class="w-full h-80 sm:h-96 md:h-[430px] z-0"></div>
+          <div id="toolroom-map" class="w-full h-80 sm:h-96 md:h-[390px] z-0"></div>
 
-          <!-- Top-Left Floating Mode Switcher (Vector vs Satellite) -->
+          <!-- Top-Left Floating Mode Switcher (Street vs Satellite vs OSM) -->
           <div class="absolute top-2.5 left-2.5 z-[500] flex items-center bg-navy-surface/90 backdrop-blur-md p-1 rounded-lg border border-slate-700/80 shadow-lg">
             <button
               type="button"
               id="map-mode-street"
               class="px-2.5 py-1 text-label-caps font-data-mono text-white bg-precision-teal/30 text-precision-teal font-semibold rounded transition-all flex items-center gap-1 cursor-pointer"
-              title="Switch to Precision Vector Blueprint"
+              title="Switch to Esri High-Precision Street Map"
             >
               <span class="material-symbols-outlined text-[13px]">layers</span>
-              <span>Vector</span>
+              <span>Street</span>
             </button>
             <button
               type="button"
@@ -430,6 +431,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             >
               <span class="material-symbols-outlined text-[13px]">satellite_alt</span>
               <span>Satellite</span>
+            </button>
+            <button
+              type="button"
+              id="map-mode-osm"
+              class="px-2.5 py-1 text-label-caps font-data-mono text-slate-300 hover:text-white rounded transition-all flex items-center gap-1 cursor-pointer"
+              title="Switch to OpenStreetMap"
+            >
+              <span class="material-symbols-outlined text-[13px]">map</span>
+              <span>OSM</span>
             </button>
           </div>
 
@@ -454,7 +464,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               type="button"
               id="map-recenter-btn"
               class="w-8 h-8 bg-navy-surface/90 hover:bg-slate-900 text-precision-teal hover:text-white rounded flex items-center justify-center shadow-md backdrop-blur-md transition-all border border-slate-700/80 cursor-pointer"
-              title="Recenter on Tripower Toolroom"
+              title="Recenter on Tripower Toolroom & Route"
             >
               <span class="material-symbols-outlined text-[18px]">my_location</span>
             </button>
@@ -492,26 +502,110 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </button>
           </div>
         </div>
+
+        <!-- Address & Landmark Bar Below Map -->
+        <div class="mt-space-sm p-space-sm bg-slate-50 rounded-lg border border-slate-200/70 flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+          <div class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-precision-teal text-[18px] mt-0.5 shrink-0">location_city</span>
+            <div>
+              <span class="font-headline-sm text-body-sm font-bold text-slate-900 block">No 29, 30 Sri Jeynanthi Nagar, Thirumudivakkam, Chennai – 600044</span>
+              <span class="font-body-sm text-[12px] text-slate-500">Landmark: Thirumudivakkam SIDCO Industrial Estate • 8.5 km from Outer Ring Road (ORR)</span>
+            </div>
+          </div>
+          <a
+            href="https://maps.google.com/maps?q=No%2029%2C30%20Sri%20Jeynanthi%20Nagar%2C%20Thirumudivakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600044"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="shrink-0 text-precision-teal hover:text-navy-surface font-data-mono text-label-caps font-semibold flex items-center gap-1"
+          >
+            <span>FULLSCREEN MAP</span>
+            <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+          </a>
+        </div>
       </div>
 
-      <!-- Address & Landmark Bar Below Map -->
-      <div class="mt-space-md p-space-sm bg-slate-50 rounded-lg border border-slate-200/70 flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
-        <div class="flex items-start gap-2">
-          <span class="material-symbols-outlined text-precision-teal text-[18px] mt-0.5 shrink-0">location_city</span>
-          <div>
-            <span class="font-headline-sm text-body-sm font-bold text-slate-900 block">No 29, 30 Sri Jeynanthi Nagar, Thirumudivakkam, Chennai – 600044</span>
-            <span class="font-body-sm text-[12px] text-slate-500">Landmark: Thirumudivakkam SIDCO Industrial Estate • Near Outer Ring Road (ORR) Junction</span>
+      <!-- Turn-by-Turn Transit Directions & Factory Access Matrix (UTILIZING EMPTY SPACE) -->
+      <div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md border border-slate-200/80 space-y-space-md">
+        <div class="flex items-center justify-between pb-space-xs border-b border-slate-100">
+          <div class="flex items-center gap-space-xs">
+            <div class="w-7 h-7 rounded-md bg-navy-surface text-precision-teal flex items-center justify-center">
+              <span class="material-symbols-outlined text-[16px]">alt_route</span>
+            </div>
+            <div>
+              <h4 class="font-headline-sm text-body-md text-slate-900 font-bold leading-tight">Driving Directions &amp; Transit Corridors</h4>
+              <span class="font-data-mono text-[10px] text-slate-400 uppercase tracking-wider block">Recommended Haulage &amp; Visitor Route Access</span>
+            </div>
+          </div>
+          <span class="font-data-mono text-[10px] text-precision-teal bg-teal-50 px-2 py-0.5 rounded border border-teal-200/60 font-semibold">ALL-VEHICLE ACCESS</span>
+        </div>
+
+        <!-- 3 Direction Route Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5">
+          <!-- Route 1 -->
+          <div class="bg-slate-50 p-space-sm rounded-lg border border-slate-200/60 hover:bg-slate-100 transition-colors">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-data-mono text-[10px] text-precision-teal font-bold uppercase">CORRIDOR A</span>
+              <span class="text-machined-gold font-data-mono text-[10px] font-semibold">12 mins</span>
+            </div>
+            <h5 class="font-headline-sm text-body-sm font-bold text-slate-900 mb-1">Outer Ring Road (ORR)</h5>
+            <p class="font-body-sm text-[11px] text-slate-600 leading-relaxed mb-2">
+              Exit 12 at Thirumudivakkam junction &rarr; East on 4-lane SIDCO Main Road directly to Sri Jeynanthi Nagar.
+            </p>
+            <div class="flex items-center justify-between pt-1 border-t border-slate-200/50 text-[10px] font-data-mono text-slate-500">
+              <span>8.5 km</span>
+              <span class="text-status-success font-semibold">Heavy Haulage</span>
+            </div>
+          </div>
+
+          <!-- Route 2 -->
+          <div class="bg-slate-50 p-space-sm rounded-lg border border-slate-200/60 hover:bg-slate-100 transition-colors">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-data-mono text-[10px] text-precision-teal font-bold uppercase">CORRIDOR B</span>
+              <span class="text-machined-gold font-data-mono text-[10px] font-semibold">25 mins</span>
+            </div>
+            <h5 class="font-headline-sm text-body-sm font-bold text-slate-900 mb-1">Airport (MAA) / GST Rd</h5>
+            <p class="font-body-sm text-[11px] text-slate-600 leading-relaxed mb-2">
+              Via Pallavaram - Thiruneermalai bypass straight into Thirumudivakkam SIDCO industrial sector.
+            </p>
+            <div class="flex items-center justify-between pt-1 border-t border-slate-200/50 text-[10px] font-data-mono text-slate-500">
+              <span>14 km</span>
+              <span class="text-precision-teal font-semibold">Executive / Air</span>
+            </div>
+          </div>
+
+          <!-- Route 3 -->
+          <div class="bg-slate-50 p-space-sm rounded-lg border border-slate-200/60 hover:bg-slate-100 transition-colors">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-data-mono text-[10px] text-precision-teal font-bold uppercase">CORRIDOR C</span>
+              <span class="text-machined-gold font-data-mono text-[10px] font-semibold">20 mins</span>
+            </div>
+            <h5 class="font-headline-sm text-body-sm font-bold text-slate-900 mb-1">Sriperumbudur (NH 48)</h5>
+            <p class="font-body-sm text-[11px] text-slate-600 leading-relaxed mb-2">
+              Via NH 48 highway &rarr; Poonamallee ORR junction &rarr; Thirumudivakkam industrial expressway.
+            </p>
+            <div class="flex items-center justify-between pt-1 border-t border-slate-200/50 text-[10px] font-data-mono text-slate-500">
+              <span>18 km</span>
+              <span class="text-navy-surface font-semibold">Auto OEM Belt</span>
+            </div>
           </div>
         </div>
-        <a
-          href="https://maps.google.com/maps?q=No%2029%2C30%20Sri%20Jeynanthi%20Nagar%2C%20Thirumudivakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600044"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="shrink-0 text-precision-teal hover:text-navy-surface font-data-mono text-label-caps font-semibold flex items-center gap-1"
-        >
-          <span>FULLSCREEN MAP</span>
-          <span class="material-symbols-outlined text-[14px]">open_in_new</span>
-        </a>
+
+        <!-- Factory Gate Arrival Directives -->
+        <div class="p-space-sm bg-slate-100 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs text-[11px] text-slate-700">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-precision-teal text-[16px] shrink-0">local_parking</span>
+            <span><strong>Gate 1 Arrival:</strong> Dedicated visitor car parking &amp; 10-Ton container trailer unloading dock.</span>
+          </div>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=No+29,30+Sri+Jeynanthi+Nagar,+Thirumudivakkam,+Chennai,+Tamil+Nadu+600044"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="shrink-0 inline-flex items-center gap-1 text-precision-teal hover:text-navy-surface font-data-mono font-bold text-label-caps"
+          >
+            <span>LIVE GPS NAVIGATION</span>
+            <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -732,7 +826,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     document.getElementById('modal-ticket-id').innerText = Math.floor(1000 + Math.random() * 9000);
   </script>
 
-<!-- Leaflet Map Controller & Interactivity (Zero Popups, High Performance) -->
+<!-- Leaflet Map Controller & Interactivity (Zero Popups, Esri Street/Satellite/OSM, Directions Corridor) -->
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function () {
     const mapEl = document.getElementById('toolroom-map');
@@ -752,18 +846,58 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       map.scrollWheelZoom.enable();
     });
 
-    // Street Layer: CartoDB Voyager (clean, crisp architectural styling, zero clutter)
-    const streetLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; CARTO &copy; OpenStreetMap',
-      subdomains: 'abcd',
+    // Street Layer: Esri World Street Map (100% Free, NO API Key, No Watermark, Clean English Labels)
+    const streetLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri &mdash; Street Map',
       maxZoom: 19
     }).addTo(map);
 
-    // Satellite Layer: Esri World Imagery (high-resolution industrial satellite)
+    // Satellite Layer: Esri World Imagery (High-Resolution Satellite)
     const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
       attribution: 'Tiles &copy; Esri &mdash; Earthstar Geographics',
       maxZoom: 19
     });
+
+    // OSM Layer: OpenStreetMap Standard
+    const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      subdomains: 'abc',
+      maxZoom: 19
+    });
+
+    // Visual Transit Route Corridor from Outer Ring Road (ORR) to Tripower Mold Tech
+    const routeCoords = [
+      [12.9868, 80.0862], // ORR Highway Exit 12 (Heavy Haulage Junction)
+      [12.9855, 80.0898], // SIDCO Industrial Corridor Gateway
+      [12.9840, 80.0935], // Thirumudivakkam Main Road
+      [12.9828, 80.0965], // Sri Jeynanthi Nagar Turn
+      [12.9818, 80.0984]  // Tripower Mold Tech Toolroom
+    ];
+
+    const routePolyline = L.polyline(routeCoords, {
+      color: '#00A896',
+      weight: 5,
+      opacity: 0.95,
+      lineCap: 'round',
+      lineJoin: 'round',
+      dashArray: '8, 8'
+    }).addTo(map);
+
+    // ORR Waypoint Marker
+    const orrIcon = L.divIcon({
+      className: 'tmt-orr-pin',
+      html: `
+        <div style="position: relative; pointer-events: none;">
+          <div style="position: absolute; top: -30px; left: -54px; width: 108px; text-align: center; background: #0b1526; color: #00E5FF; font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 4px; border: 1px solid #00A896; box-shadow: 0 2px 8px rgba(0,0,0,0.5); white-space: nowrap;">
+            ORR EXIT // 8.5 KM
+          </div>
+          <div style="width: 14px; height: 14px; border-radius: 9999px; background: #00E5FF; border: 2px solid #ffffff; box-shadow: 0 0 10px #00E5FF;"></div>
+        </div>
+      `,
+      iconSize: [14, 14],
+      iconAnchor: [7, 7]
+    });
+    L.marker([12.9868, 80.0862], { icon: orrIcon, interactive: false }).addTo(map);
 
     // Custom Precision Engineering Radar Pin (Self-contained, NO pop-ups)
     const radarIcon = L.divIcon({
@@ -787,38 +921,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     L.marker(toolroomCoords, { icon: radarIcon, interactive: false }).addTo(map);
 
-    // Layer Switcher
+    // Layer Switcher Buttons
     const btnStreet = document.getElementById('map-mode-street');
     const btnSat = document.getElementById('map-mode-satellite');
+    const btnOsm = document.getElementById('map-mode-osm');
 
-    if (btnStreet && btnSat) {
-      btnStreet.addEventListener('click', function () {
-        if (map.hasLayer(satelliteLayer)) {
-          map.removeLayer(satelliteLayer);
-          map.addLayer(streetLayer);
-          btnStreet.className = 'px-2.5 py-1 text-label-caps font-data-mono text-white bg-precision-teal/30 text-precision-teal font-semibold rounded transition-all flex items-center gap-1 cursor-pointer';
-          btnSat.className = 'px-2.5 py-1 text-label-caps font-data-mono text-slate-300 hover:text-white rounded transition-all flex items-center gap-1 cursor-pointer';
-        }
+    function setActiveLayer(activeLayer, activeBtn) {
+      [streetLayer, satelliteLayer, osmLayer].forEach(layer => {
+        if (map.hasLayer(layer)) map.removeLayer(layer);
       });
-
-      btnSat.addEventListener('click', function () {
-        if (map.hasLayer(streetLayer)) {
-          map.removeLayer(streetLayer);
-          map.addLayer(satelliteLayer);
-          btnSat.className = 'px-2.5 py-1 text-label-caps font-data-mono text-white bg-precision-teal/30 text-precision-teal font-semibold rounded transition-all flex items-center gap-1 cursor-pointer';
-          btnStreet.className = 'px-2.5 py-1 text-label-caps font-data-mono text-slate-300 hover:text-white rounded transition-all flex items-center gap-1 cursor-pointer';
-        }
+      map.addLayer(activeLayer);
+      [btnStreet, btnSat, btnOsm].forEach(btn => {
+        if (btn) btn.className = 'px-2.5 py-1 text-label-caps font-data-mono text-slate-300 hover:text-white rounded transition-all flex items-center gap-1 cursor-pointer';
       });
+      if (activeBtn) {
+        activeBtn.className = 'px-2.5 py-1 text-label-caps font-data-mono text-white bg-precision-teal/30 text-precision-teal font-semibold rounded transition-all flex items-center gap-1 cursor-pointer';
+      }
     }
 
-    // Zoom & Recenter
+    if (btnStreet) btnStreet.addEventListener('click', () => setActiveLayer(streetLayer, btnStreet));
+    if (btnSat) btnSat.addEventListener('click', () => setActiveLayer(satelliteLayer, btnSat));
+    if (btnOsm) btnOsm.addEventListener('click', () => setActiveLayer(osmLayer, btnOsm));
+
+    // Zoom & Recenter Controls
     const btnRecenter = document.getElementById('map-recenter-btn');
     const btnZoomIn = document.getElementById('map-zoom-in-btn');
     const btnZoomOut = document.getElementById('map-zoom-out-btn');
 
     if (btnRecenter) {
       btnRecenter.addEventListener('click', function () {
-        map.flyTo(toolroomCoords, initialZoom, { duration: 1.2 });
+        map.flyToBounds(L.latLngBounds(routeCoords).pad(0.18), { duration: 1.2 });
       });
     }
     if (btnZoomIn) {
