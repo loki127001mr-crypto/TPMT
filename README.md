@@ -1,16 +1,15 @@
-# Tripower Mold Tech — Web Application (`dev` branch)
+# Tripower Mold Tech — Web Application
 
 Modular **Astro + Tailwind CSS (v4)** web application for **Tripower Mold Tech**, a precision injection mold toolroom in Thirumudivakkam, Chennai.
 
 ---
 
-## 🌿 Branch Environments & Ports
+## 🌿 Environment & Port
 
-| Branch | Port | Local URL | Role |
-| :--- | :--- | :--- | :--- |
-| **`main`** | **`4321`** | [http://localhost:4321/](http://localhost:4321/) | Production / Main Release |
-| **`test`** | **`8000`** | [http://localhost:8000/](http://localhost:8000/) | Staging & Testing |
-| **`dev`** | **`9000`** | [http://localhost:9000/](http://localhost:9000/) | Active Development |
+* **Branch:** `dev` (Active Development)
+* **Assigned Port:** **`9000`**
+* **Local URL:** [http://localhost:9000/](http://localhost:9000/)
+* **Network URL:** [http://192.168.1.174:9000/](http://192.168.1.174:9000/)
 
 ---
 
