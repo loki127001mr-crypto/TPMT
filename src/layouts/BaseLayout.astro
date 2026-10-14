@@ -40,6 +40,46 @@ import '../styles/global.css';
   </style>
 </head>
 <body class="bg-background font-body-md text-body-md text-on-surface antialiased">
+  <!-- Top Page Preloader / Loading Area with exact triangle icon -->
+  <div
+    id="page-loading-area"
+    class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-navy-deep transition-opacity duration-300 pointer-events-none"
+    style="opacity: 1;"
+  >
+    <div class="relative flex flex-col items-center gap-4">
+      <div class="relative w-24 h-24 flex items-center justify-center">
+        <div class="absolute inset-0 rounded-full bg-precision-teal/15 animate-ping blur-sm"></div>
+        <div class="absolute -inset-2 rounded-full border border-machined-gold/30 animate-spin" style="animation-duration: 3s;"></div>
+        <img
+          src="/images/tripower-triangle-icon.png"
+          alt="Tripower Mould Tech"
+          class="relative w-20 h-20 object-contain drop-shadow-[0_0_15px_rgba(0,210,255,0.4)]"
+        />
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-electric-cyan animate-pulse"></span>
+        <span class="font-label-caps text-[11px] tracking-widest text-slate-300 uppercase">PRECISION TOOLING</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-machined-gold animate-pulse"></span>
+      </div>
+    </div>
+  </div>
+  <script is:inline>
+    function hideLoader() {
+      const loader = document.getElementById('page-loading-area');
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => {
+          if (loader.parentNode) loader.parentNode.removeChild(loader);
+        }, 350);
+      }
+    }
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      setTimeout(hideLoader, 150);
+    } else {
+      window.addEventListener('DOMContentLoaded', () => setTimeout(hideLoader, 150));
+      window.addEventListener('load', hideLoader);
+    }
+  </script>
   <GlobalHeader currentPage={currentPage} />
   <main class="w-full pt-[116px] bg-background min-h-screen">
     <div class="flex flex-col w-full">
