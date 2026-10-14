@@ -622,7 +622,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </section>
 </div>
 <!-- SCRIPT: INTERACTIVE PHASE SWITCHER & ACTIONS -->
-<script>
+<script is:inline>
   const phaseData = [
     {
       badge: "PHASE 01 // FRONT-END ENGINEERING DESIGN & DFM",
@@ -662,123 +662,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
   ];
 
-  function switchD3Phase(index) {
+  window.switchD3Phase = function(index) {
     const data = phaseData[index];
+    if (!data) return;
     
     // Update active tab styles
     for(let i=0; i<3; i++) {
       const btn = document.getElementById('tab-btn-' + i);
-      if (i === index) {
-        btn.className = "flex-1 py-2.5 px-space-md rounded-lg font-headline-sm text-body-sm text-on-surface bg-surface-container-lowest shadow-sm font-semibold transition-all flex items-center justify-center gap-2";
-      } else {
-        btn.className = "flex-1 py-2.5 px-space-md rounded-lg font-headline-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center gap-2";
+      if (btn) {
+        if (i === index) {
+          btn.className = "flex-1 py-2.5 px-space-md rounded-lg font-headline-sm text-body-sm text-on-surface bg-surface-container-lowest shadow-sm font-semibold transition-all flex items-center justify-center gap-2";
+        } else {
+          btn.className = "flex-1 py-2.5 px-space-md rounded-lg font-headline-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center gap-2";
+        }
       }
     }
 
     // Update phase content
-    document.getElementById('phase-title').textContent = data.title;
-    document.getElementById('phase-desc').textContent = data.desc;
-    document.getElementById('matrix-sub').textContent = data.matrixSub;
+    const titleEl = document.getElementById('phase-title');
+    const descEl = document.getElementById('phase-desc');
+    const matrixSubEl = document.getElementById('matrix-sub');
+    if (titleEl) titleEl.textContent = data.title;
+    if (descEl) descEl.textContent = data.desc;
+    if (matrixSubEl) matrixSubEl.textContent = data.matrixSub;
 
     // Re-render feature cards
     const container = document.getElementById('phase-features');
-    container.innerHTML = data.features.map(f => `
-      <div class="bg-surface-container-low p-space-md rounded-lg">
-        <div class="flex items-center gap-space-xs text-primary font-headline-sm text-body-sm mb-1 font-semibold">
-          <span class="material-symbols-outlined text-precision-teal text-[18px]">${f.icon}</span>
-          <span>${f.title}</span>
+    if (container) {
+      container.innerHTML = data.features.map(f => `
+        <div class="bg-surface-container-low p-space-md rounded-lg">
+          <div class="flex items-center gap-space-xs text-primary font-headline-sm text-body-sm mb-1 font-semibold">
+            <span class="material-symbols-outlined text-precision-teal text-[18px]">${f.icon}</span>
+            <span>${f.title}</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">${f.desc}</p>
         </div>
-        <p class="font-body-sm text-body-sm text-on-surface-variant">${f.desc}</p>
-      </div>
-    `).join('');
-  }
+      `).join('');
+    }
+  };
 
-  function handleQuickRfq(e) {
+  window.handleQuickRfq = function(e) {
     e.preventDefault();
-    document.getElementById('rfq-success').classList.remove('hidden');
+    const successEl = document.getElementById('rfq-success');
+    if (successEl) successEl.classList.remove('hidden');
     setTimeout(() => {
       e.target.reset();
     }, 1500);
-  }
-</script>
-
-<script>
-  const phaseData = [
-    {
-      badge: "PHASE 01 // FRONT-END ENGINEERING DESIGN & DFM",
-      title: "Tooling Feasibility, Moldflow & Rheological Engineering",
-      desc: "Every mold begins with algorithmic scrutiny. We eliminate weld line weaknesses, gate vestige anomalies, and differential shrinkage through complete 3D Moldflow simulation and deep-part DFM engineering before any steel is cut.",
-      matrixSub: "D3_PHASE_01.CAD",
-      features: [
-        { title: "Rheology & Flow Analysis", icon: "insights", desc: "Fill-time optimization, shear rate limits, venting calculations, and warpage mitigation." },
-        { title: "Part Fit & Functional DFM", icon: "verified_user", desc: "Thorough draft analysis, undercut resolution, side-core cam mechanics, and sink mark avoidance." },
-        { title: "Tooling Feasibility Studies", icon: "precision_manufacturing", desc: "Steel selection (H13, Stavax, NAK80) suited specifically to resin corrosiveness and target shot count." },
-        { title: "Cooling Channel Circuitry", icon: "timer", desc: "Conformal and baffled cooling loops mapped for optimal heat dissipation and sub-15s cycle rates." }
-      ]
-    },
-    {
-      badge: "PHASE 02 // PRECISION MACHINING & TOOL VALIDATION",
-      title: "High-Speed Makino CNC, EDM & Tool Trial Validation",
-      desc: "Fabricated with zero compromise. We convert qualified CAD tool paths into hardened steel core-cavities on Makino VMC mills and Charmilles wire EDM, then execute prototype T0/T1 injection test runs for fit and dimension checking.",
-      matrixSub: "D3_PHASE_02.CNC",
-      features: [
-        { title: "Makino VMC & High-Speed Milling", icon: "settings", desc: "High-speed 20,000 RPM spindle finishing yielding optical surface profiles down to &plusmn;0.005mm." },
-        { title: "Charmilles Wire & Sinker EDM", icon: "electric_bolt", desc: "Spark-erosion for razor sharp internal corners, micro ribs, and precision core pins." },
-        { title: "Prototype Validation & T0 Trials", icon: "science", desc: "First-shot injection samples inspected against master CAD nominal dimensions using Zeiss CMM." },
-        { title: "Cycle Time Optimization", icon: "speed", desc: "Fine-tuning cooling holding time, ejection stroke, and hydraulic core pulling speed." }
-      ]
-    },
-    {
-      badge: "PHASE 03 // COMMISSIONING & LIFECYCLE SERVICE",
-      title: "Streamlined Commissioning & Single-Source Toolroom Support",
-      desc: "Tooling delivery is just the starting line. Tripower provides on-site production commissioning, spare wear components, mold refurbishment, and scheduled preventive maintenance to sustain defect-free uptime for millions of cycles.",
-      matrixSub: "D3_PHASE_03.LIFECYCLE",
-      features: [
-        { title: "Streamlined Commissioning", icon: "rocket_launch", desc: "Plug-and-play production handover with certified mold validation report and setup parameters." },
-        { title: "Long-Term Operational Reliability", icon: "fact_check", desc: "Hardened guide pins, nickel-plated wear plates, and precision slide locks for zero-drift cycling." },
-        { title: "Single-Source Maintenance", icon: "build", desc: "Emergency re-tooling, cavity polishing, and modification service under one certified roof." },
-        { title: "Sustainable Procurement", icon: "recycling", desc: "Scrap reduction tooling, lower runner ratios, and green tool fabrication protocols." }
-      ]
-    }
-  ];
-
-  function switchD3Phase(index) {
-    const data = phaseData[index];
-    
-    // Update active tab styles
-    for(let i=0; i<3; i++) {
-      const btn = document.getElementById('tab-btn-' + i);
-      if (i === index) {
-        btn.className = "flex-1 py-2.5 px-space-md rounded-lg font-headline-sm text-body-sm text-on-surface bg-surface-container-lowest shadow-sm font-semibold transition-all flex items-center justify-center gap-2";
-      } else {
-        btn.className = "flex-1 py-2.5 px-space-md rounded-lg font-headline-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center gap-2";
-      }
-    }
-
-    // Update phase content
-    document.getElementById('phase-title').textContent = data.title;
-    document.getElementById('phase-desc').textContent = data.desc;
-    document.getElementById('matrix-sub').textContent = data.matrixSub;
-
-    // Re-render feature cards
-    const container = document.getElementById('phase-features');
-    container.innerHTML = data.features.map(f => `
-      <div class="bg-surface-container-low p-space-md rounded-lg">
-        <div class="flex items-center gap-space-xs text-primary font-headline-sm text-body-sm mb-1 font-semibold">
-          <span class="material-symbols-outlined text-precision-teal text-[18px]">${f.icon}</span>
-          <span>${f.title}</span>
-        </div>
-        <p class="font-body-sm text-body-sm text-on-surface-variant">${f.desc}</p>
-      </div>
-    `).join('');
-  }
-
-  function handleQuickRfq(e) {
-    e.preventDefault();
-    document.getElementById('rfq-success').classList.remove('hidden');
-    setTimeout(() => {
-      e.target.reset();
-    }, 1500);
-  }
+  };
 </script>
 </BaseLayout>
