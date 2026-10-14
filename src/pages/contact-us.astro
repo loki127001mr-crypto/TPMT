@@ -109,7 +109,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <div>
 <span class="font-label-caps text-label-caps text-slate-400 block uppercase">Toolroom Works Address</span>
 <p class="font-body-md text-body-md text-slate-900 font-medium">
-                  No 29,30 Sri Jeynanthi Nagar, Thirumudivakkam, Chennai, Tamil Nadu – 600044, India.
+                  No 29,30 Sri Jeynanthi Nagar, Thirumudivakkam, Chennai, Tamil Nadu – 600132, India.
                 </p>
 <span class="font-body-sm text-body-sm text-slate-700">Thirumudivakkam SIDCO Industrial Corridor</span>
 </div>
@@ -404,65 +404,89 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </span>
         </div>
 
-        <!-- The Map Visual Container (Spacious, High-Resolution, Interactive) -->
-        <a
-          href="https://maps.google.com/?q=12.9818,80.0984+(Tripower+Mold+Tech)"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="block group relative rounded-lg overflow-hidden border border-slate-200/80 shadow-md transition-all duration-300 hover:shadow-xl"
-          title="Click to open turn-by-turn navigation in Google Maps"
-        >
-          <div
-            class="w-full h-80 lg:h-96 rounded-lg bg-cover bg-center relative overflow-hidden transition-transform duration-500 group-hover:scale-[1.02]"
-            data-location="Thirumudivakkam, Chennai, Tamil Nadu, India"
-            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWPx87F3LbaDc34plgQ6Irb2U-QBpStyRFly1LG84z1Va6iymhaRIc0B7X2HyF3CsZ-z_N18vt-hxwxAq32bUkIrBPnHGWjj-uh7s_hPDohJgmFkVqO-jiIANQvArLq9qdBaKb5aPwIZanspULeNqZIo9ESCniubDMDNeGjgb8Q3D8taJWnsAL6s-YgojYbPJXOFMEmeVSjc3pb2U2AiZqbuEfYRTdpCZRT1MKEFHl');"
-          >
-            <!-- Exact Location Pinpoint (Positioned precisely over Thirumudivakkam Toolroom) -->
-            <div class="absolute top-[48%] left-[44%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-10 pointer-events-none">
-              <span class="absolute w-14 h-14 rounded-full bg-precision-teal/35 animate-ping"></span>
-              <span class="absolute w-10 h-10 rounded-full bg-precision-teal/60 animate-pulse"></span>
-              <div class="relative w-9 h-9 rounded-full bg-navy-surface border-2 border-precision-teal shadow-2xl flex items-center justify-center text-precision-teal">
-                <span class="material-symbols-outlined text-[20px] text-precision-teal">pin_drop</span>
-              </div>
-              <div class="mt-1 px-2.5 py-1 bg-navy-surface/95 backdrop-blur-md rounded shadow-lg border border-precision-teal/60 text-white flex items-center gap-1.5 whitespace-nowrap">
-                <span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span>
-                <span class="font-data-mono text-[10px] font-bold tracking-wider text-precision-teal">TRIPOWER MOLD TECH</span>
-              </div>
+        <!-- Real Interactive Map Structure (Zoom In / Zoom Out / Pan / Satellite / Navigation) -->
+        <div class="relative w-full h-80 sm:h-96 lg:h-[420px] rounded-lg overflow-hidden border border-slate-200/90 shadow-md bg-slate-100 group">
+          <!-- Real Interactive Google Maps Engine -->
+          <iframe
+            id="toolroom-live-map"
+            src="https://maps.google.com/maps?q=12.963025,80.088701&hl=en&z=16&output=embed"
+            class="w-full h-full border-0 rounded-lg"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Tripower Mould Tech - Exact Real Map Pinpoint (12.963025, 80.088701)"
+          ></iframe>
+
+          <!-- Top Floating Controls: Mode Switcher & Navigation Directives -->
+          <div class="absolute top-3 left-3 right-3 flex flex-wrap items-center justify-between gap-2 pointer-events-none z-10">
+            <!-- Pinpoint Identification Badge -->
+            <div class="pointer-events-auto bg-navy-surface/95 backdrop-blur-md px-3 py-1.5 rounded-lg border border-precision-teal/50 shadow-lg text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span>
+              <span class="font-data-mono text-[11px] font-bold text-precision-teal tracking-wide">TRIPOWER MOULD TECH</span>
+              <span class="hidden sm:inline font-data-mono text-[10px] text-slate-300">• 12.963025° N, 80.088701° E</span>
             </div>
 
-            <!-- Floating Open Directions Action Badge (Top Right) -->
-            <div class="absolute top-3 right-3 z-10">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-navy-surface/90 text-white font-data-mono text-label-caps rounded shadow-lg backdrop-blur-md border border-slate-700/80 group-hover:bg-slate-900 group-hover:border-precision-teal transition-all">
-                <span class="material-symbols-outlined text-[14px] text-precision-teal">directions</span>
-                <span>Open Directions</span>
-                <span class="material-symbols-outlined text-[12px] text-slate-400">open_in_new</span>
-              </span>
-            </div>
+            <!-- Interactive Mode Switcher & Direct Actions -->
+            <div class="pointer-events-auto flex items-center gap-1.5 bg-navy-surface/95 backdrop-blur-md p-1 rounded-lg border border-slate-700/80 shadow-lg">
+              <button
+                type="button"
+                id="btn-mode-map"
+                onclick="document.getElementById('toolroom-live-map').src='https://maps.google.com/maps?q=12.963025,80.088701&hl=en&z=16&output=embed'; this.classList.add('bg-precision-teal/30', 'text-precision-teal'); document.getElementById('btn-mode-sat').classList.remove('bg-precision-teal/30', 'text-precision-teal'); document.getElementById('btn-mode-sat').classList.add('text-slate-300');"
+                class="px-2.5 py-1 rounded font-data-mono text-[11px] font-semibold bg-precision-teal/30 text-precision-teal hover:text-white transition-colors flex items-center gap-1 cursor-pointer"
+                title="View Standard Roadmap with Street Names"
+              >
+                <span class="material-symbols-outlined text-[13px]">map</span>
+                <span>Map</span>
+              </button>
 
-            <!-- Overlay Gradient with Exact Coordinates & One-Click Copy -->
-            <div class="absolute inset-0 bg-gradient-to-t from-navy-deep/95 via-navy-deep/25 to-transparent flex flex-col justify-end p-space-md">
-              <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
-                <div>
-                  <span class="text-white font-headline-sm text-body-lg font-semibold block leading-tight">
-                    Tripower Mold Tech Central Toolroom
-                  </span>
-                  <span class="text-precision-teal font-data-mono text-label-caps block mt-0.5">
-                    12.9818° N, 80.0984° E • Thirumudivakkam SIDCO Industrial Estate
-                  </span>
-                </div>
-                <button
-                  type="button"
-                  onclick="event.preventDefault(); event.stopPropagation(); navigator.clipboard.writeText('12.9818, 80.0984'); const t = this.querySelector('span:last-child'); const orig = t.textContent; t.textContent = 'COPIED!'; setTimeout(() => t.textContent = orig, 1500);"
-                  class="text-precision-teal hover:text-electric-cyan font-bold transition-colors shrink-0 flex items-center gap-1 text-[11px] font-data-mono bg-navy-card/90 px-2.5 py-1.5 rounded border border-precision-teal/40 backdrop-blur-sm cursor-pointer shadow"
-                  title="Copy GPS coordinates"
-                >
-                  <span class="material-symbols-outlined text-[14px]">content_copy</span>
-                  <span>COPY GPS</span>
-                </button>
-              </div>
+              <button
+                type="button"
+                id="btn-mode-sat"
+                onclick="document.getElementById('toolroom-live-map').src='https://maps.google.com/maps?q=12.963025,80.088701&t=k&hl=en&z=17&output=embed'; this.classList.add('bg-precision-teal/30', 'text-precision-teal'); document.getElementById('btn-mode-map').classList.remove('bg-precision-teal/30', 'text-precision-teal'); document.getElementById('btn-mode-map').classList.add('text-slate-300');"
+                class="px-2.5 py-1 rounded font-data-mono text-[11px] font-semibold text-slate-300 hover:text-white transition-colors flex items-center gap-1 cursor-pointer"
+                title="View High-Resolution Satellite Aerial View"
+              >
+                <span class="material-symbols-outlined text-[13px]">satellite_alt</span>
+                <span>Satellite</span>
+              </button>
+
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=12.963025,80.088701"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-2.5 py-1 rounded font-data-mono text-[11px] font-semibold bg-status-success hover:bg-emerald-600 text-white transition-colors flex items-center gap-1 shadow-sm"
+                title="Open Turn-by-Turn Navigation in Google Maps"
+              >
+                <span class="material-symbols-outlined text-[13px]">directions</span>
+                <span>Navigate</span>
+                <span class="material-symbols-outlined text-[11px]">open_in_new</span>
+              </a>
             </div>
           </div>
-        </a>
+
+          <!-- Bottom Floating Coordinates & Copy Bar -->
+          <div class="absolute bottom-3 left-3 right-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 pointer-events-none z-10">
+            <div class="pointer-events-auto bg-navy-deep/95 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-700/80 shadow-lg text-white">
+              <div class="font-headline-sm text-body-sm font-semibold flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[15px] text-precision-teal">pin_drop</span>
+                <span>No 29,30 Sri Jeynanthi Nagar, Thirumudivakkam, Chennai – 600132</span>
+              </div>
+              <div class="font-data-mono text-[10px] text-precision-teal">
+                EXACT GPS: 12.963025° N, 80.088701° E • SIDCO INDUSTRIAL CORRIDOR
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onclick="navigator.clipboard.writeText('12.963025, 80.088701'); const t = this.querySelector('span:last-child'); const orig = t.textContent; t.textContent = 'COPIED!'; setTimeout(() => t.textContent = orig, 1500);"
+              class="pointer-events-auto shrink-0 bg-navy-card/95 hover:bg-slate-900 backdrop-blur-md text-precision-teal hover:text-white px-3 py-1.5 rounded-lg border border-precision-teal/50 shadow-lg font-data-mono text-[11px] font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+              title="Copy exact latitude and longitude"
+            >
+              <span class="material-symbols-outlined text-[13px]">content_copy</span>
+              <span>COPY GPS (12.963025, 80.088701)</span>
+            </button>
+          </div>
+        </div>
 
         <!-- Driving Corridors & Arrival Guidance (Fills width below map) -->
         <div class="mt-space-md pt-space-sm border-t border-slate-200">
