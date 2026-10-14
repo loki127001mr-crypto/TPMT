@@ -1,6 +1,16 @@
-# Tripower Mold Tech — Web Application
+# Tripower Mold Tech — Web Application (`dev` branch)
 
 Modular **Astro + Tailwind CSS (v4)** web application for **Tripower Mold Tech**, a precision injection mold toolroom in Thirumudivakkam, Chennai.
+
+---
+
+## 🌿 Branch Environments & Ports
+
+| Branch | Port | Local URL | Role |
+| :--- | :--- | :--- | :--- |
+| **`main`** | **`4321`** | [http://localhost:4321/](http://localhost:4321/) | Production / Main Release |
+| **`test`** | **`8000`** | [http://localhost:8000/](http://localhost:8000/) | Staging & Testing |
+| **`dev`** | **`9000`** | [http://localhost:9000/](http://localhost:9000/) | Active Development |
 
 ---
 
@@ -12,8 +22,8 @@ Ensure you have Node.js installed (v20+ recommended).
 # Install dependencies
 npm install
 
-# Start local development server with network access
-npm run dev -- --host
+# Start local server on port 9000
+npm run dev
 
 # Build static production bundle
 npm run build
