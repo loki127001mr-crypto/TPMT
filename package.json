@@ -6,9 +6,9 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --port 9000",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "astro preview --port 9000",
     "astro": "astro"
   },
   "dependencies": {
