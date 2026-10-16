@@ -46,12 +46,12 @@ const navLinks = [
         />
       </a>
       <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-space-xl h-20" data-active-classes="text-cyber-blue border-b-2 border-cyber-blue font-semibold">
+      <nav class="hidden lg:flex items-center gap-space-xl h-20" data-active-classes="text-cyber-blue border-b-2 border-cyber-blue font-bold">
         {navLinks.map((link) => (
           <a
             class={currentPage === link.page
-              ? 'transition-colors py-2 text-cyber-blue border-b-2 border-cyber-blue font-semibold'
-              : 'text-soft-gray/90 hover:text-rich-gold transition-colors py-2 font-body-md text-body-md'}
+              ? 'transition-colors py-2 text-cyber-blue border-b-2 border-cyber-blue font-rajdhani text-[14px] uppercase tracking-wider font-bold'
+              : 'text-soft-gray/90 hover:text-rich-gold transition-colors py-2 font-rajdhani text-[14px] uppercase tracking-wider font-semibold'}
             href={link.href}
             aria-current={currentPage === link.page ? 'page' : undefined}
           >
@@ -61,7 +61,7 @@ const navLinks = [
       </nav>
       <!-- Right Actions -->
       <div class="flex items-center gap-space-md">
-        <a class="hidden sm:inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm btn-cyber-blue font-headline-sm text-body-sm rounded shadow transition-all duration-200" href="/rfq">
+        <a class="hidden sm:inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm btn-cyber-blue rounded shadow transition-all duration-200" href="/rfq">
           <span class="material-symbols-outlined text-[16px]">request_quote</span>
           <span>RFQ Portal</span>
         </a>

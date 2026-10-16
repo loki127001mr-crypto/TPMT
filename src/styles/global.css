@@ -97,83 +97,117 @@
   --spacing-gutter-desktop: 2rem;
   --spacing-space-3xl: 6rem;
 
-  /* Font Families */
-  --font-headline-sm: "Space Grotesk", sans-serif;
-  --font-label-caps: "JetBrains Mono", monospace;
-  --font-body-lg: "Work Sans", sans-serif;
-  --font-data-mono: "JetBrains Mono", monospace;
-  --font-body-md: "Work Sans", sans-serif;
-  --font-metric-val: "Space Grotesk", sans-serif;
-  --font-headline-lg: "Space Grotesk", sans-serif;
-  --font-display-hero-mobile: "Space Grotesk", sans-serif;
-  --font-headline-md: "Space Grotesk", sans-serif;
-  --font-body-sm: "Work Sans", sans-serif;
-  --font-display-hero: "Space Grotesk", sans-serif;
-  --font-headline-lg-mobile: "Space Grotesk", sans-serif;
+  /* Font Families - Executive Engineering Pairing */
+  --font-display-hero: "Cinzel", Georgia, serif;
+  --font-display-hero-mobile: "Cinzel", Georgia, serif;
+  --font-headline-h1: "Cinzel", Georgia, serif;
+  --font-cinzel: "Cinzel", Georgia, serif;
 
-  /* Font Sizes */
+  --font-headline-lg: "Inter", sans-serif;
+  --font-headline-md: "Inter", sans-serif;
+  --font-headline-sm: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-body-sm: "Inter", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  --font-ui-nav: "Rajdhani", sans-serif;
+  --font-ui-cta: "Rajdhani", sans-serif;
+  --font-rajdhani: "Rajdhani", sans-serif;
+
+  --font-label-caps: "JetBrains Mono", monospace;
+  --font-data-mono: "JetBrains Mono", monospace;
+  --font-metric-val: "Rajdhani", "Space Grotesk", sans-serif;
+
+  /* Typographic Hierarchy Scale (Desktop)
+     H1: Cinzel (48-56px) • H2: Inter (32-36px) • H3: Inter (20-24px) • Body: Inter (16px) • UI: Rajdhani (14px) */
+  --text-display-hero: 52px;
+  --text-display-hero--line-height: 58px;
+  --text-display-hero--letter-spacing: 0.03em;
+  --text-display-hero--font-weight: 700;
+
+  --text-display-hero-mobile: 36px;
+  --text-display-hero-mobile--line-height: 42px;
+  --text-display-hero-mobile--letter-spacing: 0.02em;
+  --text-display-hero-mobile--font-weight: 700;
+
+  --text-headline-lg: 34px;
+  --text-headline-lg--line-height: 42px;
+  --text-headline-lg--letter-spacing: -0.01em;
+  --text-headline-lg--font-weight: 600;
+
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--letter-spacing: -0.01em;
+  --text-headline-lg-mobile--font-weight: 600;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--letter-spacing: -0.01em;
+  --text-headline-md--font-weight: 600;
+
   --text-headline-sm: 20px;
   --text-headline-sm--line-height: 28px;
   --text-headline-sm--letter-spacing: 0em;
   --text-headline-sm--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 26px;
+  --text-body-md--font-weight: 400;
+
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 22px;
+  --text-body-sm--font-weight: 400;
+
+  --text-ui: 14px;
+  --text-ui--line-height: 18px;
+  --text-ui--letter-spacing: 0.06em;
+  --text-ui--font-weight: 600;
 
   --text-label-caps: 11px;
   --text-label-caps--line-height: 16px;
   --text-label-caps--letter-spacing: 0.08em;
   --text-label-caps--font-weight: 500;
 
-  --text-body-lg: 18px;
-  --text-body-lg--line-height: 28px;
-  --text-body-lg--font-weight: 400;
-
   --text-data-mono: 13px;
   --text-data-mono--line-height: 18px;
   --text-data-mono--font-weight: 400;
 
-  --text-body-md: 15px;
-  --text-body-md--line-height: 24px;
-  --text-body-md--font-weight: 400;
-
   --text-metric-val: 32px;
   --text-metric-val--line-height: 36px;
-  --text-metric-val--letter-spacing: -0.01em;
+  --text-metric-val--letter-spacing: 0.01em;
   --text-metric-val--font-weight: 700;
-
-  --text-headline-lg: 38px;
-  --text-headline-lg--line-height: 46px;
-  --text-headline-lg--letter-spacing: -0.02em;
-  --text-headline-lg--font-weight: 600;
-
-  --text-display-hero-mobile: 36px;
-  --text-display-hero-mobile--line-height: 44px;
-  --text-display-hero-mobile--letter-spacing: -0.02em;
-  --text-display-hero-mobile--font-weight: 700;
-
-  --text-headline-md: 26px;
-  --text-headline-md--line-height: 34px;
-  --text-headline-md--letter-spacing: -0.01em;
-  --text-headline-md--font-weight: 600;
-
-  --text-body-sm: 13px;
-  --text-body-sm--line-height: 20px;
-  --text-body-sm--font-weight: 400;
-
-  --text-display-hero: 56px;
-  --text-display-hero--line-height: 64px;
-  --text-display-hero--letter-spacing: -0.03em;
-  --text-display-hero--font-weight: 700;
-
-  --text-headline-lg-mobile: 28px;
-  --text-headline-lg-mobile--line-height: 36px;
-  --text-headline-lg-mobile--letter-spacing: -0.01em;
-  --text-headline-lg-mobile--font-weight: 600;
 }
 
 /* Typography & UI styles from Style Guide & Wireframe */
+.font-cinzel {
+  font-family: "Cinzel", Georgia, serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.font-rajdhani {
+  font-family: "Rajdhani", sans-serif;
+}
+
 .font-heading-gold {
   font-family: "Cinzel", Georgia, serif;
   color: #D4AF37;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+}
+
+.font-nav-cta {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .text-rich-gold {
@@ -201,10 +235,32 @@
   transform: translateY(-2px);
 }
 
+.btn-gold {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #D4AF37 0%, #B89628 100%);
+  color: #0D1321;
+  border-radius: 0.375rem;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+.btn-gold:hover {
+  background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 100%);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+  transform: translateY(-1px);
+}
+
 .btn-cyber-blue {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   background-color: #00E5FF;
   color: #0D1321;
-  font-weight: 700;
   border-radius: 0.375rem;
   box-shadow: 0 0 15px rgba(0, 229, 255, 0.35);
   transition: all 0.2s ease-in-out;
@@ -212,5 +268,25 @@
 .btn-cyber-blue:hover {
   background-color: #00F2FE;
   box-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
+  transform: translateY(-1px);
+}
+
+.btn-cyber-outline {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1.5px solid #00E5FF;
+  color: #00E5FF;
+  border-radius: 0.375rem;
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+.btn-cyber-outline:hover {
+  background-color: rgba(0, 229, 255, 0.15);
+  color: #FFFFFF;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.45);
   transform: translateY(-1px);
 }
