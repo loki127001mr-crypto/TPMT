@@ -308,76 +308,293 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           Advanced CNC machining centers, electrode milling, and optical grinding systems delivering aerospace &amp; medical-grade repeatability.
         </p>
 </div>
-<!-- 4 Pillars Bento Grid -->
+<!-- 4 Pillars Interactive 3D Flip Card Gallery -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<!-- Spec 1: High Speed CNC Milling -->
-<div class="card-tech-gold p-space-lg rounded-xl flex flex-col justify-between">
-<div>
-<div class="w-12 h-12 rounded-lg bg-navy-deep/80 border border-cyber-blue/30 flex items-center justify-center text-cyber-blue mb-space-md">
-<span class="material-symbols-outlined text-[26px]">precision_manufacturing</span>
+
+<!-- Card 1: High Speed CNC Milling -->
+<div class="flip-card h-[430px] w-full group cursor-pointer">
+  <div class="flip-card-inner">
+    <!-- FRONT FACE: High-Res Image, Capability Badge, Title & Key Spec -->
+    <div class="flip-card-front bg-dark-slate border border-rich-gold/30 flex flex-col justify-between shadow-xl">
+      <div class="relative w-full h-52 overflow-hidden bg-navy-deep">
+        <img src="/images/snapshot-cnc-milling.jpg" alt="Makino High Speed CNC Milling Machine" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-slate via-dark-slate/20 to-transparent"></div>
+        <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-[11px] font-bold shadow-md">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyber-blue animate-pulse"></span>
+          <span>CAPABILITY // 01</span>
+        </div>
+        <div class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-navy-deep/90 backdrop-blur-md border border-rich-gold/40 flex items-center justify-center text-rich-gold shadow-md">
+          <span class="material-symbols-outlined text-[18px]">precision_manufacturing</span>
+        </div>
+      </div>
+      <div class="p-space-md flex flex-col justify-between flex-1">
+        <div>
+          <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-1 leading-tight">High-Speed CNC Milling</h3>
+          <p class="font-body-sm text-soft-gray/80 text-xs leading-relaxed line-clamp-2">
+            Makino VMC high-rigidity spindles reaching 20,000 RPM for mirror cavity finishes.
+          </p>
+        </div>
+        <div class="pt-space-xs border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
+          <div class="flex flex-col">
+            <span class="text-[10px] text-soft-gray/60 uppercase">ACCURACY</span>
+            <span class="text-cyber-blue font-bold text-xs">± 0.003 mm</span>
+          </div>
+          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/80 px-2.5 py-1 rounded border border-rich-gold/30">
+            <span>Hover to Flip</span>
+            <span class="material-symbols-outlined text-[14px]">flip_camera_android</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- BACK FACE: Full Technical Details, Sub-System Tolerances, CMM Verification -->
+    <div class="flip-card-back bg-gradient-to-b from-dark-slate to-navy-surface border border-cyber-blue/40 p-space-lg flex flex-col justify-between shadow-2xl">
+      <div>
+        <div class="flex items-center justify-between mb-space-sm">
+          <div class="w-10 h-10 rounded-lg bg-navy-deep border border-cyber-blue/40 flex items-center justify-center text-cyber-blue shadow">
+            <span class="material-symbols-outlined text-[22px]">precision_manufacturing</span>
+          </div>
+          <span class="font-data-mono text-label-caps text-cyber-blue font-bold">CAPABILITY // 01</span>
+        </div>
+        <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-space-xs">High-Speed CNC Milling</h3>
+        <p class="font-body-sm text-soft-gray/90 text-xs leading-relaxed mb-space-md">
+          Makino VMC high-rigidity spindles reaching 20,000 RPM for mirror cavity finishes and fine graphite electrode fabrication.
+        </p>
+        <div class="space-y-1.5 font-data-mono text-[11px] bg-navy-deep/90 border border-rich-gold/25 p-2.5 rounded text-slate-200">
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">SPINDLE SPEED</span>
+            <span class="text-white font-bold">20,000 RPM</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">REPEATABILITY</span>
+            <span class="text-cyber-blue font-bold">± 0.0015 mm</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">CAVITY FINISH</span>
+            <span class="text-rich-gold font-bold">SPI A-1 Mirror</span>
+          </div>
+        </div>
+      </div>
+      <div class="font-data-mono text-label-caps text-slate-300 bg-navy-deep/90 border border-rich-gold/30 p-2.5 rounded flex justify-between items-center">
+        <span class="font-bold text-slate-400">Accuracy</span>
+        <span class="text-cyber-blue font-bold text-sm">± 0.003 mm</span>
+      </div>
+    </div>
+  </div>
 </div>
-<span class="font-label-caps text-label-caps text-cyber-blue">CAPABILITY // 01</span>
-<h3 class="font-heading-gold text-headline-sm text-rich-gold mt-1 mb-space-xs font-semibold">High-Speed CNC Milling</h3>
-<p class="font-body-sm text-body-sm text-soft-gray/80 leading-relaxed mb-space-md">
-              Makino VMC high-rigidity spindles reaching 20,000 RPM for mirror cavity finishes and fine graphite electrode fabrication.
-            </p>
+
+<!-- Card 2: CNC Wire EDM & Spark -->
+<div class="flip-card h-[430px] w-full group cursor-pointer">
+  <div class="flip-card-inner">
+    <!-- FRONT FACE -->
+    <div class="flip-card-front bg-dark-slate border border-rich-gold/30 flex flex-col justify-between shadow-xl">
+      <div class="relative w-full h-52 overflow-hidden bg-navy-deep">
+        <img src="/images/snapshot-wire-edm.jpg" alt="CNC Wire EDM Spark Erosion Machine" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-slate via-dark-slate/20 to-transparent"></div>
+        <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-[11px] font-bold shadow-md">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyber-blue animate-pulse"></span>
+          <span>CAPABILITY // 02</span>
+        </div>
+        <div class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-navy-deep/90 backdrop-blur-md border border-rich-gold/40 flex items-center justify-center text-rich-gold shadow-md">
+          <span class="material-symbols-outlined text-[18px]">electric_bolt</span>
+        </div>
+      </div>
+      <div class="p-space-md flex flex-col justify-between flex-1">
+        <div>
+          <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-1 leading-tight">CNC Wire EDM &amp; Spark</h3>
+          <p class="font-body-sm text-soft-gray/80 text-xs leading-relaxed line-clamp-2">
+            Sub-micron spark erosion for deep ribs, fine gate pins, and medical micro-shutoffs.
+          </p>
+        </div>
+        <div class="pt-space-xs border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
+          <div class="flex flex-col">
+            <span class="text-[10px] text-soft-gray/60 uppercase">SURFACE FINISH</span>
+            <span class="text-cyber-blue font-bold text-xs">Ra 0.2 μm</span>
+          </div>
+          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/80 px-2.5 py-1 rounded border border-rich-gold/30">
+            <span>Hover to Flip</span>
+            <span class="material-symbols-outlined text-[14px]">flip_camera_android</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- BACK FACE -->
+    <div class="flip-card-back bg-gradient-to-b from-dark-slate to-navy-surface border border-cyber-blue/40 p-space-lg flex flex-col justify-between shadow-2xl">
+      <div>
+        <div class="flex items-center justify-between mb-space-sm">
+          <div class="w-10 h-10 rounded-lg bg-navy-deep border border-cyber-blue/40 flex items-center justify-center text-cyber-blue shadow">
+            <span class="material-symbols-outlined text-[22px]">electric_bolt</span>
+          </div>
+          <span class="font-data-mono text-label-caps text-cyber-blue font-bold">CAPABILITY // 02</span>
+        </div>
+        <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-space-xs">CNC Wire EDM &amp; Spark</h3>
+        <p class="font-body-sm text-soft-gray/90 text-xs leading-relaxed mb-space-md">
+          Sub-micron spark erosion for deep ribs, fine gate pins, hardened core slides, and intricate medical micro-shutoffs.
+        </p>
+        <div class="space-y-1.5 font-data-mono text-[11px] bg-navy-deep/90 border border-rich-gold/25 p-2.5 rounded text-slate-200">
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">WIRE DIAMETER</span>
+            <span class="text-white font-bold">0.10 - 0.25 mm</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">CORNER RADIUS</span>
+            <span class="text-cyber-blue font-bold">&lt; 0.05 mm</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">DIELECTRIC FLUID</span>
+            <span class="text-rich-gold font-bold">Deionized Chilled</span>
+          </div>
+        </div>
+      </div>
+      <div class="font-data-mono text-label-caps text-slate-300 bg-navy-deep/90 border border-rich-gold/30 p-2.5 rounded flex justify-between items-center">
+        <span class="font-bold text-slate-400">Surface Finish</span>
+        <span class="text-cyber-blue font-bold text-sm">Ra 0.2 μm</span>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="font-data-mono text-label-caps text-slate-300 bg-navy-deep/70 border border-rich-gold/20 p-2 rounded flex justify-between">
-<span>Accuracy</span>
-<span class="text-cyber-blue font-bold">± 0.003 mm</span>
+
+<!-- Card 3: Ultra Precision Grinding -->
+<div class="flip-card h-[430px] w-full group cursor-pointer">
+  <div class="flip-card-inner">
+    <!-- FRONT FACE -->
+    <div class="flip-card-front bg-dark-slate border border-rich-gold/30 flex flex-col justify-between shadow-xl">
+      <div class="relative w-full h-52 overflow-hidden bg-navy-deep">
+        <img src="/images/snapshot-precision-grinding.jpg" alt="Ultra Precision Surface Grinding Machine" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-slate via-dark-slate/20 to-transparent"></div>
+        <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-[11px] font-bold shadow-md">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyber-blue animate-pulse"></span>
+          <span>CAPABILITY // 03</span>
+        </div>
+        <div class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-navy-deep/90 backdrop-blur-md border border-rich-gold/40 flex items-center justify-center text-rich-gold shadow-md">
+          <span class="material-symbols-outlined text-[18px]">rotate_right</span>
+        </div>
+      </div>
+      <div class="p-space-md flex flex-col justify-between flex-1">
+        <div>
+          <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-1 leading-tight">Ultra Precision Grinding</h3>
+          <p class="font-body-sm text-soft-gray/80 text-xs leading-relaxed line-clamp-2">
+            Flatness and parallelism ground across mold plates to prevent flash generation on high-tonnage presses.
+          </p>
+        </div>
+        <div class="pt-space-xs border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
+          <div class="flex flex-col">
+            <span class="text-[10px] text-soft-gray/60 uppercase">PARALLELISM</span>
+            <span class="text-cyber-blue font-bold text-xs">&lt; 0.002 mm</span>
+          </div>
+          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/80 px-2.5 py-1 rounded border border-rich-gold/30">
+            <span>Hover to Flip</span>
+            <span class="material-symbols-outlined text-[14px]">flip_camera_android</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- BACK FACE -->
+    <div class="flip-card-back bg-gradient-to-b from-dark-slate to-navy-surface border border-cyber-blue/40 p-space-lg flex flex-col justify-between shadow-2xl">
+      <div>
+        <div class="flex items-center justify-between mb-space-sm">
+          <div class="w-10 h-10 rounded-lg bg-navy-deep border border-cyber-blue/40 flex items-center justify-center text-cyber-blue shadow">
+            <span class="material-symbols-outlined text-[22px]">rotate_right</span>
+          </div>
+          <span class="font-data-mono text-label-caps text-cyber-blue font-bold">CAPABILITY // 03</span>
+        </div>
+        <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-space-xs">Ultra Precision Grinding</h3>
+        <p class="font-body-sm text-soft-gray/90 text-xs leading-relaxed mb-space-md">
+          Flatness and parallelism ground across mold plates to prevent flash generation on high-tonnage injection presses.
+        </p>
+        <div class="space-y-1.5 font-data-mono text-[11px] bg-navy-deep/90 border border-rich-gold/25 p-2.5 rounded text-slate-200">
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">FLATNESS TOLERANCE</span>
+            <span class="text-white font-bold">0.0015 mm</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">SURFACE PARALLELISM</span>
+            <span class="text-cyber-blue font-bold">&lt; 0.002 mm</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">WHEEL TECHNOLOGY</span>
+            <span class="text-rich-gold font-bold">CBN &amp; Diamond</span>
+          </div>
+        </div>
+      </div>
+      <div class="font-data-mono text-label-caps text-slate-300 bg-navy-deep/90 border border-rich-gold/30 p-2.5 rounded flex justify-between items-center">
+        <span class="font-bold text-slate-400">Parallelism</span>
+        <span class="text-cyber-blue font-bold text-sm">&lt; 0.002 mm</span>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- Card 4: Micro & Multi-Cavity -->
+<div class="flip-card h-[430px] w-full group cursor-pointer">
+  <div class="flip-card-inner">
+    <!-- FRONT FACE -->
+    <div class="flip-card-front bg-dark-slate border border-rich-gold/30 flex flex-col justify-between shadow-xl">
+      <div class="relative w-full h-52 overflow-hidden bg-navy-deep">
+        <img src="/images/snapshot-micro-cavity.jpg" alt="16-Cavity Precision Injection Mold Tooling" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-slate via-dark-slate/20 to-transparent"></div>
+        <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-[11px] font-bold shadow-md">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyber-blue animate-pulse"></span>
+          <span>CAPABILITY // 04</span>
+        </div>
+        <div class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-navy-deep/90 backdrop-blur-md border border-rich-gold/40 flex items-center justify-center text-rich-gold shadow-md">
+          <span class="material-symbols-outlined text-[18px]">grid_view</span>
+        </div>
+      </div>
+      <div class="p-space-md flex flex-col justify-between flex-1">
+        <div>
+          <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-1 leading-tight">Micro &amp; Multi-Cavity</h3>
+          <p class="font-body-sm text-soft-gray/80 text-xs leading-relaxed line-clamp-2">
+            High-volume multi-cavity hot-runner systems engineered for balanced runner distribution.
+          </p>
+        </div>
+        <div class="pt-space-xs border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
+          <div class="flex flex-col">
+            <span class="text-[10px] text-soft-gray/60 uppercase">CAVITATION</span>
+            <span class="text-cyber-blue font-bold text-xs">2 to 32 Cavities</span>
+          </div>
+          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/80 px-2.5 py-1 rounded border border-rich-gold/30">
+            <span>Hover to Flip</span>
+            <span class="material-symbols-outlined text-[14px]">flip_camera_android</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- BACK FACE -->
+    <div class="flip-card-back bg-gradient-to-b from-dark-slate to-navy-surface border border-cyber-blue/40 p-space-lg flex flex-col justify-between shadow-2xl">
+      <div>
+        <div class="flex items-center justify-between mb-space-sm">
+          <div class="w-10 h-10 rounded-lg bg-navy-deep border border-cyber-blue/40 flex items-center justify-center text-cyber-blue shadow">
+            <span class="material-symbols-outlined text-[22px]">grid_view</span>
+          </div>
+          <span class="font-data-mono text-label-caps text-cyber-blue font-bold">CAPABILITY // 04</span>
+        </div>
+        <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-space-xs">Micro &amp; Multi-Cavity</h3>
+        <p class="font-body-sm text-soft-gray/90 text-xs leading-relaxed mb-space-md">
+          High-volume multi-cavity hot-runner systems engineered for balanced runner distribution and short cycle durations.
+        </p>
+        <div class="space-y-1.5 font-data-mono text-[11px] bg-navy-deep/90 border border-rich-gold/25 p-2.5 rounded text-slate-200">
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">CAVITY BALANCE</span>
+            <span class="text-white font-bold">± 0.2% Sync</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">HOT RUNNER</span>
+            <span class="text-cyber-blue font-bold">Valve Gate Type</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">SUB-GATE ORIFICE</span>
+            <span class="text-rich-gold font-bold">Ø 0.40 mm Sub-Gate</span>
+          </div>
+        </div>
+      </div>
+      <div class="font-data-mono text-label-caps text-slate-300 bg-navy-deep/90 border border-rich-gold/30 p-2.5 rounded flex justify-between items-center">
+        <span class="font-bold text-slate-400">Cavitation</span>
+        <span class="text-cyber-blue font-bold text-sm">2 to 32 Cavities</span>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- Spec 2: Micro EDM & Wire Cut -->
-<div class="card-tech-gold p-space-lg rounded-xl flex flex-col justify-between">
-<div>
-<div class="w-12 h-12 rounded-lg bg-navy-deep/80 border border-cyber-blue/30 flex items-center justify-center text-cyber-blue mb-space-md">
-<span class="material-symbols-outlined text-[26px]">electric_bolt</span>
-</div>
-<span class="font-label-caps text-label-caps text-cyber-blue">CAPABILITY // 02</span>
-<h3 class="font-heading-gold text-headline-sm text-rich-gold mt-1 mb-space-xs font-semibold">CNC Wire EDM &amp; Spark</h3>
-<p class="font-body-sm text-body-sm text-soft-gray/80 leading-relaxed mb-space-md">
-              Sub-micron spark erosion for deep ribs, fine gate pins, hardened core slides, and intricate medical micro-shutoffs.
-            </p>
-</div>
-<div class="font-data-mono text-label-caps text-slate-300 bg-navy-deep/70 border border-rich-gold/20 p-2 rounded flex justify-between">
-<span>Surface Finish</span>
-<span class="text-cyber-blue font-bold">Ra 0.2 μm</span>
-</div>
-</div>
-<!-- Spec 3: Surface & Cylindrical Grinding -->
-<div class="card-tech-gold p-space-lg rounded-xl flex flex-col justify-between">
-<div>
-<div class="w-12 h-12 rounded-lg bg-navy-deep/80 border border-cyber-blue/30 flex items-center justify-center text-cyber-blue mb-space-md">
-<span class="material-symbols-outlined text-[26px]">rotate_right</span>
-</div>
-<span class="font-label-caps text-label-caps text-cyber-blue">CAPABILITY // 03</span>
-<h3 class="font-heading-gold text-headline-sm text-rich-gold mt-1 mb-space-xs font-semibold">Ultra Precision Grinding</h3>
-<p class="font-body-sm text-body-sm text-soft-gray/80 leading-relaxed mb-space-md">
-              Flatness and parallelism ground across mold plates to prevent flash generation on high-tonnage injection presses.
-            </p>
-</div>
-<div class="font-data-mono text-label-caps text-slate-300 bg-navy-deep/70 border border-rich-gold/20 p-2 rounded flex justify-between">
-<span>Parallelism</span>
-<span class="text-cyber-blue font-bold">&lt; 0.002 mm</span>
-</div>
-</div>
-<!-- Spec 4: Micro-Molding & Multi-Cavity -->
-<div class="card-tech-gold p-space-lg rounded-xl flex flex-col justify-between">
-<div>
-<div class="w-12 h-12 rounded-lg bg-navy-deep/80 border border-cyber-blue/30 flex items-center justify-center text-cyber-blue mb-space-md">
-<span class="material-symbols-outlined text-[26px]">grid_view</span>
-</div>
-<span class="font-label-caps text-label-caps text-cyber-blue">CAPABILITY // 04</span>
-<h3 class="font-heading-gold text-headline-sm text-rich-gold mt-1 mb-space-xs font-semibold">Micro &amp; Multi-Cavity</h3>
-<p class="font-body-sm text-body-sm text-soft-gray/80 leading-relaxed mb-space-md">
-              High-volume multi-cavity hot-runner systems engineered for balanced runner distribution and short cycle durations.
-            </p>
-</div>
-<div class="font-data-mono text-label-caps text-slate-300 bg-navy-deep/70 border border-rich-gold/20 p-2 rounded flex justify-between">
-<span>Cavitation</span>
-<span class="text-cyber-blue font-bold">2 to 32 Cavities</span>
-</div>
-</div>
+
 </div>
 <!-- Live Inspection Metrology Card -->
 <div class="mt-space-xl bg-dark-slate border border-rich-gold/30 text-soft-gray p-space-xl rounded-xl shadow-lg flex flex-col lg:flex-row items-center justify-between gap-space-lg">
@@ -532,5 +749,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </div>
 </div>
 </section>
+
+<script>
+  // Touch / click support for 3D flip cards
+  document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', () => {
+      if (window.matchMedia('(hover: none)').matches) {
+        card.classList.toggle('is-flipped');
+      }
+    });
+  });
+</script>
 
 </BaseLayout>
