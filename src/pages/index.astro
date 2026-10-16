@@ -294,14 +294,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </div>
 </section>
 <!-- CAPABILITIES SNAPSHOT MATRIX -->
-<section class="w-full bg-navy-deep py-space-3xl text-soft-gray border-b border-rich-gold/20">
+<section class="w-full bg-navy-deep py-space-2xl text-soft-gray border-b border-rich-gold/20">
 <div class="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20">
 <!-- Section Title -->
-<div class="mb-space-2xl text-center max-w-2xl mx-auto">
+<div class="mb-space-xl text-center max-w-3xl mx-auto">
 <span class="font-label-caps text-label-caps text-cyber-blue uppercase tracking-widest block mb-space-xs font-semibold">
           TOOLROOM INFRASTRUCTURE
         </span>
-<h2 class="font-heading-gold text-headline-lg text-rich-gold mb-space-sm font-bold">
+<h2 class="font-heading-gold text-headline-lg text-rich-gold mb-space-xs font-bold">
           Precision Tooling &amp; Machining Snapshot
         </h2>
 <p class="font-body-md text-body-md text-soft-gray/80">
@@ -309,14 +309,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </p>
 </div>
 <!-- 4 Pillars Interactive 3D Flip Card Gallery -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8 w-full">
 
 <!-- Card 1: High Speed CNC Milling -->
-<div class="flip-card h-[430px] w-full group cursor-pointer">
+<div class="flip-card h-[450px] w-full group cursor-pointer">
   <div class="flip-card-inner">
-    <!-- FRONT FACE: High-Res Image, Capability Badge, Title & Key Spec -->
+    <!-- FRONT FACE: High-Res Image, Capability Badge, Title, Feature Chips & Spec -->
     <div class="flip-card-front bg-dark-slate border border-rich-gold/30 flex flex-col justify-between shadow-xl">
-      <div class="relative w-full h-52 overflow-hidden bg-navy-deep">
+      <div class="relative w-full h-56 overflow-hidden bg-navy-deep shrink-0">
         <img src="/images/snapshot-cnc-milling.jpg" alt="Makino High Speed CNC Milling Machine" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
         <div class="absolute inset-0 bg-gradient-to-t from-dark-slate via-dark-slate/20 to-transparent"></div>
         <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-[11px] font-bold shadow-md">
@@ -330,16 +330,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="p-space-md flex flex-col justify-between flex-1">
         <div>
           <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-1 leading-tight">High-Speed CNC Milling</h3>
-          <p class="font-body-sm text-soft-gray/80 text-xs leading-relaxed line-clamp-2">
+          <p class="font-body-sm text-soft-gray/85 text-xs leading-relaxed mb-2.5">
             Makino VMC high-rigidity spindles reaching 20,000 RPM for mirror cavity finishes.
           </p>
+          <div class="flex flex-wrap gap-1.5 font-data-mono text-[10px]">
+            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-cyber-blue font-semibold">Makino V33i</span>
+            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-rich-gold/25 text-rich-gold font-semibold">20k RPM Spindle</span>
+            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-white">SPI A-1 Mirror</span>
+          </div>
         </div>
-        <div class="pt-space-xs border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
+        <div class="pt-2.5 border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
           <div class="flex flex-col">
             <span class="text-[10px] text-soft-gray/60 uppercase">ACCURACY</span>
             <span class="text-cyber-blue font-bold text-xs">± 0.003 mm</span>
           </div>
-          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/80 px-2.5 py-1 rounded border border-rich-gold/30">
+          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/90 px-2.5 py-1 rounded border border-rich-gold/30 shadow-sm">
             <span>Hover to Flip</span>
             <span class="material-symbols-outlined text-[14px]">flip_camera_android</span>
           </span>
@@ -370,7 +375,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <div class="flex justify-between">
             <span class="text-soft-gray/70">CAVITY FINISH</span>
-            <span class="text-rich-gold font-bold">SPI A-1 Mirror</span>
+            <span class="text-rich-gold font-bold">SPI A-1 Optical Mirror</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">TOOL STEEL</span>
+            <span class="text-white font-bold">Stavax ESR / H13</span>
           </div>
         </div>
       </div>
@@ -383,11 +392,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </div>
 
 <!-- Card 2: CNC Wire EDM & Spark -->
-<div class="flip-card h-[430px] w-full group cursor-pointer">
+<div class="flip-card h-[450px] w-full group cursor-pointer">
   <div class="flip-card-inner">
     <!-- FRONT FACE -->
     <div class="flip-card-front bg-dark-slate border border-rich-gold/30 flex flex-col justify-between shadow-xl">
-      <div class="relative w-full h-52 overflow-hidden bg-navy-deep">
+      <div class="relative w-full h-56 overflow-hidden bg-navy-deep shrink-0">
         <img src="/images/snapshot-wire-edm.jpg" alt="CNC Wire EDM Spark Erosion Machine" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
         <div class="absolute inset-0 bg-gradient-to-t from-dark-slate via-dark-slate/20 to-transparent"></div>
         <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-[11px] font-bold shadow-md">
@@ -401,16 +410,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="p-space-md flex flex-col justify-between flex-1">
         <div>
           <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-1 leading-tight">CNC Wire EDM &amp; Spark</h3>
-          <p class="font-body-sm text-soft-gray/80 text-xs leading-relaxed line-clamp-2">
+          <p class="font-body-sm text-soft-gray/85 text-xs leading-relaxed mb-2.5">
             Sub-micron spark erosion for deep ribs, fine gate pins, and medical micro-shutoffs.
           </p>
+          <div class="flex flex-wrap gap-1.5 font-data-mono text-[10px]">
+            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-cyber-blue font-semibold">Sub-Micron Gap</span>
+            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-rich-gold/25 text-rich-gold font-semibold">Ø 0.10mm Wire</span>
+            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-white">Intricate Ribs</span>
+          </div>
         </div>
-        <div class="pt-space-xs border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
+        <div class="pt-2.5 border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
           <div class="flex flex-col">
             <span class="text-[10px] text-soft-gray/60 uppercase">SURFACE FINISH</span>
             <span class="text-cyber-blue font-bold text-xs">Ra 0.2 μm</span>
           </div>
-          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/80 px-2.5 py-1 rounded border border-rich-gold/30">
+          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/90 px-2.5 py-1 rounded border border-rich-gold/30 shadow-sm">
             <span>Hover to Flip</span>
             <span class="material-symbols-outlined text-[14px]">flip_camera_android</span>
           </span>
@@ -443,6 +457,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <span class="text-soft-gray/70">DIELECTRIC FLUID</span>
             <span class="text-rich-gold font-bold">Deionized Chilled</span>
           </div>
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">BURR TOLERANCE</span>
+            <span class="text-white font-bold">Zero-Burr Shutoff</span>
+          </div>
         </div>
       </div>
       <div class="font-data-mono text-label-caps text-slate-300 bg-navy-deep/90 border border-rich-gold/30 p-2.5 rounded flex justify-between items-center">
@@ -454,11 +472,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </div>
 
 <!-- Card 3: Ultra Precision Grinding -->
-<div class="flip-card h-[430px] w-full group cursor-pointer">
+<div class="flip-card h-[450px] w-full group cursor-pointer">
   <div class="flip-card-inner">
     <!-- FRONT FACE -->
     <div class="flip-card-front bg-dark-slate border border-rich-gold/30 flex flex-col justify-between shadow-xl">
-      <div class="relative w-full h-52 overflow-hidden bg-navy-deep">
+      <div class="relative w-full h-56 overflow-hidden bg-navy-deep shrink-0">
         <img src="/images/snapshot-precision-grinding.jpg" alt="Ultra Precision Surface Grinding Machine" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
         <div class="absolute inset-0 bg-gradient-to-t from-dark-slate via-dark-slate/20 to-transparent"></div>
         <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-[11px] font-bold shadow-md">
@@ -472,16 +490,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="p-space-md flex flex-col justify-between flex-1">
         <div>
           <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-1 leading-tight">Ultra Precision Grinding</h3>
-          <p class="font-body-sm text-soft-gray/80 text-xs leading-relaxed line-clamp-2">
+          <p class="font-body-sm text-soft-gray/85 text-xs leading-relaxed mb-2.5">
             Flatness and parallelism ground across mold plates to prevent flash generation on high-tonnage presses.
           </p>
+          <div class="flex flex-wrap gap-1.5 font-data-mono text-[10px]">
+            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-cyber-blue font-semibold">Flatness: 0.0015mm</span>
+            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-rich-gold/25 text-rich-gold font-semibold">CBN &amp; Diamond</span>
+            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-white">Zero-Flash Line</span>
+          </div>
         </div>
-        <div class="pt-space-xs border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
+        <div class="pt-2.5 border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
           <div class="flex flex-col">
             <span class="text-[10px] text-soft-gray/60 uppercase">PARALLELISM</span>
             <span class="text-cyber-blue font-bold text-xs">&lt; 0.002 mm</span>
           </div>
-          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/80 px-2.5 py-1 rounded border border-rich-gold/30">
+          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/90 px-2.5 py-1 rounded border border-rich-gold/30 shadow-sm">
             <span>Hover to Flip</span>
             <span class="material-symbols-outlined text-[14px]">flip_camera_android</span>
           </span>
@@ -514,6 +537,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <span class="text-soft-gray/70">WHEEL TECHNOLOGY</span>
             <span class="text-rich-gold font-bold">CBN &amp; Diamond</span>
           </div>
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">PLATE CAPACITY</span>
+            <span class="text-white font-bold">800 x 600 mm</span>
+          </div>
         </div>
       </div>
       <div class="font-data-mono text-label-caps text-slate-300 bg-navy-deep/90 border border-rich-gold/30 p-2.5 rounded flex justify-between items-center">
@@ -525,11 +552,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </div>
 
 <!-- Card 4: Micro & Multi-Cavity -->
-<div class="flip-card h-[430px] w-full group cursor-pointer">
+<div class="flip-card h-[450px] w-full group cursor-pointer">
   <div class="flip-card-inner">
     <!-- FRONT FACE -->
     <div class="flip-card-front bg-dark-slate border border-rich-gold/30 flex flex-col justify-between shadow-xl">
-      <div class="relative w-full h-52 overflow-hidden bg-navy-deep">
+      <div class="relative w-full h-56 overflow-hidden bg-navy-deep shrink-0">
         <img src="/images/snapshot-micro-cavity.jpg" alt="16-Cavity Precision Injection Mold Tooling" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
         <div class="absolute inset-0 bg-gradient-to-t from-dark-slate via-dark-slate/20 to-transparent"></div>
         <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-[11px] font-bold shadow-md">
@@ -543,16 +570,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="p-space-md flex flex-col justify-between flex-1">
         <div>
           <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-1 leading-tight">Micro &amp; Multi-Cavity</h3>
-          <p class="font-body-sm text-soft-gray/80 text-xs leading-relaxed line-clamp-2">
+          <p class="font-body-sm text-soft-gray/85 text-xs leading-relaxed mb-2.5">
             High-volume multi-cavity hot-runner systems engineered for balanced runner distribution.
           </p>
+          <div class="flex flex-wrap gap-1.5 font-data-mono text-[10px]">
+            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-cyber-blue font-semibold">2 to 32 Cavities</span>
+            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-rich-gold/25 text-rich-gold font-semibold">Valve Gating</span>
+            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-white">Stavax 54 HRC</span>
+          </div>
         </div>
-        <div class="pt-space-xs border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
+        <div class="pt-2.5 border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
           <div class="flex flex-col">
             <span class="text-[10px] text-soft-gray/60 uppercase">CAVITATION</span>
             <span class="text-cyber-blue font-bold text-xs">2 to 32 Cavities</span>
           </div>
-          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/80 px-2.5 py-1 rounded border border-rich-gold/30">
+          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/90 px-2.5 py-1 rounded border border-rich-gold/30 shadow-sm">
             <span>Hover to Flip</span>
             <span class="material-symbols-outlined text-[14px]">flip_camera_android</span>
           </span>
@@ -584,6 +616,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="flex justify-between">
             <span class="text-soft-gray/70">SUB-GATE ORIFICE</span>
             <span class="text-rich-gold font-bold">Ø 0.40 mm Sub-Gate</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-soft-gray/70">CORE HARDNESS</span>
+            <span class="text-white font-bold">54 HRC Hardened</span>
           </div>
         </div>
       </div>
