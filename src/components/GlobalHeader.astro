@@ -17,26 +17,26 @@ const navLinks = [
 <header class="fixed top-0 w-full z-50 shadow-[0_1px_8px_rgba(0,0,0,0.06)]">
   <!-- Top Info Bar -->
   <div class="bg-navy-deep text-slate-100">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-9 flex items-center justify-between font-data-mono text-body-sm">
+    <div class="max-w-[1680px] w-full mx-auto px-6 sm:px-10 lg:px-14 xl:px-20 h-9 flex items-center justify-between font-data-mono text-body-sm">
       <div class="flex items-center gap-space-lg">
-        <a class="flex items-center gap-space-xs text-slate-400 hover:text-electric-cyan transition-colors" href="tel:+919176729970">
-          <span class="material-symbols-outlined text-[14px] text-precision-teal">call</span>
+        <a class="flex items-center gap-space-xs text-soft-gray/90 hover:text-cyber-blue transition-colors" href="tel:+919176729970">
+          <span class="material-symbols-outlined text-[14px] text-cyber-blue">call</span>
           <span>+91 9176729970</span>
         </a>
-        <span class="text-slate-700 hidden sm:inline">|</span>
-        <a class="hidden sm:flex items-center gap-space-xs text-slate-400 hover:text-electric-cyan transition-colors" href="mailto:Tripowermouldtec@gmail.com">
-          <span class="material-symbols-outlined text-[14px] text-precision-teal">mail</span>
+        <span class="text-rich-gold/40 hidden sm:inline">|</span>
+        <a class="hidden sm:flex items-center gap-space-xs text-soft-gray/90 hover:text-cyber-blue transition-colors" href="mailto:Tripowermouldtec@gmail.com">
+          <span class="material-symbols-outlined text-[14px] text-cyber-blue">mail</span>
           <span>Tripowermouldtec@gmail.com</span>
         </a>
       </div>
       <div class="flex items-center gap-space-md">
-        <span class="text-slate-400 font-label-caps text-label-caps">CHENNAI, INDIA</span>
+        <span class="text-soft-gray/90 font-data-mono text-label-caps">CHENNAI, INDIA</span>
       </div>
     </div>
   </div>
   <!-- Main Navigation -->
   <div class="bg-navy-surface/95 backdrop-blur-xl border-b border-navy-card">
-    <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+    <div class="h-20 max-w-[1680px] w-full mx-auto px-6 sm:px-10 lg:px-14 xl:px-20 flex items-center justify-between">
       <!-- Logo -->
       <a href="/" class="flex items-center group py-1" aria-label="Tripower Mould Tech Home">
         <img
@@ -46,12 +46,12 @@ const navLinks = [
         />
       </a>
       <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-space-xl h-20" data-active-classes="text-electric-cyan border-b-2 border-electric-cyan font-semibold">
+      <nav class="hidden lg:flex items-center gap-space-xl h-20" data-active-classes="text-cyber-blue border-b-2 border-cyber-blue font-semibold">
         {navLinks.map((link) => (
           <a
             class={currentPage === link.page
-              ? 'transition-colors py-2 text-electric-cyan border-b-2 border-electric-cyan font-semibold'
-              : 'text-slate-400 hover:text-white transition-colors py-2 font-body-md text-body-md'}
+              ? 'transition-colors py-2 text-cyber-blue border-b-2 border-cyber-blue font-semibold'
+              : 'text-soft-gray/90 hover:text-rich-gold transition-colors py-2 font-body-md text-body-md'}
             href={link.href}
             aria-current={currentPage === link.page ? 'page' : undefined}
           >
@@ -61,7 +61,7 @@ const navLinks = [
       </nav>
       <!-- Right Actions -->
       <div class="flex items-center gap-space-md">
-        <a class="hidden sm:inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm bg-precision-teal hover:bg-electric-cyan text-primary font-headline-sm text-body-sm font-semibold rounded shadow transition-colors" href="/rfq">
+        <a class="hidden sm:inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm btn-cyber-blue font-headline-sm text-body-sm rounded shadow transition-all duration-200" href="/rfq">
           <span class="material-symbols-outlined text-[16px]">request_quote</span>
           <span>RFQ Portal</span>
         </a>
