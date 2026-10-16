@@ -64,65 +64,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <h2 class="font-headline-md text-headline-md text-white">Verified Tooling Deployments</h2>
 </div>
 <!-- Filter Buttons Tabbed Control -->
-<div class="flex flex-wrap items-center gap-space-xs bg-surface-container p-1 rounded" id="portfolio-filters">
-<button class="filter-btn px-space-md py-space-xs rounded font-headline-sm text-body-sm text-white bg-navy-surface shadow-sm transition-all" data-filter="all">All Projects</button>
-<button class="filter-btn px-space-md py-space-xs rounded font-headline-sm text-body-sm text-white hover:text-cyber-blue transition-all" data-filter="medical">Medical Devices</button>
-<button class="filter-btn px-space-md py-space-xs rounded font-headline-sm text-body-sm text-white hover:text-cyber-blue transition-all" data-filter="automotive">Automotive</button>
-<button class="filter-btn px-space-md py-space-xs rounded font-headline-sm text-body-sm text-white hover:text-cyber-blue transition-all" data-filter="overmolding">Cable Overmolding</button>
-<button class="filter-btn px-space-md py-space-xs rounded font-headline-sm text-body-sm text-white hover:text-cyber-blue transition-all" data-filter="die-cast">Packaging &amp; Die-Cast</button>
+<div class="flex flex-wrap items-center gap-space-xs bg-navy-card/90 p-1.5 rounded-lg border border-rich-gold/25 shadow-md" id="portfolio-filters">
+<button class="filter-btn px-4 py-2 rounded-md font-rajdhani text-[14px] uppercase tracking-wider font-bold bg-cyber-blue text-navy-deep shadow-md transition-all cursor-pointer" data-filter="all">All Projects</button>
+<button class="filter-btn px-4 py-2 rounded-md font-rajdhani text-[14px] uppercase tracking-wider font-semibold text-soft-gray/80 hover:text-white hover:bg-navy-surface transition-all cursor-pointer" data-filter="medical">Medical Devices</button>
+<button class="filter-btn px-4 py-2 rounded-md font-rajdhani text-[14px] uppercase tracking-wider font-semibold text-soft-gray/80 hover:text-white hover:bg-navy-surface transition-all cursor-pointer" data-filter="automotive">Automotive</button>
+<button class="filter-btn px-4 py-2 rounded-md font-rajdhani text-[14px] uppercase tracking-wider font-semibold text-soft-gray/80 hover:text-white hover:bg-navy-surface transition-all cursor-pointer" data-filter="overmolding">Cable Overmolding</button>
+<button class="filter-btn px-4 py-2 rounded-md font-rajdhani text-[14px] uppercase tracking-wider font-semibold text-soft-gray/80 hover:text-white hover:bg-navy-surface transition-all cursor-pointer" data-filter="die-cast">Packaging &amp; Die-Cast</button>
 </div>
 </div>
-<!-- Feature Visual Highlight: Multi-Cavity & Metrology Table Bench (User Imagery) -->
-<div class="w-full bg-dark-slate border border-rich-gold/25 rounded-xl shadow-md overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
-<div class="lg:col-span-7 relative h-80 lg:h-auto min-h-[360px] bg-navy-deep overflow-hidden">
-<img alt="Medical Tooling Inspection Stage and Overmolding Samples" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFk_q6Yy_AZkd4XM2fBwDzfj0Er9pI9zMmNFbjPwYaRvmWkyRSycNiZJmzpAnjuIOn9tb1-5tc8w7OCLe2rcqTUYDjc6jJeOcFyYsVXlkKW6VazrQeCihYVrO_qanFAIWCwulq48f0z8Q64_UW-UBbMO6Y_vwfQtgipoKGQ1JXoEi38GMX8kbhhhAWRxyBaNPBRRY5f5nESCWpU15iyBoE4LzHeOBUKNS-RKtFxj3R">
-<div class="absolute bottom-3 left-3 bg-navy-deep/85 backdrop-blur-md px-3 py-1.5 rounded flex items-center gap-2 text-white">
-<span class="w-2 h-2 rounded-full bg-status-success"></span>
-<span class="font-data-mono text-label-caps text-electric-cyan">INSPECTION LAB D-3 BENCH // RUN #4028</span>
-</div>
-</div>
-<div class="lg:col-span-5 p-space-xl flex flex-col justify-between bg-dark-slate border border-rich-gold/25">
-<div>
-<div class="flex items-center justify-between mb-space-sm">
-<span class="font-label-caps text-label-caps text-machined-gold">REFERENCE CASE: MED-0849</span>
-<span class="bg-surface-container px-2 py-0.5 rounded font-data-mono text-[11px] text-secondary">CLASS 100K CLEANROOM TOOL</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-white mb-space-xs">Dual-Cavity Micro-Fluidic Core &amp; Vertical Harness Overmold</h3>
-<p class="font-body-md text-body-md text-soft-gray/85 mb-space-md leading-relaxed">
-              Synchronized production layout featuring hardened Stavax ESR steel cavities (54 HRC) coupled with dual-station shuttle overmold tooling for medical diagnostics, zero flash at &lt;0.01mm tolerance.
-            </p>
-<div class="grid grid-cols-2 gap-space-sm font-data-mono text-body-sm text-white mb-space-md bg-navy-deep/80 border border-rich-gold/15 p-space-md rounded">
-<div>
-<span class="font-label-caps text-[10px] text-slate-400 block">CAVITY SURFACE</span>
-<span class="font-bold text-white">SPI A-1 Optical Mirror</span>
-</div>
-<div>
-<span class="font-label-caps text-[10px] text-slate-400 block">RESIN COMPATIBILITY</span>
-<span class="font-bold text-white">Medical Polycarbonate / TPU</span>
-</div>
-<div>
-<span class="font-label-caps text-[10px] text-slate-400 block">CYCLE TARGET</span>
-<span class="font-bold text-white">11.8 Seconds</span>
-</div>
-<div>
-<span class="font-label-caps text-[10px] text-slate-400 block">TOTAL CAVITATION</span>
-<span class="font-bold text-white">8 + 8 Sub-Gates</span>
-</div>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-sm">
-<div class="flex items-center gap-space-xs text-precision-teal">
-<span class="material-symbols-outlined text-[18px]">verified</span>
-<span class="font-data-mono text-label-caps">ZEISS CONTURA VALIDATED</span>
-</div>
-<button class="px-space-md py-space-xs bg-navy-surface hover:bg-precision-teal text-white hover:text-navy-deep font-headline-sm text-body-sm rounded transition-colors inline-flex items-center gap-1">
-<span>View Full Report</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Bento-Style Project Cards Gallery -->
+<!-- Bento-Style Project Cards Gallery (Immediately Under Switching Tabs) -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="portfolio-grid">
 <!-- Project 1: Medical Micro-Molded Parts -->
 <div class="portfolio-item group bg-dark-slate border border-rich-gold/25 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="medical">
@@ -329,6 +279,58 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </div>
 </div>
 </div>
+
+<!-- Feature Visual Highlight: Multi-Cavity & Metrology Table Bench (Moved Down Below Categories) -->
+<div id="featured-benchmark" class="w-full bg-dark-slate border border-rich-gold/30 rounded-xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 mt-space-lg transition-all duration-300">
+<div class="lg:col-span-7 relative h-80 lg:h-auto min-h-[360px] bg-navy-deep overflow-hidden">
+<img alt="Medical Tooling Inspection Stage and Overmolding Samples" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFk_q6Yy_AZkd4XM2fBwDzfj0Er9pI9zMmNFbjPwYaRvmWkyRSycNiZJmzpAnjuIOn9tb1-5tc8w7OCLe2rcqTUYDjc6jJeOcFyYsVXlkKW6VazrQeCihYVrO_qanFAIWCwulq48f0z8Q64_UW-UBbMO6Y_vwfQtgipoKGQ1JXoEi38GMX8kbhhhAWRxyBaNPBRRY5f5nESCWpU15iyBoE4LzHeOBUKNS-RKtFxj3R">
+<div class="absolute bottom-3 left-3 bg-navy-deep/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-cyber-blue/30 flex items-center gap-2 text-white">
+<span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span>
+<span class="font-data-mono text-label-caps text-cyber-blue font-bold">INSPECTION LAB D-3 BENCH // RUN #4028</span>
+</div>
+</div>
+<div class="lg:col-span-5 p-space-xl flex flex-col justify-between bg-dark-slate border-t lg:border-t-0 lg:border-l border-rich-gold/25">
+<div>
+<div class="flex items-center justify-between mb-space-sm flex-wrap gap-2">
+<span class="font-data-mono text-label-caps text-rich-gold font-bold">FLAGSHIP BENCHMARK: MED-0849</span>
+<span class="bg-navy-surface border border-cyber-blue/30 px-2.5 py-0.5 rounded font-data-mono text-[11px] text-cyber-blue font-bold">CLASS 100K CLEANROOM TOOL</span>
+</div>
+<h3 class="font-heading-gold text-headline-sm text-white font-bold mb-space-xs">Dual-Cavity Micro-Fluidic Core &amp; Vertical Harness Overmold</h3>
+<p class="font-body-md text-body-md text-soft-gray/85 mb-space-md leading-relaxed">
+              Synchronized production layout featuring hardened Stavax ESR steel cavities (54 HRC) coupled with dual-station shuttle overmold tooling for medical diagnostics, zero flash at &lt;0.01mm tolerance.
+            </p>
+<div class="grid grid-cols-2 gap-space-sm font-data-mono text-body-sm text-white mb-space-md bg-navy-deep/80 border border-rich-gold/20 p-space-md rounded-lg">
+<div>
+<span class="font-data-mono text-[10px] text-soft-gray/70 block uppercase">CAVITY SURFACE</span>
+<span class="font-bold text-white">SPI A-1 Optical Mirror</span>
+</div>
+<div>
+<span class="font-data-mono text-[10px] text-soft-gray/70 block uppercase">RESIN COMPATIBILITY</span>
+<span class="font-bold text-white">Medical Polycarbonate / TPU</span>
+</div>
+<div>
+<span class="font-data-mono text-[10px] text-soft-gray/70 block uppercase">CYCLE TARGET</span>
+<span class="font-bold text-cyber-blue">11.8 Seconds</span>
+</div>
+<div>
+<span class="font-data-mono text-[10px] text-soft-gray/70 block uppercase">TOTAL CAVITATION</span>
+<span class="font-bold text-rich-gold">8 + 8 Sub-Gates</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-rich-gold/15 flex-wrap gap-2">
+<div class="flex items-center gap-space-xs text-cyber-blue">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-data-mono text-label-caps font-bold">ZEISS CONTURA VALIDATED</span>
+</div>
+<a href="/rfq" class="btn-cyber-blue px-space-md py-space-xs inline-flex items-center gap-1.5 text-center">
+<span>View Full Report</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+
 </div>
 </section>
 <!-- Technical Machining Capabilities & High-Speed CNC Matrix (Inspired by Floor Image) -->
@@ -572,10 +574,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </section>
 </div>
 <script>
-  // Simple interactive filter tabs logic for client showcase
-  document.addEventListener('DOMContentLoaded', () => {
+  // Interactive filter tabs for deployment showcase
+  function initPortfolioFilters() {
     const filterButtons = document.querySelectorAll('#portfolio-filters .filter-btn');
     const portfolioItems = document.querySelectorAll('#portfolio-grid .portfolio-item');
+    const featuredCard = document.getElementById('featured-benchmark');
 
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -583,13 +586,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         // Toggle active button visuals
         filterButtons.forEach(b => {
-          b.classList.remove('bg-navy-surface', 'text-white', 'shadow-sm');
-          b.classList.add('text-white');
+          b.classList.remove('bg-cyber-blue', 'text-navy-deep', 'font-bold', 'shadow-md');
+          b.classList.add('text-soft-gray/80');
         });
-        btn.classList.add('bg-navy-surface', 'text-white', 'shadow-sm');
-        btn.classList.remove('text-white');
+        btn.classList.add('bg-cyber-blue', 'text-navy-deep', 'font-bold', 'shadow-md');
+        btn.classList.remove('text-soft-gray/80');
 
-        // Filter cards
+        // Filter deployment cards
         portfolioItems.forEach(item => {
           const itemCat = item.getAttribute('data-category');
           if (targetCategory === 'all' || itemCat === targetCategory) {
@@ -598,41 +601,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             item.style.display = 'none';
           }
         });
-      });
-    });
-  });
-</script>
 
-<script>
-  // Simple interactive filter tabs logic for client showcase
-  document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('#portfolio-filters .filter-btn');
-    const portfolioItems = document.querySelectorAll('#portfolio-grid .portfolio-item');
-
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetCategory = btn.getAttribute('data-filter');
-
-        // Toggle active button visuals
-        filterButtons.forEach(b => {
-          b.classList.remove('bg-navy-surface', 'text-white', 'shadow-sm');
-          b.classList.add('text-white');
-        });
-        btn.classList.add('bg-navy-surface', 'text-white', 'shadow-sm');
-        btn.classList.remove('text-white');
-
-        // Filter cards
-        portfolioItems.forEach(item => {
-          const itemCat = item.getAttribute('data-category');
-          if (targetCategory === 'all' || itemCat === targetCategory) {
-            item.style.display = 'flex';
+        // Show benchmark case study for All, Medical, and Overmolding
+        if (featuredCard) {
+          if (targetCategory === 'all' || targetCategory === 'medical' || targetCategory === 'overmolding') {
+            featuredCard.style.display = 'grid';
           } else {
-            item.style.display = 'none';
+            featuredCard.style.display = 'none';
           }
-        });
+        }
       });
     });
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPortfolioFilters);
+  } else {
+    initPortfolioFilters();
+  }
 </script>
 </BaseLayout>
 
