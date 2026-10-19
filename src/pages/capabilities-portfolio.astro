@@ -415,77 +415,80 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           From first billet cut to final multi-shot signoff, our calibrated metrology loop delivers comprehensive GD&amp;T reporting and verified process stability.
         </p>
 </div>
-<!-- Process Stepper Grid -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Step 1 -->
-<div class="bg-dark-slate border border-rich-gold/25 p-space-xl rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
-<div>
-<div class="flex items-center justify-between mb-space-md">
-<span class="font-data-mono text-headline-sm text-precision-teal font-bold">01</span>
-<span class="px-2 py-0.5 rounded font-label-caps text-[10px] bg-surface-container text-soft-gray/80">IN-PROCESS</span>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-white mb-space-xs">In-Process Optical &amp; CMM Inspection</h4>
-<p class="font-body-sm text-body-sm text-soft-gray/85 mb-space-md leading-relaxed">
-              Every critical steel core and cavity insert is laser-scanned and validated against 3D CAD step models on a climate-stabilized Zeiss CMM prior to mold base assembly.
+<!-- Process Feature: 01 In-Process Optical & CMM Inspection (Expanded Full-Width Presentation) -->
+<div class="w-full bg-dark-slate border border-rich-gold/30 rounded-2xl shadow-2xl p-space-xl lg:p-space-2xl relative overflow-hidden">
+  <div class="absolute -right-16 -top-16 w-80 h-80 bg-cyber-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -left-16 -bottom-16 w-80 h-80 bg-rich-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+  
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center relative z-10">
+    <!-- Left Column: Core Overview -->
+    <div class="lg:col-span-6 flex flex-col justify-between space-y-space-md">
+      <div>
+        <div class="flex items-center gap-3 mb-space-sm">
+          <span class="font-data-mono text-headline-lg text-cyber-blue font-bold tracking-tight">01</span>
+          <span class="px-3 py-1 rounded-full font-label-caps text-label-caps bg-navy-surface border border-cyber-blue/30 text-cyber-blue font-bold flex items-center gap-1.5 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-cyber-blue animate-pulse"></span>
+            CORE IN-PROCESS METROLOGY
+          </span>
+        </div>
+        <h3 class="font-heading-gold text-headline-lg text-white font-bold leading-tight mb-space-sm">
+          In-Process Optical &amp; Precision CMM Inspection
+        </h3>
+        <p class="font-body-md text-body-md text-soft-gray/90 leading-relaxed mb-space-lg">
+          Every critical steel core and cavity insert is precision-scanned and validated directly against 3D CAD STEP models on a high-precision Zeiss CMM prior to mold base assembly.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="grid grid-cols-2 gap-space-sm pt-space-xs border-t border-rich-gold/15">
+        <div class="p-space-sm bg-navy-surface/80 rounded-lg border border-rich-gold/20">
+          <div class="font-data-mono text-[11px] text-slate-400 uppercase">Verification Standard</div>
+          <div class="font-data-mono text-body-sm font-bold text-cyber-blue mt-0.5">±0.003 mm Nominal</div>
+        </div>
+        <div class="p-space-sm bg-navy-surface/80 rounded-lg border border-rich-gold/20">
+          <div class="font-data-mono text-[11px] text-slate-400 uppercase">Inspection Stage</div>
+          <div class="font-data-mono text-body-sm font-bold text-rich-gold mt-0.5">Optical &amp; Zeiss CMM</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Verification Deliverables & Audits -->
+    <div class="lg:col-span-6 space-y-space-md">
+      <div class="p-space-md lg:p-space-lg bg-navy-surface/90 border border-rich-gold/25 rounded-xl backdrop-blur-md shadow-md hover:border-cyber-blue/40 transition-colors">
+        <div class="flex items-start gap-space-md">
+          <div class="w-10 h-10 rounded-lg bg-dark-slate border border-cyber-blue/30 flex items-center justify-center text-cyber-blue shrink-0 mt-0.5">
+            <span class="material-symbols-outlined text-[22px]">blur_on</span>
+          </div>
+          <div>
+            <h4 class="font-headline-sm text-body-md text-white font-bold mb-1 flex items-center gap-2">
+              <span>Point Cloud Deviation Analysis</span>
+              <span class="material-symbols-outlined text-[16px] text-precision-teal">verified</span>
+            </h4>
+            <p class="font-body-sm text-body-sm text-soft-gray/80 leading-relaxed">
+              Laser-scanned core and cavity geometry mapped with micron-level color deviation heatmaps against nominal 3D CAD STEP models.
             </p>
-</div>
-<ul class="font-data-mono text-body-sm text-soft-gray/90 space-y-2 pt-space-sm">
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[16px] text-precision-teal">check_circle</span>
-<span>Point cloud deviation analysis</span>
-</li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[16px] text-precision-teal">check_circle</span>
-<span>100% Core concentricity audit</span>
-</li>
-</ul>
-</div>
-<!-- Step 2 -->
-<div class="bg-dark-slate border border-rich-gold/25 p-space-xl rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
-<div>
-<div class="flex items-center justify-between mb-space-md">
-<span class="font-data-mono text-headline-sm text-precision-teal font-bold">02</span>
-<span class="px-2 py-0.5 rounded font-label-caps text-[10px] bg-surface-container text-soft-gray/80">SAMPLING PHASE</span>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-white mb-space-xs">Sample Dimensional &amp; CpK Reporting</h4>
-<p class="font-body-sm text-body-sm text-soft-gray/85 mb-space-md leading-relaxed">
-              T0 and T1 plastic sample parts undergo complete 32-point dimensional analysis, material shrink characterization, and tensile verification against client drawing prints.
+          </div>
+        </div>
+      </div>
+
+      <div class="p-space-md lg:p-space-lg bg-navy-surface/90 border border-rich-gold/25 rounded-xl backdrop-blur-md shadow-md hover:border-cyber-blue/40 transition-colors">
+        <div class="flex items-start gap-space-md">
+          <div class="w-10 h-10 rounded-lg bg-dark-slate border border-cyber-blue/30 flex items-center justify-center text-cyber-blue shrink-0 mt-0.5">
+            <span class="material-symbols-outlined text-[22px]">center_focus_strong</span>
+          </div>
+          <div>
+            <h4 class="font-headline-sm text-body-md text-white font-bold mb-1 flex items-center gap-2">
+              <span>100% Core &amp; Cavity Concentricity Audit</span>
+              <span class="material-symbols-outlined text-[16px] text-precision-teal">verified</span>
+            </h4>
+            <p class="font-body-sm text-body-sm text-soft-gray/80 leading-relaxed">
+              Optical concentricity inspection ensuring exact alignment, zero pin deflection, and micro-tolerance shut-off seal integrity.
             </p>
-</div>
-<ul class="font-data-mono text-body-sm text-soft-gray/90 space-y-2 pt-space-sm">
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[16px] text-precision-teal">check_circle</span>
-<span>AS9102 / PPAP Level 3 documentation</span>
-</li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[16px] text-precision-teal">check_circle</span>
-<span>Micro-CT void and porosity inspection</span>
-</li>
-</ul>
-</div>
-<!-- Step 3 -->
-<div class="bg-dark-slate border border-rich-gold/25 p-space-xl rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
-<div>
-<div class="flex items-center justify-between mb-space-md">
-<span class="font-data-mono text-headline-sm text-machined-gold font-bold">03</span>
-<span class="px-2 py-0.5 rounded font-label-caps text-[10px] bg-surface-container text-machined-gold font-bold">FINAL AUDIT</span>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-white mb-space-xs">Full Trial Run &amp; Plant Sign-Off</h4>
-<p class="font-body-sm text-body-sm text-soft-gray/85 mb-space-md leading-relaxed">
-              A continuous 4-hour uninterrupted dry-cycle and wet-cycle production trial ensures balanced thermal stabilization, smooth part ejection, and zero hydraulic drift.
-            </p>
-</div>
-<ul class="font-data-mono text-body-sm text-soft-gray/90 space-y-2 pt-space-sm">
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[16px] text-machined-gold">check_circle</span>
-<span>Mold maintenance manual &amp; spare spares kit</span>
-</li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[16px] text-machined-gold">check_circle</span>
-<span>Final client buy-off certification</span>
-</li>
-</ul>
-</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- Live Inspection Data Benchmark Table -->
 <div class="bg-dark-slate border border-rich-gold/25 p-space-lg rounded-xl shadow-sm overflow-x-auto">
