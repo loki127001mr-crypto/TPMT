@@ -57,6 +57,7 @@ npm run preview
 
 ## 📖 In-Depth Documentation
 
-For the full architectural breakdown, component hierarchy, design tokens, and developer how-to playbook, see:
+* 👉 **[Custom Domain & GitHub Setup Guide](documentation/CUSTOM_DOMAIN_GITHUB_SETUP_GUIDE.md)**: Full walkthrough of 3rd-party domain linking, DNS records, GitHub Pages, and CI/CD.
+* 👉 **[Domain Quick Setup](documentation/DOMAIN_SETUP.md)**: Quick summary of domain mappings and SSL certificates.
+* 👉 **[Architecture & Developer Manual](../documentation/README.md)**: Full architecture breakdown, component hierarchy, design tokens, and editing manuals.
 
-👉 **[documentation/README.md](../documentation/README.md)** (Full Architecture, Directory Map, and Editing Manuals)
