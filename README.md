@@ -7,6 +7,7 @@ Modular **Astro + Tailwind CSS (v4)** web application for **Tripower Mold Tech**
 ## 🌿 Environment & Port
 
 * **Branch:** `dev` (Active Development)
+* **Live Custom Domain:** **[https://tpmt.work.gd](https://tpmt.work.gd)** *(HTTPS / Automated GitHub Pages)*
 * **Assigned Port:** **`9000`**
 * **Local URL:** [http://localhost:9000/](http://localhost:9000/)
 * **Network URL:** [http://192.168.1.174:9000/](http://192.168.1.174:9000/)
@@ -35,8 +36,9 @@ npm run preview
 
 ## 🌐 Live URLs
 
-* **Local Machine:** [http://localhost:9000/](http://localhost:9000/)
-* **Local Network (LAN):** [http://192.168.1.174:9000/](http://192.168.1.174:9000/)
+* **🌍 Live Production Domain:** **[https://tpmt.work.gd](https://tpmt.work.gd)** *(Free SSL / HTTPS Verified)*
+* **💻 Local Machine:** [http://localhost:9000/](http://localhost:9000/)
+* **📱 Local Network (LAN):** [http://192.168.1.174:9000/](http://192.168.1.174:9000/)
 
 ---
 
