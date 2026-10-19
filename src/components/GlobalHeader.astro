@@ -42,18 +42,18 @@ const navLinks = [
       <a href="/" class="flex items-center group py-1" aria-label="Tripower Mould Tech Home">
         <img
           alt="Tripower Mould Tech"
-          class="h-11 sm:h-16 lg:h-[64px] w-auto max-w-[210px] sm:max-w-none object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+          class="h-12 sm:h-16 lg:h-[68px] xl:h-[72px] w-auto max-w-[220px] sm:max-w-none object-contain transition-transform duration-300 group-hover:scale-[1.02]"
           src="/images/tripower-logo-full.png"
         />
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-space-xl h-20" data-active-classes="text-cyber-blue border-b-2 border-cyber-blue font-bold">
+      <!-- Desktop & Laptop Nav -->
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-7 2xl:gap-space-xl h-20" data-active-classes="text-cyber-blue border-b-2 border-cyber-blue font-bold">
         {navLinks.map((link) => (
           <a
             class={currentPage === link.page
-              ? 'transition-colors py-2 text-cyber-blue border-b-2 border-cyber-blue font-rajdhani text-[14px] uppercase tracking-wider font-bold'
-              : 'text-soft-gray/90 hover:text-rich-gold transition-colors py-2 font-rajdhani text-[14px] uppercase tracking-wider font-semibold'}
+              ? 'transition-colors py-2 text-cyber-blue border-b-2 border-cyber-blue font-rajdhani text-[14px] xl:text-[15px] uppercase tracking-wider font-bold'
+              : 'text-soft-gray/90 hover:text-rich-gold transition-colors py-2 font-rajdhani text-[14px] xl:text-[15px] uppercase tracking-wider font-semibold'}
             href={link.href}
             aria-current={currentPage === link.page ? 'page' : undefined}
           >
@@ -62,10 +62,10 @@ const navLinks = [
         ))}
       </nav>
 
-      <!-- Right Actions (Desktop & Mobile) -->
-      <div class="flex items-center gap-3">
-        <!-- Desktop RFQ Button -->
-        <a class="hidden sm:inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm btn-cyber-blue rounded shadow transition-all duration-200" href="/rfq">
+      <!-- Right Actions (Desktop, Tablet & Mobile) -->
+      <div class="flex items-center gap-3 xl:gap-4">
+        <!-- Desktop / Tablet RFQ Button -->
+        <a class="hidden sm:inline-flex items-center justify-center gap-space-xs px-4 xl:px-5 py-2.5 btn-cyber-blue rounded-lg shadow-md transition-all duration-200 font-rajdhani text-sm font-bold uppercase tracking-wider" href="/rfq">
           <span class="material-symbols-outlined text-[16px]">request_quote</span>
           <span>RFQ Portal</span>
         </a>
