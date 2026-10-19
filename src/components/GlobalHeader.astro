@@ -6,16 +6,16 @@ export interface Props {
 const { currentPage = '' } = Astro.props;
 
 const navLinks = [
-  { href: '/', label: 'Home', page: 'home', icon: 'home' },
-  { href: '/about-us', label: 'About Us', page: 'about-us', icon: 'corporate_fare' },
-  { href: '/services', label: 'Services & D3 Solutions', page: 'services', icon: 'build_circle' },
-  { href: '/capabilities', label: 'Capabilities & Portfolio', page: 'capabilities', icon: 'precision_manufacturing' },
-  { href: '/contact', label: 'Contact Us', page: 'contact', icon: 'support_agent' },
+  { href: '/', label: 'Home', page: 'home' },
+  { href: '/about-us', label: 'About Us', page: 'about-us' },
+  { href: '/services', label: 'Services & D3 Solutions', page: 'services' },
+  { href: '/capabilities', label: 'Capabilities & Portfolio', page: 'capabilities' },
+  { href: '/contact', label: 'Contact Us', page: 'contact' },
 ];
 ---
 
 <header class="fixed top-0 w-full z-50 shadow-[0_1px_8px_rgba(0,0,0,0.06)]">
-  <!-- Top Info Bar (Exact 30edca3 Desktop Size & Spacing) -->
+  <!-- Top Info Bar -->
   <div class="bg-navy-deep text-slate-100">
     <div class="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20 h-9 flex items-center justify-between font-data-mono text-body-sm">
       <div class="flex items-center gap-space-lg">
@@ -34,11 +34,10 @@ const navLinks = [
       </div>
     </div>
   </div>
-  
-  <!-- Main Navigation (Exact 30edca3 Desktop Height, Logo Size & Spacing) -->
+  <!-- Main Navigation -->
   <div class="bg-navy-surface/95 backdrop-blur-xl border-b border-navy-card">
     <div class="h-20 w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20 flex items-center justify-between">
-      <!-- Logo (Exact 30edca3 Desktop Size: h-14 sm:h-16 lg:h-[64px] max-w-[280px]) -->
+      <!-- Logo -->
       <a href="/" class="flex items-center group py-1" aria-label="Tripower Mould Tech Home">
         <img
           alt="Tripower Mould Tech"
@@ -46,8 +45,7 @@ const navLinks = [
           src="/images/tripower-logo-full.png"
         />
       </a>
-
-      <!-- Desktop Nav (Exact 30edca3 Links, Spacing, & Hierarchy) -->
+      <!-- Desktop Nav -->
       <nav class="hidden lg:flex items-center gap-space-xl h-20" data-active-classes="text-cyber-blue border-b-2 border-cyber-blue font-bold">
         {navLinks.map((link) => (
           <a
@@ -61,159 +59,13 @@ const navLinks = [
           </a>
         ))}
       </nav>
-
-      <!-- Right Actions (Desktop RFQ + Mobile Menu Toggle) -->
+      <!-- Right Actions -->
       <div class="flex items-center gap-space-md">
-        <!-- Desktop RFQ Button (Exact 30edca3 Style) -->
         <a class="hidden sm:inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm btn-cyber-blue rounded shadow transition-all duration-200" href="/rfq">
           <span class="material-symbols-outlined text-[16px]">request_quote</span>
           <span>RFQ Portal</span>
         </a>
-
-        <!-- Mobile 3-Line Hamburger Menu Button (Appears ONLY on Mobile Screens) -->
-        <button
-          id="mobile-menu-toggle"
-          type="button"
-          class="lg:hidden flex items-center justify-center w-11 h-11 rounded-lg bg-navy-card border border-rich-gold/30 text-rich-gold hover:text-cyber-blue focus:outline-none transition-all active:scale-95 shadow-md"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-        >
-          <!-- 3-Line Hamburger Icon -->
-          <svg id="hamburger-icon" class="w-6 h-6 stroke-current" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-          <!-- Close X Icon -->
-          <svg id="close-icon" class="w-6 h-6 stroke-current hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Mobile Navigation Drawer Overlay (Active ONLY on Mobile Viewport) -->
-  <div
-    id="mobile-menu-drawer"
-    class="lg:hidden fixed inset-x-0 top-[116px] h-[calc(100dvh-116px)] bg-navy-deep/98 backdrop-blur-2xl border-b border-rich-gold/30 shadow-2xl z-40 transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none overflow-y-auto flex flex-col justify-between"
-  >
-    <div class="px-6 py-6 space-y-2">
-      <div class="text-[11px] font-data-mono uppercase tracking-widest text-slate-400 mb-3 px-2 flex items-center justify-between">
-        <span>NAVIGATION MENU</span>
-        <span class="text-cyber-blue font-bold">TRIPOWER MOLD TECH</span>
-      </div>
-
-      {navLinks.map((link) => (
-        <a
-          href={link.href}
-          class={currentPage === link.page
-            ? "mobile-nav-link flex items-center justify-between px-4 py-3.5 rounded-xl bg-navy-surface border border-cyber-blue/40 text-cyber-blue font-rajdhani text-lg uppercase tracking-wider font-bold shadow-md"
-            : "mobile-nav-link flex items-center justify-between px-4 py-3.5 rounded-xl hover:bg-navy-surface/60 text-soft-gray hover:text-rich-gold font-rajdhani text-lg uppercase tracking-wider font-semibold transition-colors"}
-        >
-          <span class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-[20px] text-precision-teal">{link.icon}</span>
-            <span>{link.label}</span>
-          </span>
-          <span class="material-symbols-outlined text-[18px] text-slate-500">chevron_right</span>
-        </a>
-      ))}
-
-      <!-- Mobile RFQ Portal CTA Button -->
-      <div class="pt-4 mt-2">
-        <a
-          href="/rfq"
-          class="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl btn-cyber-blue font-bold text-center text-navy-deep shadow-lg uppercase tracking-wider font-rajdhani text-base"
-        >
-          <span class="material-symbols-outlined text-[20px]">request_quote</span>
-          <span>RFQ Portal — Instant Quote</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Mobile Drawer Bottom Contact Info -->
-    <div class="px-6 py-5 bg-navy-surface/90 border-t border-rich-gold/20 flex flex-col gap-2 font-data-mono text-xs text-soft-gray/80">
-      <div class="flex items-center justify-between">
-        <span class="text-slate-400">PLANT PHONE</span>
-        <a href="tel:+919176729970" class="text-cyber-blue font-bold hover:underline">+91 9176729970</a>
-      </div>
-      <div class="flex items-center justify-between">
-        <span class="text-slate-400">DIRECT EMAIL</span>
-        <a href="mailto:Tripowermouldtec@gmail.com" class="text-cyber-blue hover:underline">Tripowermouldtec@gmail.com</a>
-      </div>
-      <div class="flex items-center justify-between">
-        <span class="text-slate-400">PLANT LOCATION</span>
-        <span class="text-rich-gold">Thirumudivakkam, Chennai</span>
       </div>
     </div>
   </div>
 </header>
-
-<script is:inline>
-  function initMobileMenu() {
-    const toggleBtn = document.getElementById('mobile-menu-toggle');
-    const drawer = document.getElementById('mobile-menu-drawer');
-    const hamburgerIcon = document.getElementById('hamburger-icon');
-    const closeIcon = document.getElementById('close-icon');
-    if (!toggleBtn || !drawer) return;
-
-    let isOpen = false;
-
-    function openMenu() {
-      isOpen = true;
-      drawer.classList.remove('opacity-0', '-translate-y-4', 'pointer-events-none');
-      drawer.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
-      toggleBtn.setAttribute('aria-expanded', 'true');
-      if (hamburgerIcon) hamburgerIcon.classList.add('hidden');
-      if (closeIcon) closeIcon.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeMenu() {
-      isOpen = false;
-      drawer.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
-      drawer.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
-      toggleBtn.setAttribute('aria-expanded', 'false');
-      if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
-      if (closeIcon) closeIcon.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-
-    toggleBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      if (isOpen) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-    });
-
-    // Close when clicking any nav link inside drawer
-    drawer.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        closeMenu();
-      });
-    });
-
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && isOpen) {
-        closeMenu();
-      }
-    });
-
-    // Close when window resized to desktop
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 1024 && isOpen) {
-        closeMenu();
-      }
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initMobileMenu);
-  } else {
-    initMobileMenu();
-  }
-</script>
