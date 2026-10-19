@@ -15,12 +15,12 @@ const navLinks = [
 ---
 
 <header class="fixed top-0 w-full z-50 shadow-[0_1px_8px_rgba(0,0,0,0.06)]">
-  <!-- Top Info Bar -->
+  <!-- Top Info Bar (Exact 30edca3 Desktop Size & Spacing) -->
   <div class="bg-navy-deep text-slate-100">
-    <div class="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-20 h-9 flex items-center justify-between font-data-mono text-body-sm">
-      <div class="flex items-center gap-2 sm:gap-space-lg">
-        <a class="flex items-center gap-1.5 text-soft-gray/90 hover:text-cyber-blue transition-colors text-xs sm:text-sm" href="tel:+919176729970">
-          <span class="material-symbols-outlined text-[13px] text-cyber-blue">call</span>
+    <div class="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20 h-9 flex items-center justify-between font-data-mono text-body-sm">
+      <div class="flex items-center gap-space-lg">
+        <a class="flex items-center gap-space-xs text-soft-gray/90 hover:text-cyber-blue transition-colors" href="tel:+919176729970">
+          <span class="material-symbols-outlined text-[14px] text-cyber-blue">call</span>
           <span>+91 9176729970</span>
         </a>
         <span class="text-rich-gold/40 hidden sm:inline">|</span>
@@ -35,25 +35,25 @@ const navLinks = [
     </div>
   </div>
   
-  <!-- Main Navigation -->
+  <!-- Main Navigation (Exact 30edca3 Desktop Height, Logo Size & Spacing) -->
   <div class="bg-navy-surface/95 backdrop-blur-xl border-b border-navy-card">
-    <div class="h-16 sm:h-20 w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-20 flex items-center justify-between">
-      <!-- Logo -->
+    <div class="h-20 w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20 flex items-center justify-between">
+      <!-- Logo (Exact 30edca3 Desktop Size: h-14 sm:h-16 lg:h-[64px] max-w-[280px]) -->
       <a href="/" class="flex items-center group py-1" aria-label="Tripower Mould Tech Home">
         <img
           alt="Tripower Mould Tech"
-          class="h-12 sm:h-16 lg:h-[68px] xl:h-[72px] w-auto max-w-[220px] sm:max-w-none object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+          class="h-14 sm:h-16 lg:h-[64px] w-auto max-w-[280px] sm:max-w-none object-contain transition-transform duration-300 group-hover:scale-[1.02]"
           src="/images/tripower-logo-full.png"
         />
       </a>
 
-      <!-- Desktop & Laptop Nav -->
-      <nav class="hidden lg:flex items-center gap-4 xl:gap-7 2xl:gap-space-xl h-20" data-active-classes="text-cyber-blue border-b-2 border-cyber-blue font-bold">
+      <!-- Desktop Nav (Exact 30edca3 Links, Spacing, & Hierarchy) -->
+      <nav class="hidden lg:flex items-center gap-space-xl h-20" data-active-classes="text-cyber-blue border-b-2 border-cyber-blue font-bold">
         {navLinks.map((link) => (
           <a
             class={currentPage === link.page
-              ? 'transition-colors py-2 text-cyber-blue border-b-2 border-cyber-blue font-rajdhani text-[14px] xl:text-[15px] uppercase tracking-wider font-bold'
-              : 'text-soft-gray/90 hover:text-rich-gold transition-colors py-2 font-rajdhani text-[14px] xl:text-[15px] uppercase tracking-wider font-semibold'}
+              ? 'transition-colors py-2 text-cyber-blue border-b-2 border-cyber-blue font-rajdhani text-[14px] uppercase tracking-wider font-bold'
+              : 'text-soft-gray/90 hover:text-rich-gold transition-colors py-2 font-rajdhani text-[14px] uppercase tracking-wider font-semibold'}
             href={link.href}
             aria-current={currentPage === link.page ? 'page' : undefined}
           >
@@ -62,23 +62,23 @@ const navLinks = [
         ))}
       </nav>
 
-      <!-- Right Actions (Desktop, Tablet & Mobile) -->
-      <div class="flex items-center gap-3 xl:gap-4">
-        <!-- Desktop / Tablet RFQ Button -->
-        <a class="hidden sm:inline-flex items-center justify-center gap-space-xs px-4 xl:px-5 py-2.5 btn-cyber-blue rounded-lg shadow-md transition-all duration-200 font-rajdhani text-sm font-bold uppercase tracking-wider" href="/rfq">
+      <!-- Right Actions (Desktop RFQ + Mobile Menu Toggle) -->
+      <div class="flex items-center gap-space-md">
+        <!-- Desktop RFQ Button (Exact 30edca3 Style) -->
+        <a class="hidden sm:inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm btn-cyber-blue rounded shadow transition-all duration-200" href="/rfq">
           <span class="material-symbols-outlined text-[16px]">request_quote</span>
           <span>RFQ Portal</span>
         </a>
 
-        <!-- 3-Line Mobile Hamburger Menu Button -->
+        <!-- Mobile 3-Line Hamburger Menu Button (Appears ONLY on Mobile Screens) -->
         <button
           id="mobile-menu-toggle"
           type="button"
-          class="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-navy-card border border-rich-gold/30 text-rich-gold hover:text-cyber-blue hover:border-cyber-blue focus:outline-none transition-all active:scale-95 shadow-md"
+          class="lg:hidden flex items-center justify-center w-11 h-11 rounded-lg bg-navy-card border border-rich-gold/30 text-rich-gold hover:text-cyber-blue focus:outline-none transition-all active:scale-95 shadow-md"
           aria-label="Toggle navigation menu"
           aria-expanded="false"
         >
-          <!-- 3-Line Icon -->
+          <!-- 3-Line Hamburger Icon -->
           <svg id="hamburger-icon" class="w-6 h-6 stroke-current" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -94,10 +94,10 @@ const navLinks = [
     </div>
   </div>
 
-  <!-- Mobile Navigation Drawer Overlay -->
+  <!-- Mobile Navigation Drawer Overlay (Active ONLY on Mobile Viewport) -->
   <div
     id="mobile-menu-drawer"
-    class="lg:hidden fixed inset-x-0 top-[100px] sm:top-[116px] h-[calc(100dvh-100px)] sm:h-[calc(100dvh-116px)] bg-navy-deep/98 backdrop-blur-2xl border-b border-rich-gold/30 shadow-2xl z-40 transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none overflow-y-auto flex flex-col justify-between"
+    class="lg:hidden fixed inset-x-0 top-[116px] h-[calc(100dvh-116px)] bg-navy-deep/98 backdrop-blur-2xl border-b border-rich-gold/30 shadow-2xl z-40 transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none overflow-y-auto flex flex-col justify-between"
   >
     <div class="px-6 py-6 space-y-2">
       <div class="text-[11px] font-data-mono uppercase tracking-widest text-slate-400 mb-3 px-2 flex items-center justify-between">
