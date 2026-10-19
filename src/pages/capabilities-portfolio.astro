@@ -415,77 +415,96 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           From first billet cut to final multi-shot signoff, our calibrated metrology loop delivers comprehensive GD&amp;T reporting and verified process stability.
         </p>
 </div>
-<!-- Process Stepper Grid -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Step 1 -->
-<div class="bg-dark-slate border border-rich-gold/30 p-space-xl rounded-xl shadow-md flex flex-col justify-between relative group hover:shadow-xl transition-all">
-<div>
-<div class="flex items-center justify-between mb-space-md">
-<span class="font-data-mono text-2xl text-precision-teal font-extrabold">01</span>
-<span class="px-2.5 py-1 rounded font-data-mono text-xs bg-surface-container text-slate-200 font-bold">IN-PROCESS</span>
-</div>
-<h4 class="font-heading-gold text-xl sm:text-2xl text-white font-bold mb-space-xs">In-Process Optical &amp; CMM Inspection</h4>
-<p class="text-sm sm:text-base text-slate-200 mb-space-md leading-relaxed font-normal">
-              Every critical steel core and cavity insert is laser-scanned and validated against 3D CAD step models on a climate-stabilized Zeiss CMM prior to mold base assembly.
-            </p>
-</div>
-<ul class="font-data-mono text-sm sm:text-base text-slate-200 space-y-2.5 pt-space-sm border-t border-rich-gold/20">
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px] text-precision-teal">check_circle</span>
-<span>Point cloud deviation analysis</span>
-</li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px] text-precision-teal">check_circle</span>
-<span>100% Core concentricity audit</span>
-</li>
-</ul>
-</div>
-<!-- Step 2 -->
-<div class="bg-dark-slate border border-rich-gold/30 p-space-xl rounded-xl shadow-md flex flex-col justify-between relative group hover:shadow-xl transition-all">
-<div>
-<div class="flex items-center justify-between mb-space-md">
-<span class="font-data-mono text-2xl text-precision-teal font-extrabold">02</span>
-<span class="px-2.5 py-1 rounded font-data-mono text-xs bg-surface-container text-slate-200 font-bold">SAMPLING PHASE</span>
-</div>
-<h4 class="font-heading-gold text-xl sm:text-2xl text-white font-bold mb-space-xs">Sample Dimensional &amp; CpK Reporting</h4>
-<p class="text-sm sm:text-base text-slate-200 mb-space-md leading-relaxed font-normal">
-              T0 and T1 plastic sample parts undergo complete 32-point dimensional analysis, material shrink characterization, and tensile verification against client drawing prints.
-            </p>
-</div>
-<ul class="font-data-mono text-sm sm:text-base text-slate-200 space-y-2.5 pt-space-sm border-t border-rich-gold/20">
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px] text-precision-teal">check_circle</span>
-<span>AS9102 / PPAP Level 3 documentation</span>
-</li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px] text-precision-teal">check_circle</span>
-<span>Micro-CT void and porosity inspection</span>
-</li>
-</ul>
-</div>
-<!-- Step 3 -->
-<div class="bg-dark-slate border border-rich-gold/30 p-space-xl rounded-xl shadow-md flex flex-col justify-between relative group hover:shadow-xl transition-all">
-<div>
-<div class="flex items-center justify-between mb-space-md">
-<span class="font-data-mono text-2xl text-machined-gold font-extrabold">03</span>
-<span class="px-2.5 py-1 rounded font-data-mono text-xs bg-surface-container text-machined-gold font-bold">FINAL AUDIT</span>
-</div>
-<h4 class="font-heading-gold text-xl sm:text-2xl text-white font-bold mb-space-xs">Full Trial Run &amp; Plant Sign-Off</h4>
-<p class="text-sm sm:text-base text-slate-200 mb-space-md leading-relaxed font-normal">
-              A continuous 4-hour uninterrupted dry-cycle and wet-cycle production trial ensures balanced thermal stabilization, smooth part ejection, and zero hydraulic drift.
-            </p>
-</div>
-<ul class="font-data-mono text-sm sm:text-base text-slate-200 space-y-2.5 pt-space-sm border-t border-rich-gold/20">
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px] text-machined-gold">check_circle</span>
-<span>Mold maintenance manual &amp; spare spares kit</span>
-</li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px] text-machined-gold">check_circle</span>
-<span>Final client buy-off certification</span>
-</li>
-</ul>
-</div>
+<!-- Modernized In-Process Metrology Showcase (01) -->
+<div class="w-full bg-dark-slate border-2 border-rich-gold/40 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl relative overflow-hidden group hover:border-rich-gold transition-all duration-300">
+  <!-- Ambient background glow -->
+  <div class="absolute -right-20 -top-20 w-80 h-80 bg-precision-teal/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-rich-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+    <!-- Left Column: Core Description & Verification Badges -->
+    <div class="lg:col-span-7 flex flex-col gap-5">
+      <!-- Top Eyebrow Tag -->
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="font-data-mono text-3xl sm:text-4xl text-precision-teal font-extrabold tracking-tight">01</span>
+        <span class="px-3.5 py-1 rounded-full font-data-mono text-xs sm:text-sm bg-navy-deep text-precision-teal border border-precision-teal/40 font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#10B981]"></span>
+          IN-PROCESS QUALITY VERIFICATION
+        </span>
+        <span class="font-data-mono text-xs sm:text-sm text-rich-gold font-bold tracking-wider">ZEISS CMM CELL // BENCH 01</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h3 class="font-heading-gold text-2xl sm:text-3xl lg:text-4xl text-white font-bold tracking-tight">
+        In-Process Optical &amp; CMM Inspection
+      </h3>
+
+      <!-- Core Description -->
+      <p class="text-base sm:text-lg lg:text-xl text-slate-100 leading-relaxed font-normal">
+        Every critical steel core and cavity insert is laser-scanned and validated against 3D CAD step models on a climate-stabilized Zeiss CMM prior to mold base assembly.
+      </p>
+
+      <!-- Key Verified Features in Modern Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+        <div class="flex items-center gap-3.5 p-4 rounded-xl bg-navy-deep/90 border border-rich-gold/25 shadow-sm">
+          <div class="w-11 h-11 rounded-lg bg-navy-card text-precision-teal flex items-center justify-center border border-precision-teal/30 shrink-0">
+            <span class="material-symbols-outlined text-[24px]">radar</span>
+          </div>
+          <div>
+            <div class="text-xs text-slate-300 font-bold uppercase font-data-mono tracking-wider">METROLOGY PROTOCOL</div>
+            <div class="text-base sm:text-lg font-bold text-white">Point cloud deviation analysis</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3.5 p-4 rounded-xl bg-navy-deep/90 border border-rich-gold/25 shadow-sm">
+          <div class="w-11 h-11 rounded-lg bg-navy-card text-rich-gold flex items-center justify-center border border-rich-gold/30 shrink-0">
+            <span class="material-symbols-outlined text-[24px]">verified</span>
+          </div>
+          <div>
+            <div class="text-xs text-slate-300 font-bold uppercase font-data-mono tracking-wider">TOLERANCE VERIFICATION</div>
+            <div class="text-base sm:text-lg font-bold text-white">100% Core concentricity audit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: High-Tech Telemetry HUD Readout -->
+    <div class="lg:col-span-5 bg-navy-deep/95 border border-rich-gold/30 rounded-xl p-6 sm:p-7 shadow-xl flex flex-col gap-4">
+      <div class="flex items-center justify-between pb-3 border-b border-rich-gold/20">
+        <span class="font-data-mono text-xs sm:text-sm text-rich-gold font-bold uppercase tracking-wider flex items-center gap-2">
+          <span class="material-symbols-outlined text-[18px] text-precision-teal">precision_manufacturing</span>
+          METROLOGY LAB HUD
+        </span>
+        <span class="font-data-mono text-xs sm:text-sm text-emerald-400 font-bold flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span> ACTIVE
+        </span>
+      </div>
+
+      <div class="space-y-3 font-data-mono text-xs sm:text-sm divide-y divide-rich-gold/15">
+        <div class="pt-2 flex justify-between items-center">
+          <span class="text-slate-300 font-medium">Measurement Fidelity:</span>
+          <span class="text-precision-teal font-extrabold text-sm sm:text-base">± 0.002 mm</span>
+        </div>
+        <div class="pt-2.5 flex justify-between items-center">
+          <span class="text-slate-300 font-medium">Scanning System:</span>
+          <span class="text-white font-bold">Zeiss Contura Bridge CMM</span>
+        </div>
+        <div class="pt-2.5 flex justify-between items-center">
+          <span class="text-slate-300 font-medium">Data Model Alignment:</span>
+          <span class="text-white font-bold">Direct STEP 3D Overlay</span>
+        </div>
+        <div class="pt-2.5 flex justify-between items-center">
+          <span class="text-slate-300 font-medium">Quality Compliance:</span>
+          <span class="text-emerald-400 font-extrabold">Zero-Defect Standard</span>
+        </div>
+      </div>
+
+      <div class="mt-2 pt-3 border-t border-rich-gold/20 flex items-center justify-between font-data-mono text-xs sm:text-sm text-slate-300">
+        <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-precision-teal text-[16px]">check_circle</span> Calibration Certified</span>
+        <span class="text-rich-gold font-bold">SUB-MICRON AUDITED</span>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- Live Inspection Data Benchmark Table -->
 <div class="bg-dark-slate border border-rich-gold/30 p-space-lg rounded-xl shadow-md overflow-x-auto">
