@@ -45,7 +45,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 xl:gap-14 items-center">
 <!-- Left: Core Hook -->
 <div class="lg:col-span-7 xl:col-span-8 space-y-space-lg">
-<h1 class="font-heading-gold text-display-hero lg:text-5xl xl:text-6xl text-white tracking-tight leading-[1.12]">
+<h1 class="font-heading-gold text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl text-white tracking-tight leading-[1.14]">
 <span class="bg-gradient-to-r from-[#FFE58F] via-[#D4AF37] to-[#B8860B] bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(212,175,55,0.25)]">
             Advanced Tooling
           </span> &amp; <br>
@@ -53,17 +53,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Precision Injection Mold
           </span> <span class="bg-gradient-to-r from-[#FFE58F] via-[#D4AF37] to-[#AA7C11] bg-clip-text text-transparent">Solutions.</span>
 </h1>
-<p class="font-body-lg text-body-lg text-soft-gray/85 max-w-3xl leading-relaxed">
+<p class="text-lg sm:text-xl xl:text-2xl text-slate-100 max-w-3xl leading-relaxed font-normal">
             Operating from our 1,500 sq. ft. precision facility in Thirumudivakkam, Chennai. Equipped with Makino VMC CNC centers, Wire EDM, and full CMM metrology for sub-micron tooling in mission-critical medical, electronics, and automotive applications.
           </p>
 <!-- Dual CTAs -->
 <div class="flex flex-wrap items-center gap-space-md pt-space-sm">
-<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md btn-cyber-blue rounded shadow-lg transition-all duration-200" href="/rfq">
+<a class="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 btn-cyber-blue rounded-lg shadow-xl transition-all duration-200 text-base sm:text-lg font-bold" href="/rfq">
 <span>Request Engineering Quote</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
 </a>
-<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md btn-cyber-outline rounded shadow transition-all duration-200" href="/capabilities">
-<span class="material-symbols-outlined text-[18px]">precision_manufacturing</span>
+<a class="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 btn-cyber-outline rounded-lg shadow-lg transition-all duration-200 text-base sm:text-lg font-bold" href="/capabilities">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
 <span>Explore Capabilities</span>
 </a>
 </div>
@@ -71,54 +71,54 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <!-- Right: Fast Verification Micro-Telemetry -->
 <div class="lg:col-span-5 xl:col-span-4 flex flex-col gap-space-md">
 <div class="bg-gradient-to-b from-dark-slate/95 to-navy-surface/95 backdrop-blur-md p-space-xl rounded-xl border border-rich-gold/40 shadow-2xl space-y-space-md">
-<div class="flex items-center justify-between font-label-caps text-label-caps text-rich-gold border-b border-rich-gold/20 pb-space-xs font-semibold">
+<div class="flex items-center justify-between font-data-mono text-xs sm:text-sm text-rich-gold border-b border-rich-gold/20 pb-space-xs font-bold uppercase tracking-wider">
 <span>FACILITY TELEMETRY</span>
-<span class="text-cyber-blue font-semibold flex items-center gap-1.5">
-<span class="w-1.5 h-1.5 rounded-full bg-cyber-blue animate-ping"></span> ONLINE
+<span class="text-cyber-blue font-bold flex items-center gap-1.5 text-sm sm:text-base">
+<span class="w-2 h-2 rounded-full bg-cyber-blue animate-ping"></span> ONLINE
               </span>
 </div>
 <div class="divide-y divide-rich-gold/15">
-<div class="py-space-sm flex justify-between items-center">
-<span class="font-body-sm text-body-sm text-soft-gray/80">Toolroom Footprint</span>
-<span class="font-data-mono text-body-sm text-white font-semibold">1,500 SQ. FT.</span>
+<div class="py-3 flex justify-between items-center">
+<span class="text-sm sm:text-base text-slate-200 font-medium">Toolroom Footprint</span>
+<span class="font-data-mono text-base sm:text-lg text-white font-bold">1,500 SQ. FT.</span>
 </div>
-<div class="py-space-sm flex justify-between items-center">
-<span class="font-body-sm text-body-sm text-soft-gray/80">Standard Tolerances</span>
-<span class="font-data-mono text-body-sm text-cyber-blue font-bold shadow-[0_0_8px_rgba(0,229,255,0.4)]">± 0.005 mm</span>
+<div class="py-3 flex justify-between items-center">
+<span class="text-sm sm:text-base text-slate-200 font-medium">Standard Tolerances</span>
+<span class="font-data-mono text-base sm:text-lg text-cyber-blue font-bold shadow-[0_0_8px_rgba(0,229,255,0.4)]">± 0.005 mm</span>
 </div>
-<div class="py-space-sm flex justify-between items-center">
-<span class="font-body-sm text-body-sm text-soft-gray/80">High-Speed Spindles</span>
-<span class="font-data-mono text-body-sm text-white font-semibold">Makino VMC Series</span>
+<div class="py-3 flex justify-between items-center">
+<span class="text-sm sm:text-base text-slate-200 font-medium">High-Speed Spindles</span>
+<span class="font-data-mono text-base sm:text-lg text-white font-bold">Makino VMC Series</span>
 </div>
-<div class="py-space-sm flex justify-between items-center">
-<span class="font-body-sm text-body-sm text-soft-gray/80">CAD/CAM Integration</span>
-<span class="font-data-mono text-body-sm text-rich-gold font-semibold">UG NX / Moldflow</span>
+<div class="py-3 flex justify-between items-center">
+<span class="text-sm sm:text-base text-slate-200 font-medium">CAD/CAM Integration</span>
+<span class="font-data-mono text-base sm:text-lg text-rich-gold font-bold">UG NX / Moldflow</span>
 </div>
 </div>
 </div>
 </div>
 </div>
 <!-- High-Impact Stats Matrix: Double Shaded Backdrop -->
-<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mt-space-2xl pt-space-xl bg-gradient-to-r from-dark-slate/70 via-navy-surface/80 to-dark-slate/70 backdrop-blur-md rounded-xl border border-rich-gold/25 p-space-lg shadow-xl">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mt-space-2xl pt-space-xl bg-gradient-to-r from-dark-slate/85 via-navy-surface/90 to-dark-slate/85 backdrop-blur-md rounded-xl border border-rich-gold/30 p-space-lg shadow-xl">
 <div class="flex flex-col p-space-md">
-<span class="font-metric-val text-metric-val text-white font-bold">15+</span>
-<span class="font-label-caps text-label-caps text-soft-gray/80 uppercase mt-1">Years Industry Leadership</span>
-<span class="font-body-sm text-body-sm text-cyber-blue mt-0.5">Proven Tamil Nadu Hub</span>
+<span class="font-metric-val text-3xl sm:text-4xl lg:text-5xl text-white font-extrabold tracking-tight">15+</span>
+<span class="font-data-mono text-xs sm:text-sm text-slate-200 font-bold uppercase tracking-wider mt-1.5">Years Industry Leadership</span>
+<span class="text-sm sm:text-base text-cyber-blue font-semibold mt-0.5">Proven Tamil Nadu Hub</span>
 </div>
 <div class="flex flex-col p-space-md">
-<span class="font-metric-val text-metric-val bg-gradient-to-r from-cyber-blue to-teal-300 bg-clip-text text-transparent font-bold">D3</span>
-<span class="font-label-caps text-label-caps text-soft-gray/80 uppercase mt-1">Design • Dev • Delivery</span>
-<span class="font-body-sm text-body-sm text-soft-gray/70 mt-0.5">End-to-End Methodology</span>
+<span class="font-metric-val text-3xl sm:text-4xl lg:text-5xl bg-gradient-to-r from-cyber-blue to-teal-300 bg-clip-text text-transparent font-extrabold tracking-tight">D3</span>
+<span class="font-data-mono text-xs sm:text-sm text-slate-200 font-bold uppercase tracking-wider mt-1.5">Design • Dev • Delivery</span>
+<span class="text-sm sm:text-base text-slate-300 font-medium mt-0.5">End-to-End Methodology</span>
 </div>
 <div class="flex flex-col p-space-md">
-<span class="font-metric-val text-metric-val bg-gradient-to-r from-[#FFE58F] to-[#D4AF37] bg-clip-text text-transparent font-bold">±5μm</span>
-<span class="font-label-caps text-label-caps text-soft-gray/80 uppercase mt-1">Makino VMC Precision</span>
-<span class="font-body-sm text-body-sm text-soft-gray/70 mt-0.5">Optical &amp; CMM Verified</span>
+<span class="font-metric-val text-3xl sm:text-4xl lg:text-5xl bg-gradient-to-r from-[#FFE58F] to-[#D4AF37] bg-clip-text text-transparent font-extrabold tracking-tight">±5μm</span>
+<span class="font-data-mono text-xs sm:text-sm text-slate-200 font-bold uppercase tracking-wider mt-1.5">Makino VMC Precision</span>
+<span class="text-sm sm:text-base text-slate-300 font-medium mt-0.5">Optical &amp; CMM Verified</span>
 </div>
 <div class="flex flex-col p-space-md">
-<span class="font-metric-val text-metric-val text-emerald-400 font-bold">100%</span>
-<span class="font-label-caps text-label-caps text-soft-gray/80 uppercase mt-1">Zero Defect &amp; On-Time</span>
-<span class="font-body-sm text-body-sm text-soft-gray/70 mt-0.5">Mission-Critical SLAs</span>
+<span class="font-metric-val text-3xl sm:text-4xl lg:text-5xl text-emerald-400 font-extrabold tracking-tight">100%</span>
+<span class="font-data-mono text-xs sm:text-sm text-slate-200 font-bold uppercase tracking-wider mt-1.5">Zero Defect &amp; On-Time</span>
+<span class="text-sm sm:text-base text-slate-300 font-medium mt-0.5">Mission-Critical SLAs</span>
 </div>
 </div>
 </div>
@@ -129,15 +129,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <!-- Section Header -->
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
 <div>
-<div class="flex items-center gap-2 text-secondary font-label-caps text-label-caps uppercase tracking-wider mb-space-xs">
-<span class="material-symbols-outlined text-[16px] text-precision-teal">account_tree</span>
+<div class="flex items-center gap-2 text-cyber-blue font-data-mono text-xs sm:text-sm uppercase tracking-wider mb-space-xs font-bold">
+<span class="material-symbols-outlined text-[18px] text-precision-teal">account_tree</span>
             Structured Engineering Framework
           </div>
-<h2 class="font-heading-gold text-headline-lg text-rich-gold">
+<h2 class="font-heading-gold text-3xl sm:text-4xl lg:text-5xl text-rich-gold font-bold">
             The D3 Execution Engine
           </h2>
 </div>
-<p class="font-body-md text-body-md text-slate-300 max-w-md">
+<p class="text-base sm:text-lg text-slate-200 max-w-lg leading-relaxed font-normal">
           From native CAD concept to high-yield production, our unified 3-phase methodology eliminates mold rebuilds and accelerates industrialization.
         </p>
 </div>
@@ -147,28 +147,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <div class="card-tech-gold p-space-xl rounded-xl flex flex-col justify-between group">
 <div>
 <div class="flex items-center justify-between mb-space-lg">
-<span class="font-data-mono text-label-caps px-2.5 py-1 bg-dark-slate border border-precision-teal/30 rounded text-precision-teal font-bold">
+<span class="font-data-mono text-xs sm:text-sm px-3 py-1 bg-dark-slate border border-precision-teal/30 rounded text-precision-teal font-bold">
                 PHASE 01
               </span>
-<span class="material-symbols-outlined text-precision-teal text-[28px] group-hover:scale-110 transition-transform">architecture</span>
+<span class="material-symbols-outlined text-precision-teal text-[30px] group-hover:scale-110 transition-transform">architecture</span>
 </div>
-<h3 class="font-heading-gold text-headline-md text-rich-gold mb-space-sm">Design &amp; DFM</h3>
-<p class="font-body-md text-body-md text-slate-300 mb-space-lg leading-relaxed">
+<h3 class="font-heading-gold text-2xl sm:text-3xl text-rich-gold mb-space-sm font-bold">Design &amp; DFM</h3>
+<p class="text-base sm:text-lg text-slate-200 mb-space-lg leading-relaxed font-normal">
               Comprehensive DFM analysis, 3D mold layout simulation, gate cooling optimization, and parting line feasibility check before steel cutting.
             </p>
 </div>
-<div class="space-y-space-xs font-data-mono text-body-sm pt-space-md bg-dark-slate p-space-md rounded border border-slate-700/50">
-<div class="flex items-center justify-between text-slate-300">
+<div class="space-y-space-sm font-data-mono text-sm sm:text-base pt-space-md bg-dark-slate p-space-md rounded border border-slate-700/50">
+<div class="flex items-center justify-between text-slate-200">
 <span>Rheology Analysis</span>
-<span class="text-status-success font-semibold">PASS</span>
+<span class="text-status-success font-bold">PASS</span>
 </div>
-<div class="flex items-center justify-between text-slate-300">
+<div class="flex items-center justify-between text-slate-200">
 <span>Shrinkage Offset</span>
-<span class="text-white font-semibold">Calibrated</span>
+<span class="text-white font-bold">Calibrated</span>
 </div>
-<div class="flex items-center justify-between text-slate-300">
+<div class="flex items-center justify-between text-slate-200">
 <span>CAD Platforms</span>
-<span class="text-precision-teal font-semibold">Creo / Solidworks</span>
+<span class="text-precision-teal font-bold">Creo / Solidworks</span>
 </div>
 </div>
 </div>
@@ -176,28 +176,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <div class="card-tech-gold p-space-xl rounded-xl flex flex-col justify-between group">
 <div>
 <div class="flex items-center justify-between mb-space-lg">
-<span class="font-data-mono text-label-caps px-2.5 py-1 bg-dark-slate border border-machined-gold/30 rounded text-machined-gold font-bold">
+<span class="font-data-mono text-xs sm:text-sm px-3 py-1 bg-dark-slate border border-machined-gold/30 rounded text-machined-gold font-bold">
                 PHASE 02
               </span>
-<span class="material-symbols-outlined text-machined-gold text-[28px] group-hover:scale-110 transition-transform">precision_manufacturing</span>
+<span class="material-symbols-outlined text-machined-gold text-[30px] group-hover:scale-110 transition-transform">precision_manufacturing</span>
 </div>
-<h3 class="font-heading-gold text-headline-md text-rich-gold mb-space-sm">Development &amp; Testing</h3>
-<p class="font-body-md text-body-md text-slate-300 mb-space-lg leading-relaxed">
+<h3 class="font-heading-gold text-2xl sm:text-3xl text-rich-gold mb-space-sm font-bold">Development &amp; Testing</h3>
+<p class="text-base sm:text-lg text-slate-200 mb-space-lg leading-relaxed font-normal">
               Makino VMC high-speed machining, precision EDM, tool assembly, and initial T0-T1 mold sampling runs under strict process validation.
             </p>
 </div>
-<div class="space-y-space-xs font-data-mono text-body-sm pt-space-md bg-dark-slate p-space-md rounded border border-slate-700/50">
-<div class="flex items-center justify-between text-slate-300">
+<div class="space-y-space-sm font-data-mono text-sm sm:text-base pt-space-md bg-dark-slate p-space-md rounded border border-slate-700/50">
+<div class="flex items-center justify-between text-slate-200">
 <span>EDM Spark Gap</span>
-<span class="text-white font-semibold">0.015 mm</span>
+<span class="text-white font-bold">0.015 mm</span>
 </div>
-<div class="flex items-center justify-between text-slate-300">
+<div class="flex items-center justify-between text-slate-200">
 <span>Tool Steel Standard</span>
-<span class="text-machined-gold font-semibold">H13 / Stavax ESR</span>
+<span class="text-machined-gold font-bold">H13 / Stavax ESR</span>
 </div>
-<div class="flex items-center justify-between text-slate-300">
+<div class="flex items-center justify-between text-slate-200">
 <span>Sample Validation</span>
-<span class="text-status-success font-semibold">T1 First Article</span>
+<span class="text-status-success font-bold">T1 First Article</span>
 </div>
 </div>
 </div>
@@ -205,28 +205,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <div class="card-tech-gold p-space-xl rounded-xl flex flex-col justify-between group">
 <div>
 <div class="flex items-center justify-between mb-space-lg">
-<span class="font-data-mono text-label-caps px-2.5 py-1 bg-dark-slate border border-precision-teal/30 rounded text-precision-teal font-bold">
+<span class="font-data-mono text-xs sm:text-sm px-3 py-1 bg-dark-slate border border-precision-teal/30 rounded text-precision-teal font-bold">
                 PHASE 03
               </span>
-<span class="material-symbols-outlined text-precision-teal text-[28px] group-hover:scale-110 transition-transform">local_shipping</span>
+<span class="material-symbols-outlined text-precision-teal text-[30px] group-hover:scale-110 transition-transform">local_shipping</span>
 </div>
-<h3 class="font-heading-gold text-headline-md text-rich-gold mb-space-sm">Delivery &amp; Handover</h3>
-<p class="font-body-md text-body-md text-slate-300 mb-space-lg leading-relaxed">
+<h3 class="font-heading-gold text-2xl sm:text-3xl text-rich-gold mb-space-sm font-bold">Delivery &amp; Handover</h3>
+<p class="text-base sm:text-lg text-slate-200 mb-space-lg leading-relaxed font-normal">
               100% CMM dimensional inspection sign-off, full tool maintenance manual, hot-runner diagnostics, and on-site integration support.
             </p>
 </div>
-<div class="space-y-space-xs font-data-mono text-body-sm pt-space-md bg-dark-slate p-space-md rounded border border-slate-700/50">
-<div class="flex items-center justify-between text-slate-300">
+<div class="space-y-space-sm font-data-mono text-sm sm:text-base pt-space-md bg-dark-slate p-space-md rounded border border-slate-700/50">
+<div class="flex items-center justify-between text-slate-200">
 <span>Metrology Audit</span>
-<span class="text-status-success font-semibold">100% CMM</span>
+<span class="text-status-success font-bold">100% CMM</span>
 </div>
-<div class="flex items-center justify-between text-slate-300">
+<div class="flex items-center justify-between text-slate-200">
 <span>Spare Insert Pack</span>
-<span class="text-white font-semibold">Included</span>
+<span class="text-white font-bold">Included</span>
 </div>
-<div class="flex items-center justify-between text-slate-300">
+<div class="flex items-center justify-between text-slate-200">
 <span>Tool Warranty</span>
-<span class="text-precision-teal font-semibold">Up to 1M Shots</span>
+<span class="text-precision-teal font-bold">Up to 1M Shots</span>
 </div>
 </div>
 </div>
@@ -252,42 +252,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <!-- Text Details -->
 <div class="lg:col-span-6 p-space-xl lg:p-space-2xl flex flex-col justify-between">
 <div>
-<div class="inline-flex items-center gap-2 px-3 py-1 bg-dark-slate rounded-full border border-rich-gold/20 text-cyber-blue font-label-caps text-label-caps mb-space-md">
-<span class="material-symbols-outlined text-[15px] text-cyber-blue">hub</span>
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-dark-slate rounded-full border border-rich-gold/30 text-cyber-blue font-data-mono text-xs sm:text-sm mb-space-md font-bold tracking-wider uppercase">
+<span class="material-symbols-outlined text-[18px] text-cyber-blue">hub</span>
               HIGH PRECISION CORE SPECIALIZATION
             </div>
-<h2 class="font-heading-gold text-headline-lg text-rich-gold mb-space-md leading-tight font-bold">
+<h2 class="font-heading-gold text-3xl sm:text-4xl lg:text-5xl text-rich-gold mb-space-md leading-tight font-bold">
               Vertical Insert Molding &amp; Precision Cable Overmolding
             </h2>
-<p class="font-body-md text-body-md text-soft-gray/85 mb-space-lg leading-relaxed">
+<p class="text-base sm:text-lg text-slate-100 mb-space-lg leading-relaxed font-normal">
               We specialize in custom tooling for vertical rotary insert molding machines. Engineered for zero pin deflection, flawless seal-off geometry, and high-integrity strain relief overmolding for medical patient monitor cables and automotive sensory harnesses.
             </p>
 <!-- Specification Badges -->
 <div class="grid grid-cols-2 gap-space-md mb-space-xl">
-<div class="p-space-md bg-dark-slate rounded border border-rich-gold/20">
-<span class="font-label-caps text-label-caps text-rich-gold block font-semibold">INSERT COMPATIBILITY</span>
-<span class="font-headline-sm text-body-md font-semibold text-white">Brass, SS316, Copper &amp; PCB</span>
+<div class="p-space-md bg-dark-slate rounded-lg border border-rich-gold/30">
+<span class="font-data-mono text-xs sm:text-sm text-rich-gold block font-bold uppercase tracking-wider mb-1">INSERT COMPATIBILITY</span>
+<span class="text-base sm:text-lg font-bold text-white">Brass, SS316, Copper &amp; PCB</span>
 </div>
-<div class="p-space-md bg-dark-slate rounded border border-rich-gold/20">
-<span class="font-label-caps text-label-caps text-rich-gold block font-semibold">OVERMOLD RESINS</span>
-<span class="font-headline-sm text-body-md font-semibold text-white">TPU, TPE, PVC, PBT, PA66</span>
+<div class="p-space-md bg-dark-slate rounded-lg border border-rich-gold/30">
+<span class="font-data-mono text-xs sm:text-sm text-rich-gold block font-bold uppercase tracking-wider mb-1">OVERMOLD RESINS</span>
+<span class="text-base sm:text-lg font-bold text-white">TPU, TPE, PVC, PBT, PA66</span>
 </div>
-<div class="p-space-md bg-dark-slate rounded border border-rich-gold/20">
-<span class="font-label-caps text-label-caps text-rich-gold block font-semibold">SEAL-OFF SHUTOFF</span>
-<span class="font-headline-sm text-body-md font-semibold text-cyber-blue">±0.003 mm Tolerance</span>
+<div class="p-space-md bg-dark-slate rounded-lg border border-rich-gold/30">
+<span class="font-data-mono text-xs sm:text-sm text-rich-gold block font-bold uppercase tracking-wider mb-1">SEAL-OFF SHUTOFF</span>
+<span class="text-base sm:text-lg font-bold text-cyber-blue">±0.003 mm Tolerance</span>
 </div>
-<div class="p-space-md bg-dark-slate rounded border border-rich-gold/20">
-<span class="font-label-caps text-label-caps text-rich-gold block font-semibold">APPLICATIONS</span>
-<span class="font-headline-sm text-body-md font-semibold text-white">ECG Leads, Sensor Plugs</span>
+<div class="p-space-md bg-dark-slate rounded-lg border border-rich-gold/30">
+<span class="font-data-mono text-xs sm:text-sm text-rich-gold block font-bold uppercase tracking-wider mb-1">APPLICATIONS</span>
+<span class="text-base sm:text-lg font-bold text-white">ECG Leads, Sensor Plugs</span>
 </div>
 </div>
 </div>
 <div class="flex items-center gap-space-md flex-wrap">
-<a class="btn-cyber-blue inline-flex items-center gap-space-xs px-space-lg py-space-sm font-headline-sm text-body-sm font-bold rounded shadow transition-all" href="/services">
+<a class="btn-cyber-blue inline-flex items-center gap-2 px-6 py-3.5 text-base sm:text-lg font-bold rounded-lg shadow-lg transition-all" href="/services">
 <span>View Insert Tooling Specs</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </a>
-<span class="font-data-mono text-label-caps text-rich-gold border border-rich-gold/30 px-3 py-1 rounded">CYCLE TIME OPTIMIZED</span>
+<span class="font-data-mono text-xs sm:text-sm text-rich-gold border border-rich-gold/40 px-3.5 py-1.5 rounded font-bold uppercase tracking-wider">CYCLE TIME OPTIMIZED</span>
 </div>
 </div>
 </div>
@@ -298,13 +298,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <div class="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20">
 <!-- Section Title -->
 <div class="mb-space-xl text-center max-w-3xl mx-auto">
-<span class="font-label-caps text-label-caps text-cyber-blue uppercase tracking-widest block mb-space-xs font-semibold">
+<span class="font-data-mono text-xs sm:text-sm text-cyber-blue uppercase tracking-widest block mb-space-xs font-bold">
           TOOLROOM INFRASTRUCTURE
         </span>
-<h2 class="font-heading-gold text-headline-lg text-rich-gold mb-space-xs font-bold">
+<h2 class="font-heading-gold text-3xl sm:text-4xl lg:text-5xl text-rich-gold mb-space-xs font-bold">
           Precision Tooling &amp; Machining Snapshot
         </h2>
-<p class="font-body-md text-body-md text-soft-gray/80">
+<p class="text-base sm:text-lg text-slate-200">
           Advanced CNC machining centers, electrode milling, and optical grinding systems delivering aerospace &amp; medical-grade repeatability.
         </p>
 </div>
@@ -312,41 +312,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8 w-full">
 
 <!-- Card 1: High Speed CNC Milling -->
-<div class="flip-card h-[450px] w-full group cursor-pointer">
+<div class="flip-card h-[490px] w-full group cursor-pointer">
   <div class="flip-card-inner">
     <!-- FRONT FACE: High-Res Image, Capability Badge, Title, Feature Chips & Spec -->
     <div class="flip-card-front bg-dark-slate border border-rich-gold/30 flex flex-col justify-between shadow-xl">
-      <div class="relative w-full h-56 overflow-hidden bg-navy-deep shrink-0">
+      <div class="relative w-full h-52 overflow-hidden bg-navy-deep shrink-0">
         <img src="/images/snapshot-cnc-milling.jpg" alt="Makino High Speed CNC Milling Machine" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
         <div class="absolute inset-0 bg-gradient-to-t from-dark-slate via-dark-slate/20 to-transparent"></div>
-        <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-[11px] font-bold shadow-md">
-          <span class="w-1.5 h-1.5 rounded-full bg-cyber-blue animate-pulse"></span>
+        <div class="absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-xs font-bold shadow-md">
+          <span class="w-2 h-2 rounded-full bg-cyber-blue animate-pulse"></span>
           <span>CAPABILITY // 01</span>
         </div>
-        <div class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-navy-deep/90 backdrop-blur-md border border-rich-gold/40 flex items-center justify-center text-rich-gold shadow-md">
-          <span class="material-symbols-outlined text-[18px]">precision_manufacturing</span>
+        <div class="absolute top-3 right-3 w-9 h-9 rounded-lg bg-navy-deep/90 backdrop-blur-md border border-rich-gold/40 flex items-center justify-center text-rich-gold shadow-md">
+          <span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
         </div>
       </div>
       <div class="p-space-md flex flex-col justify-between flex-1">
         <div>
-          <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-1 leading-tight">High-Speed CNC Milling</h3>
-          <p class="font-body-sm text-soft-gray/85 text-xs leading-relaxed mb-2.5">
+          <h3 class="font-heading-gold text-xl sm:text-2xl text-rich-gold font-bold mb-1.5 leading-tight">High-Speed CNC Milling</h3>
+          <p class="text-sm sm:text-base text-slate-200 leading-relaxed mb-3 font-normal">
             Makino VMC high-rigidity spindles reaching 20,000 RPM for mirror cavity finishes.
           </p>
-          <div class="flex flex-wrap gap-1.5 font-data-mono text-[10px]">
-            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-cyber-blue font-semibold">Makino V33i</span>
-            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-rich-gold/25 text-rich-gold font-semibold">20k RPM Spindle</span>
-            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-white">SPI A-1 Mirror</span>
+          <div class="flex flex-wrap gap-1.5 font-data-mono text-xs">
+            <span class="px-2.5 py-1 rounded bg-navy-deep/90 border border-cyber-blue/30 text-cyber-blue font-semibold">Makino V33i</span>
+            <span class="px-2.5 py-1 rounded bg-navy-deep/90 border border-rich-gold/30 text-rich-gold font-semibold">20k RPM Spindle</span>
+            <span class="px-2.5 py-1 rounded bg-navy-deep/90 border border-cyber-blue/30 text-white font-medium">SPI A-1 Mirror</span>
           </div>
         </div>
-        <div class="pt-2.5 border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
+        <div class="pt-3 border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
           <div class="flex flex-col">
-            <span class="text-[10px] text-soft-gray/60 uppercase">ACCURACY</span>
-            <span class="text-cyber-blue font-bold text-xs">± 0.003 mm</span>
+            <span class="text-xs text-slate-300 uppercase font-semibold">ACCURACY</span>
+            <span class="text-cyber-blue font-bold text-sm sm:text-base">± 0.003 mm</span>
           </div>
-          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/90 px-2.5 py-1 rounded border border-rich-gold/30 shadow-sm">
+          <span class="inline-flex items-center gap-1.5 text-xs sm:text-sm text-rich-gold font-bold group-hover:text-cyber-blue transition-colors bg-navy-deep/90 px-3 py-1.5 rounded-lg border border-rich-gold/30 shadow-sm">
             <span>Hover to Flip</span>
-            <span class="material-symbols-outlined text-[14px]">flip_camera_android</span>
+            <span class="material-symbols-outlined text-[16px]">flip_camera_android</span>
           </span>
         </div>
       </div>
@@ -358,75 +358,75 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="w-10 h-10 rounded-lg bg-navy-deep border border-cyber-blue/40 flex items-center justify-center text-cyber-blue shadow">
             <span class="material-symbols-outlined text-[22px]">precision_manufacturing</span>
           </div>
-          <span class="font-data-mono text-label-caps text-cyber-blue font-bold">CAPABILITY // 01</span>
+          <span class="font-data-mono text-xs sm:text-sm text-cyber-blue font-bold">CAPABILITY // 01</span>
         </div>
-        <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-space-xs">High-Speed CNC Milling</h3>
-        <p class="font-body-sm text-soft-gray/90 text-xs leading-relaxed mb-space-md">
+        <h3 class="font-heading-gold text-xl sm:text-2xl text-rich-gold font-bold mb-space-xs">High-Speed CNC Milling</h3>
+        <p class="text-sm sm:text-base text-slate-100 leading-relaxed mb-space-md font-normal">
           Makino VMC high-rigidity spindles reaching 20,000 RPM for mirror cavity finishes and fine graphite electrode fabrication.
         </p>
-        <div class="space-y-1.5 font-data-mono text-[11px] bg-navy-deep/90 border border-rich-gold/25 p-2.5 rounded text-slate-200">
+        <div class="space-y-2 font-data-mono text-xs sm:text-sm bg-navy-deep/90 border border-rich-gold/25 p-3 rounded text-slate-200">
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">SPINDLE SPEED</span>
+            <span class="text-slate-300 font-medium">SPINDLE SPEED</span>
             <span class="text-white font-bold">20,000 RPM</span>
           </div>
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">REPEATABILITY</span>
+            <span class="text-slate-300 font-medium">REPEATABILITY</span>
             <span class="text-cyber-blue font-bold">± 0.0015 mm</span>
           </div>
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">CAVITY FINISH</span>
+            <span class="text-slate-300 font-medium">CAVITY FINISH</span>
             <span class="text-rich-gold font-bold">SPI A-1 Optical Mirror</span>
           </div>
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">TOOL STEEL</span>
+            <span class="text-slate-300 font-medium">TOOL STEEL</span>
             <span class="text-white font-bold">Stavax ESR / H13</span>
           </div>
         </div>
       </div>
-      <div class="font-data-mono text-label-caps text-slate-300 bg-navy-deep/90 border border-rich-gold/30 p-2.5 rounded flex justify-between items-center">
-        <span class="font-bold text-slate-400">Accuracy</span>
-        <span class="text-cyber-blue font-bold text-sm">± 0.003 mm</span>
+      <div class="font-data-mono text-xs sm:text-sm text-slate-200 bg-navy-deep/90 border border-rich-gold/30 p-2.5 rounded flex justify-between items-center font-bold">
+        <span class="text-slate-300">Accuracy</span>
+        <span class="text-cyber-blue text-sm sm:text-base font-extrabold">± 0.003 mm</span>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Card 2: CNC Wire EDM & Spark -->
-<div class="flip-card h-[450px] w-full group cursor-pointer">
+<div class="flip-card h-[490px] w-full group cursor-pointer">
   <div class="flip-card-inner">
     <!-- FRONT FACE -->
     <div class="flip-card-front bg-dark-slate border border-rich-gold/30 flex flex-col justify-between shadow-xl">
-      <div class="relative w-full h-56 overflow-hidden bg-navy-deep shrink-0">
+      <div class="relative w-full h-52 overflow-hidden bg-navy-deep shrink-0">
         <img src="/images/snapshot-wire-edm.jpg" alt="CNC Wire EDM Spark Erosion Machine" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
         <div class="absolute inset-0 bg-gradient-to-t from-dark-slate via-dark-slate/20 to-transparent"></div>
-        <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-[11px] font-bold shadow-md">
-          <span class="w-1.5 h-1.5 rounded-full bg-cyber-blue animate-pulse"></span>
+        <div class="absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-xs font-bold shadow-md">
+          <span class="w-2 h-2 rounded-full bg-cyber-blue animate-pulse"></span>
           <span>CAPABILITY // 02</span>
         </div>
-        <div class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-navy-deep/90 backdrop-blur-md border border-rich-gold/40 flex items-center justify-center text-rich-gold shadow-md">
-          <span class="material-symbols-outlined text-[18px]">electric_bolt</span>
+        <div class="absolute top-3 right-3 w-9 h-9 rounded-lg bg-navy-deep/90 backdrop-blur-md border border-rich-gold/40 flex items-center justify-center text-rich-gold shadow-md">
+          <span class="material-symbols-outlined text-[20px]">electric_bolt</span>
         </div>
       </div>
       <div class="p-space-md flex flex-col justify-between flex-1">
         <div>
-          <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-1 leading-tight">CNC Wire EDM &amp; Spark</h3>
-          <p class="font-body-sm text-soft-gray/85 text-xs leading-relaxed mb-2.5">
+          <h3 class="font-heading-gold text-xl sm:text-2xl text-rich-gold font-bold mb-1.5 leading-tight">CNC Wire EDM &amp; Spark</h3>
+          <p class="text-sm sm:text-base text-slate-200 leading-relaxed mb-3 font-normal">
             Sub-micron spark erosion for deep ribs, fine gate pins, and medical micro-shutoffs.
           </p>
-          <div class="flex flex-wrap gap-1.5 font-data-mono text-[10px]">
-            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-cyber-blue font-semibold">Sub-Micron Gap</span>
-            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-rich-gold/25 text-rich-gold font-semibold">Ø 0.10mm Wire</span>
-            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-white">Intricate Ribs</span>
+          <div class="flex flex-wrap gap-1.5 font-data-mono text-xs">
+            <span class="px-2.5 py-1 rounded bg-navy-deep/90 border border-cyber-blue/30 text-cyber-blue font-semibold">Sub-Micron Gap</span>
+            <span class="px-2.5 py-1 rounded bg-navy-deep/90 border border-rich-gold/30 text-rich-gold font-semibold">Ø 0.10mm Wire</span>
+            <span class="px-2.5 py-1 rounded bg-navy-deep/90 border border-cyber-blue/30 text-white font-medium">Intricate Ribs</span>
           </div>
         </div>
-        <div class="pt-2.5 border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
+        <div class="pt-3 border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
           <div class="flex flex-col">
-            <span class="text-[10px] text-soft-gray/60 uppercase">SURFACE FINISH</span>
-            <span class="text-cyber-blue font-bold text-xs">Ra 0.2 μm</span>
+            <span class="text-xs text-slate-300 uppercase font-semibold">SURFACE FINISH</span>
+            <span class="text-cyber-blue font-bold text-sm sm:text-base">Ra 0.2 μm</span>
           </div>
-          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/90 px-2.5 py-1 rounded border border-rich-gold/30 shadow-sm">
+          <span class="inline-flex items-center gap-1.5 text-xs sm:text-sm text-rich-gold font-bold group-hover:text-cyber-blue transition-colors bg-navy-deep/90 px-3 py-1.5 rounded-lg border border-rich-gold/30 shadow-sm">
             <span>Hover to Flip</span>
-            <span class="material-symbols-outlined text-[14px]">flip_camera_android</span>
+            <span class="material-symbols-outlined text-[16px]">flip_camera_android</span>
           </span>
         </div>
       </div>
@@ -438,75 +438,75 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="w-10 h-10 rounded-lg bg-navy-deep border border-cyber-blue/40 flex items-center justify-center text-cyber-blue shadow">
             <span class="material-symbols-outlined text-[22px]">electric_bolt</span>
           </div>
-          <span class="font-data-mono text-label-caps text-cyber-blue font-bold">CAPABILITY // 02</span>
+          <span class="font-data-mono text-xs sm:text-sm text-cyber-blue font-bold">CAPABILITY // 02</span>
         </div>
-        <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-space-xs">CNC Wire EDM &amp; Spark</h3>
-        <p class="font-body-sm text-soft-gray/90 text-xs leading-relaxed mb-space-md">
+        <h3 class="font-heading-gold text-xl sm:text-2xl text-rich-gold font-bold mb-space-xs">CNC Wire EDM &amp; Spark</h3>
+        <p class="text-sm sm:text-base text-slate-100 leading-relaxed mb-space-md font-normal">
           Sub-micron spark erosion for deep ribs, fine gate pins, hardened core slides, and intricate medical micro-shutoffs.
         </p>
-        <div class="space-y-1.5 font-data-mono text-[11px] bg-navy-deep/90 border border-rich-gold/25 p-2.5 rounded text-slate-200">
+        <div class="space-y-2 font-data-mono text-xs sm:text-sm bg-navy-deep/90 border border-rich-gold/25 p-3 rounded text-slate-200">
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">WIRE DIAMETER</span>
+            <span class="text-slate-300 font-medium">WIRE DIAMETER</span>
             <span class="text-white font-bold">0.10 - 0.25 mm</span>
           </div>
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">CORNER RADIUS</span>
+            <span class="text-slate-300 font-medium">CORNER RADIUS</span>
             <span class="text-cyber-blue font-bold">&lt; 0.05 mm</span>
           </div>
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">DIELECTRIC FLUID</span>
+            <span class="text-slate-300 font-medium">DIELECTRIC FLUID</span>
             <span class="text-rich-gold font-bold">Deionized Chilled</span>
           </div>
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">BURR TOLERANCE</span>
+            <span class="text-slate-300 font-medium">BURR TOLERANCE</span>
             <span class="text-white font-bold">Zero-Burr Shutoff</span>
           </div>
         </div>
       </div>
-      <div class="font-data-mono text-label-caps text-slate-300 bg-navy-deep/90 border border-rich-gold/30 p-2.5 rounded flex justify-between items-center">
-        <span class="font-bold text-slate-400">Surface Finish</span>
-        <span class="text-cyber-blue font-bold text-sm">Ra 0.2 μm</span>
+      <div class="font-data-mono text-xs sm:text-sm text-slate-200 bg-navy-deep/90 border border-rich-gold/30 p-2.5 rounded flex justify-between items-center font-bold">
+        <span class="text-slate-300">Surface Finish</span>
+        <span class="text-cyber-blue text-sm sm:text-base font-extrabold">Ra 0.2 μm</span>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Card 3: Ultra Precision Grinding -->
-<div class="flip-card h-[450px] w-full group cursor-pointer">
+<div class="flip-card h-[490px] w-full group cursor-pointer">
   <div class="flip-card-inner">
     <!-- FRONT FACE -->
     <div class="flip-card-front bg-dark-slate border border-rich-gold/30 flex flex-col justify-between shadow-xl">
-      <div class="relative w-full h-56 overflow-hidden bg-navy-deep shrink-0">
+      <div class="relative w-full h-52 overflow-hidden bg-navy-deep shrink-0">
         <img src="/images/snapshot-precision-grinding.jpg" alt="Ultra Precision Surface Grinding Machine" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
         <div class="absolute inset-0 bg-gradient-to-t from-dark-slate via-dark-slate/20 to-transparent"></div>
-        <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-[11px] font-bold shadow-md">
-          <span class="w-1.5 h-1.5 rounded-full bg-cyber-blue animate-pulse"></span>
+        <div class="absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-xs font-bold shadow-md">
+          <span class="w-2 h-2 rounded-full bg-cyber-blue animate-pulse"></span>
           <span>CAPABILITY // 03</span>
         </div>
-        <div class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-navy-deep/90 backdrop-blur-md border border-rich-gold/40 flex items-center justify-center text-rich-gold shadow-md">
-          <span class="material-symbols-outlined text-[18px]">rotate_right</span>
+        <div class="absolute top-3 right-3 w-9 h-9 rounded-lg bg-navy-deep/90 backdrop-blur-md border border-rich-gold/40 flex items-center justify-center text-rich-gold shadow-md">
+          <span class="material-symbols-outlined text-[20px]">rotate_right</span>
         </div>
       </div>
       <div class="p-space-md flex flex-col justify-between flex-1">
         <div>
-          <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-1 leading-tight">Ultra Precision Grinding</h3>
-          <p class="font-body-sm text-soft-gray/85 text-xs leading-relaxed mb-2.5">
+          <h3 class="font-heading-gold text-xl sm:text-2xl text-rich-gold font-bold mb-1.5 leading-tight">Ultra Precision Grinding</h3>
+          <p class="text-sm sm:text-base text-slate-200 leading-relaxed mb-3 font-normal">
             Flatness and parallelism ground across mold plates to prevent flash generation on high-tonnage presses.
           </p>
-          <div class="flex flex-wrap gap-1.5 font-data-mono text-[10px]">
-            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-cyber-blue font-semibold">Flatness: 0.0015mm</span>
-            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-rich-gold/25 text-rich-gold font-semibold">CBN &amp; Diamond</span>
-            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-white">Zero-Flash Line</span>
+          <div class="flex flex-wrap gap-1.5 font-data-mono text-xs">
+            <span class="px-2.5 py-1 rounded bg-navy-deep/90 border border-cyber-blue/30 text-cyber-blue font-semibold">Flatness: 0.0015mm</span>
+            <span class="px-2.5 py-1 rounded bg-navy-deep/90 border border-rich-gold/30 text-rich-gold font-semibold">CBN &amp; Diamond</span>
+            <span class="px-2.5 py-1 rounded bg-navy-deep/90 border border-cyber-blue/30 text-white font-medium">Zero-Flash Line</span>
           </div>
         </div>
-        <div class="pt-2.5 border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
+        <div class="pt-3 border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
           <div class="flex flex-col">
-            <span class="text-[10px] text-soft-gray/60 uppercase">PARALLELISM</span>
-            <span class="text-cyber-blue font-bold text-xs">&lt; 0.002 mm</span>
+            <span class="text-xs text-slate-300 uppercase font-semibold">PARALLELISM</span>
+            <span class="text-cyber-blue font-bold text-sm sm:text-base">&lt; 0.002 mm</span>
           </div>
-          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/90 px-2.5 py-1 rounded border border-rich-gold/30 shadow-sm">
+          <span class="inline-flex items-center gap-1.5 text-xs sm:text-sm text-rich-gold font-bold group-hover:text-cyber-blue transition-colors bg-navy-deep/90 px-3 py-1.5 rounded-lg border border-rich-gold/30 shadow-sm">
             <span>Hover to Flip</span>
-            <span class="material-symbols-outlined text-[14px]">flip_camera_android</span>
+            <span class="material-symbols-outlined text-[16px]">flip_camera_android</span>
           </span>
         </div>
       </div>
@@ -518,75 +518,75 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="w-10 h-10 rounded-lg bg-navy-deep border border-cyber-blue/40 flex items-center justify-center text-cyber-blue shadow">
             <span class="material-symbols-outlined text-[22px]">rotate_right</span>
           </div>
-          <span class="font-data-mono text-label-caps text-cyber-blue font-bold">CAPABILITY // 03</span>
+          <span class="font-data-mono text-xs sm:text-sm text-cyber-blue font-bold">CAPABILITY // 03</span>
         </div>
-        <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-space-xs">Ultra Precision Grinding</h3>
-        <p class="font-body-sm text-soft-gray/90 text-xs leading-relaxed mb-space-md">
+        <h3 class="font-heading-gold text-xl sm:text-2xl text-rich-gold font-bold mb-space-xs">Ultra Precision Grinding</h3>
+        <p class="text-sm sm:text-base text-slate-100 leading-relaxed mb-space-md font-normal">
           Flatness and parallelism ground across mold plates to prevent flash generation on high-tonnage injection presses.
         </p>
-        <div class="space-y-1.5 font-data-mono text-[11px] bg-navy-deep/90 border border-rich-gold/25 p-2.5 rounded text-slate-200">
+        <div class="space-y-2 font-data-mono text-xs sm:text-sm bg-navy-deep/90 border border-rich-gold/25 p-3 rounded text-slate-200">
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">FLATNESS TOLERANCE</span>
+            <span class="text-slate-300 font-medium">FLATNESS TOLERANCE</span>
             <span class="text-white font-bold">0.0015 mm</span>
           </div>
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">SURFACE PARALLELISM</span>
+            <span class="text-slate-300 font-medium">SURFACE PARALLELISM</span>
             <span class="text-cyber-blue font-bold">&lt; 0.002 mm</span>
           </div>
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">WHEEL TECHNOLOGY</span>
+            <span class="text-slate-300 font-medium">WHEEL TECHNOLOGY</span>
             <span class="text-rich-gold font-bold">CBN &amp; Diamond</span>
           </div>
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">PLATE CAPACITY</span>
+            <span class="text-slate-300 font-medium">PLATE CAPACITY</span>
             <span class="text-white font-bold">800 x 600 mm</span>
           </div>
         </div>
       </div>
-      <div class="font-data-mono text-label-caps text-slate-300 bg-navy-deep/90 border border-rich-gold/30 p-2.5 rounded flex justify-between items-center">
-        <span class="font-bold text-slate-400">Parallelism</span>
-        <span class="text-cyber-blue font-bold text-sm">&lt; 0.002 mm</span>
+      <div class="font-data-mono text-xs sm:text-sm text-slate-200 bg-navy-deep/90 border border-rich-gold/30 p-2.5 rounded flex justify-between items-center font-bold">
+        <span class="text-slate-300">Parallelism</span>
+        <span class="text-cyber-blue text-sm sm:text-base font-extrabold">&lt; 0.002 mm</span>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Card 4: Micro & Multi-Cavity -->
-<div class="flip-card h-[450px] w-full group cursor-pointer">
+<div class="flip-card h-[490px] w-full group cursor-pointer">
   <div class="flip-card-inner">
     <!-- FRONT FACE -->
     <div class="flip-card-front bg-dark-slate border border-rich-gold/30 flex flex-col justify-between shadow-xl">
-      <div class="relative w-full h-56 overflow-hidden bg-navy-deep shrink-0">
+      <div class="relative w-full h-52 overflow-hidden bg-navy-deep shrink-0">
         <img src="/images/snapshot-micro-cavity.jpg" alt="16-Cavity Precision Injection Mold Tooling" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
         <div class="absolute inset-0 bg-gradient-to-t from-dark-slate via-dark-slate/20 to-transparent"></div>
-        <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-[11px] font-bold shadow-md">
-          <span class="w-1.5 h-1.5 rounded-full bg-cyber-blue animate-pulse"></span>
+        <div class="absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1 bg-navy-deep/90 backdrop-blur-md border border-cyber-blue/40 rounded text-cyber-blue font-data-mono text-xs font-bold shadow-md">
+          <span class="w-2 h-2 rounded-full bg-cyber-blue animate-pulse"></span>
           <span>CAPABILITY // 04</span>
         </div>
-        <div class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-navy-deep/90 backdrop-blur-md border border-rich-gold/40 flex items-center justify-center text-rich-gold shadow-md">
-          <span class="material-symbols-outlined text-[18px]">grid_view</span>
+        <div class="absolute top-3 right-3 w-9 h-9 rounded-lg bg-navy-deep/90 backdrop-blur-md border border-rich-gold/40 flex items-center justify-center text-rich-gold shadow-md">
+          <span class="material-symbols-outlined text-[20px]">grid_view</span>
         </div>
       </div>
       <div class="p-space-md flex flex-col justify-between flex-1">
         <div>
-          <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-1 leading-tight">Micro &amp; Multi-Cavity</h3>
-          <p class="font-body-sm text-soft-gray/85 text-xs leading-relaxed mb-2.5">
+          <h3 class="font-heading-gold text-xl sm:text-2xl text-rich-gold font-bold mb-1.5 leading-tight">Micro &amp; Multi-Cavity</h3>
+          <p class="text-sm sm:text-base text-slate-200 leading-relaxed mb-3 font-normal">
             High-volume multi-cavity hot-runner systems engineered for balanced runner distribution.
           </p>
-          <div class="flex flex-wrap gap-1.5 font-data-mono text-[10px]">
-            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-cyber-blue font-semibold">2 to 32 Cavities</span>
-            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-rich-gold/25 text-rich-gold font-semibold">Valve Gating</span>
-            <span class="px-2 py-0.5 rounded bg-navy-deep/80 border border-cyber-blue/30 text-white">Stavax 54 HRC</span>
+          <div class="flex flex-wrap gap-1.5 font-data-mono text-xs">
+            <span class="px-2.5 py-1 rounded bg-navy-deep/90 border border-cyber-blue/30 text-cyber-blue font-semibold">2 to 32 Cavities</span>
+            <span class="px-2.5 py-1 rounded bg-navy-deep/90 border border-rich-gold/30 text-rich-gold font-semibold">Valve Gating</span>
+            <span class="px-2.5 py-1 rounded bg-navy-deep/90 border border-cyber-blue/30 text-white font-medium">Stavax 54 HRC</span>
           </div>
         </div>
-        <div class="pt-2.5 border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
+        <div class="pt-3 border-t border-rich-gold/20 flex items-center justify-between font-data-mono">
           <div class="flex flex-col">
-            <span class="text-[10px] text-soft-gray/60 uppercase">CAVITATION</span>
-            <span class="text-cyber-blue font-bold text-xs">2 to 32 Cavities</span>
+            <span class="text-xs text-slate-300 uppercase font-semibold">CAVITATION</span>
+            <span class="text-cyber-blue font-bold text-sm sm:text-base">2 to 32 Cavities</span>
           </div>
-          <span class="inline-flex items-center gap-1 text-[11px] text-rich-gold font-semibold group-hover:text-cyber-blue transition-colors bg-navy-deep/90 px-2.5 py-1 rounded border border-rich-gold/30 shadow-sm">
+          <span class="inline-flex items-center gap-1.5 text-xs sm:text-sm text-rich-gold font-bold group-hover:text-cyber-blue transition-colors bg-navy-deep/90 px-3 py-1.5 rounded-lg border border-rich-gold/30 shadow-sm">
             <span>Hover to Flip</span>
-            <span class="material-symbols-outlined text-[14px]">flip_camera_android</span>
+            <span class="material-symbols-outlined text-[16px]">flip_camera_android</span>
           </span>
         </div>
       </div>
@@ -598,34 +598,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="w-10 h-10 rounded-lg bg-navy-deep border border-cyber-blue/40 flex items-center justify-center text-cyber-blue shadow">
             <span class="material-symbols-outlined text-[22px]">grid_view</span>
           </div>
-          <span class="font-data-mono text-label-caps text-cyber-blue font-bold">CAPABILITY // 04</span>
+          <span class="font-data-mono text-xs sm:text-sm text-cyber-blue font-bold">CAPABILITY // 04</span>
         </div>
-        <h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold mb-space-xs">Micro &amp; Multi-Cavity</h3>
-        <p class="font-body-sm text-soft-gray/90 text-xs leading-relaxed mb-space-md">
+        <h3 class="font-heading-gold text-xl sm:text-2xl text-rich-gold font-bold mb-space-xs">Micro &amp; Multi-Cavity</h3>
+        <p class="text-sm sm:text-base text-slate-100 leading-relaxed mb-space-md font-normal">
           High-volume multi-cavity hot-runner systems engineered for balanced runner distribution and short cycle durations.
         </p>
-        <div class="space-y-1.5 font-data-mono text-[11px] bg-navy-deep/90 border border-rich-gold/25 p-2.5 rounded text-slate-200">
+        <div class="space-y-2 font-data-mono text-xs sm:text-sm bg-navy-deep/90 border border-rich-gold/25 p-3 rounded text-slate-200">
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">CAVITY BALANCE</span>
+            <span class="text-slate-300 font-medium">CAVITY BALANCE</span>
             <span class="text-white font-bold">± 0.2% Sync</span>
           </div>
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">HOT RUNNER</span>
+            <span class="text-slate-300 font-medium">HOT RUNNER</span>
             <span class="text-cyber-blue font-bold">Valve Gate Type</span>
           </div>
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">SUB-GATE ORIFICE</span>
+            <span class="text-slate-300 font-medium">SUB-GATE ORIFICE</span>
             <span class="text-rich-gold font-bold">Ø 0.40 mm Sub-Gate</span>
           </div>
           <div class="flex justify-between">
-            <span class="text-soft-gray/70">CORE HARDNESS</span>
+            <span class="text-slate-300 font-medium">CORE HARDNESS</span>
             <span class="text-white font-bold">54 HRC Hardened</span>
           </div>
         </div>
       </div>
-      <div class="font-data-mono text-label-caps text-slate-300 bg-navy-deep/90 border border-rich-gold/30 p-2.5 rounded flex justify-between items-center">
-        <span class="font-bold text-slate-400">Cavitation</span>
-        <span class="text-cyber-blue font-bold text-sm">2 to 32 Cavities</span>
+      <div class="font-data-mono text-xs sm:text-sm text-slate-200 bg-navy-deep/90 border border-rich-gold/30 p-2.5 rounded flex justify-between items-center font-bold">
+        <span class="text-slate-300">Cavitation</span>
+        <span class="text-cyber-blue text-sm sm:text-base font-extrabold">2 to 32 Cavities</span>
       </div>
     </div>
   </div>
@@ -633,35 +633,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 </div>
 <!-- Live Inspection Metrology Card -->
-<div class="mt-space-xl bg-dark-slate border border-rich-gold/30 text-soft-gray p-space-xl rounded-xl shadow-lg flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="mt-space-xl bg-dark-slate border border-rich-gold/30 text-slate-100 p-space-xl rounded-xl shadow-lg flex flex-col lg:flex-row items-center justify-between gap-space-lg">
 <div class="flex items-center gap-space-md">
-<div class="w-14 h-14 rounded-full bg-navy-deep border border-cyber-blue/30 flex items-center justify-center shrink-0 text-cyber-blue">
-<span class="material-symbols-outlined text-[32px]">biotech</span>
+<div class="w-16 h-16 rounded-full bg-navy-deep border border-cyber-blue/40 flex items-center justify-center shrink-0 text-cyber-blue shadow-md">
+<span class="material-symbols-outlined text-[36px]">biotech</span>
 </div>
 <div>
-<h4 class="font-heading-gold text-headline-sm text-rich-gold font-bold">Full Metrology Traceability &amp; First Article Inspection</h4>
-<p class="font-body-sm text-body-sm text-soft-gray/80 mt-0.5">Every mold insert and molded sample undergoes strict optical CMM measurement and surface roughness verification prior to sign-off.</p>
+<h4 class="font-heading-gold text-xl sm:text-2xl text-rich-gold font-bold">Full Metrology Traceability &amp; First Article Inspection</h4>
+<p class="text-base sm:text-lg text-slate-200 mt-1 leading-relaxed font-normal">Every mold insert and molded sample undergoes strict optical CMM measurement and surface roughness verification prior to sign-off.</p>
 </div>
 </div>
 <div class="flex items-center gap-space-sm shrink-0">
-<span class="px-3 py-1.5 bg-navy-deep text-cyber-blue border border-cyber-blue/40 font-data-mono text-body-sm rounded font-bold">CpK &gt; 1.67</span>
+<span class="px-4 py-2 bg-navy-deep text-cyber-blue border border-cyber-blue/40 font-data-mono text-base sm:text-lg rounded-lg font-extrabold shadow-sm">CpK &gt; 1.67</span>
 </div>
 </div>
 </div>
 </section>
 <!-- CLIENT TRUST & INDUSTRIES SERVED -->
-<section class="w-full bg-charcoal-blue py-space-3xl text-soft-gray border-b border-rich-gold/20">
+<section class="w-full bg-charcoal-blue py-space-3xl text-slate-100 border-b border-rich-gold/20">
 <div class="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20">
 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-space-2xl gap-space-md">
 <div>
-<span class="font-label-caps text-label-caps text-cyber-blue uppercase tracking-widest block mb-space-xs font-semibold">
+<span class="font-data-mono text-xs sm:text-sm text-cyber-blue uppercase tracking-widest block mb-space-xs font-bold">
             INDUSTRY SECTOR PORTFOLIO
           </span>
-<h2 class="font-heading-gold text-headline-lg text-rich-gold font-bold">
+<h2 class="font-heading-gold text-3xl sm:text-4xl lg:text-5xl text-rich-gold font-bold">
             Trusted by Critical Engineering Sectors
           </h2>
 </div>
-<div class="flex items-center gap-2 font-data-mono text-body-sm text-soft-gray/80 bg-dark-slate px-3 py-1.5 rounded-full border border-rich-gold/20">
+<div class="flex items-center gap-2.5 font-data-mono text-xs sm:text-sm text-slate-200 font-bold bg-dark-slate px-4 py-2 rounded-full border border-rich-gold/30 shadow-sm">
 <span class="w-2.5 h-2.5 rounded-full bg-cyber-blue shadow-[0_0_8px_#00E5FF]"></span>
           ACTIVE TOOLING SUPPLY FOR TIER-1 CONTRACTORS
         </div>
@@ -669,65 +669,65 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <!-- Sector Grids -->
 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
 <!-- 01 Medical -->
-<div class="bg-dark-slate p-space-lg rounded-xl border border-rich-gold/20 hover:border-rich-gold/60 transition-all flex flex-col justify-between">
+<div class="bg-dark-slate p-space-lg rounded-xl border border-rich-gold/30 hover:border-rich-gold/60 transition-all flex flex-col justify-between shadow-md">
 <div>
-<span class="material-symbols-outlined text-[32px] text-cyber-blue mb-space-sm">medical_services</span>
-<h3 class="font-heading-gold text-body-md font-bold text-rich-gold mb-space-xs">Medical Devices</h3>
-<p class="font-body-sm text-body-sm text-soft-gray/80 leading-relaxed">
+<span class="material-symbols-outlined text-[36px] text-cyber-blue mb-space-sm">medical_services</span>
+<h3 class="font-heading-gold text-xl sm:text-2xl font-bold text-rich-gold mb-2">Medical Devices</h3>
+<p class="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
               Diagnostic housings, overmolded sensor cables, luer connectors, and IV set tooling under cleanroom tolerances.
             </p>
 </div>
-<span class="mt-space-md font-label-caps text-label-caps text-cyber-blue font-semibold">USP CLASS VI MEDICAL READY</span>
+<span class="mt-space-md font-data-mono text-xs sm:text-sm text-cyber-blue font-bold tracking-wider">USP CLASS VI MEDICAL READY</span>
 </div>
 <!-- 02 Automotive -->
-<div class="bg-dark-slate p-space-lg rounded-xl border border-rich-gold/20 hover:border-rich-gold/60 transition-all flex flex-col justify-between">
+<div class="bg-dark-slate p-space-lg rounded-xl border border-rich-gold/30 hover:border-rich-gold/60 transition-all flex flex-col justify-between shadow-md">
 <div>
-<span class="material-symbols-outlined text-[32px] text-cyber-blue mb-space-sm">directions_car</span>
-<h3 class="font-heading-gold text-body-md font-bold text-rich-gold mb-space-xs">Automotive Systems</h3>
-<p class="font-body-sm text-body-sm text-soft-gray/80 leading-relaxed">
+<span class="material-symbols-outlined text-[36px] text-cyber-blue mb-space-sm">directions_car</span>
+<h3 class="font-heading-gold text-xl sm:text-2xl font-bold text-rich-gold mb-2">Automotive Systems</h3>
+<p class="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
               Engine bay connectors, relay housings, wiring harness grommets, and insert molded lead frames.
             </p>
 </div>
-<span class="mt-space-md font-label-caps text-label-caps text-cyber-blue font-semibold">PPAP LEVEL 3 SUPPORT</span>
+<span class="mt-space-md font-data-mono text-xs sm:text-sm text-cyber-blue font-bold tracking-wider">PPAP LEVEL 3 SUPPORT</span>
 </div>
 <!-- 03 Oil & Gas -->
-<div class="bg-dark-slate p-space-lg rounded-xl border border-rich-gold/20 hover:border-rich-gold/60 transition-all flex flex-col justify-between">
+<div class="bg-dark-slate p-space-lg rounded-xl border border-rich-gold/30 hover:border-rich-gold/60 transition-all flex flex-col justify-between shadow-md">
 <div>
-<span class="material-symbols-outlined text-[32px] text-rich-gold mb-space-sm">oil_barrel</span>
-<h3 class="font-heading-gold text-body-md font-bold text-rich-gold mb-space-xs">Oil &amp; Gas Instrumentation</h3>
-<p class="font-body-sm text-body-sm text-soft-gray/80 leading-relaxed">
+<span class="material-symbols-outlined text-[36px] text-rich-gold mb-space-sm">oil_barrel</span>
+<h3 class="font-heading-gold text-xl sm:text-2xl font-bold text-rich-gold mb-2">Oil &amp; Gas Instrumentation</h3>
+<p class="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
               Explosion-proof potted cable overmolds, rugged high-pressure seals, and chemical-resistant PEEK tooling.
             </p>
 </div>
-<span class="mt-space-md font-label-caps text-label-caps text-cyber-blue font-semibold">EXTREME ENVIRONMENT SPECS</span>
+<span class="mt-space-md font-data-mono text-xs sm:text-sm text-cyber-blue font-bold tracking-wider">EXTREME ENVIRONMENT SPECS</span>
 </div>
 <!-- 04 Food Packaging -->
-<div class="bg-dark-slate p-space-lg rounded-xl border border-rich-gold/20 hover:border-rich-gold/60 transition-all flex flex-col justify-between">
+<div class="bg-dark-slate p-space-lg rounded-xl border border-rich-gold/30 hover:border-rich-gold/60 transition-all flex flex-col justify-between shadow-md">
 <div>
-<span class="material-symbols-outlined text-[32px] text-cyber-blue mb-space-sm">lunch_dining</span>
-<h3 class="font-heading-gold text-body-md font-bold text-rich-gold mb-space-xs">Packaging &amp; Closures</h3>
-<p class="font-body-sm text-body-sm text-soft-gray/80 leading-relaxed">
+<span class="material-symbols-outlined text-[36px] text-cyber-blue mb-space-sm">lunch_dining</span>
+<h3 class="font-heading-gold text-xl sm:text-2xl font-bold text-rich-gold mb-2">Packaging &amp; Closures</h3>
+<p class="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
               Thin-wall fast cycle injection molds, flip-top caps with in-mold closing, and multi-cavity containers.
             </p>
 </div>
-<span class="mt-space-md font-label-caps text-label-caps text-cyber-blue font-semibold">FAST CYCLE &lt; 4.5 SEC</span>
+<span class="mt-space-md font-data-mono text-xs sm:text-sm text-cyber-blue font-bold tracking-wider">FAST CYCLE &lt; 4.5 SEC</span>
 </div>
 <!-- 05 Rubber & Die Casting -->
-<div class="bg-dark-slate p-space-lg rounded-xl border border-rich-gold/20 hover:border-rich-gold/60 transition-all flex flex-col justify-between">
+<div class="bg-dark-slate p-space-lg rounded-xl border border-rich-gold/30 hover:border-rich-gold/60 transition-all flex flex-col justify-between shadow-md">
 <div>
-<span class="material-symbols-outlined text-[32px] text-rich-gold mb-space-sm">hardware</span>
-<h3 class="font-heading-gold text-body-md font-bold text-rich-gold mb-space-xs">Rubber &amp; Die Casting</h3>
-<p class="font-body-sm text-body-sm text-soft-gray/80 leading-relaxed">
+<span class="material-symbols-outlined text-[36px] text-rich-gold mb-space-sm">hardware</span>
+<h3 class="font-heading-gold text-xl sm:text-2xl font-bold text-rich-gold mb-2">Rubber &amp; Die Casting</h3>
+<p class="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
               Compression tooling, silicone transfer molds, and high-wear pressure die-casting trim dies.
             </p>
 </div>
-<span class="mt-space-md font-label-caps text-label-caps text-cyber-blue font-semibold">H13 NITRIDED STEEL</span>
+<span class="mt-space-md font-data-mono text-xs sm:text-sm text-cyber-blue font-bold tracking-wider">H13 NITRIDED STEEL</span>
 </div>
 </div>
 </div>
 </section>
 <!-- INTERACTIVE FAST RFQ & INSTANT CONTACT BANNER -->
-<section class="w-full bg-navy-deep py-space-3xl text-soft-gray">
+<section class="w-full bg-navy-deep py-space-3xl text-slate-100">
 <div class="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20">
 <div class="bg-charcoal-blue rounded-xl p-space-xl lg:p-space-2xl border border-rich-gold/40 shadow-2xl relative overflow-hidden">
 <!-- Subtle Cyber Glow Effect -->
@@ -735,49 +735,49 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center relative z-10">
 <!-- Left Content -->
 <div class="lg:col-span-7 space-y-space-md">
-<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-dark-slate rounded border border-cyber-blue/30 text-cyber-blue font-label-caps text-label-caps tracking-wider uppercase font-semibold">
-<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-dark-slate rounded-lg border border-cyber-blue/30 text-cyber-blue font-data-mono text-xs sm:text-sm tracking-wider uppercase font-bold">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
               INSTANT TOOLING CONSULTATION
             </span>
-<h2 class="font-heading-gold text-headline-lg text-rich-gold leading-tight font-bold">
+<h2 class="font-heading-gold text-3xl sm:text-4xl lg:text-5xl text-rich-gold leading-tight font-bold">
               Ready to Accelerate Your Mold Development?
             </h2>
-<p class="font-body-md text-body-md text-soft-gray/85 max-w-xl">
+<p class="text-base sm:text-lg text-slate-100 max-w-xl font-normal leading-relaxed">
               Upload your 2D drawings or 3D CAD (.STEP / .IGS / .X_T) for an immediate preliminary DFM assessment and formal quotation within 24 hours.
             </p>
-<div class="flex flex-wrap items-center gap-space-md pt-space-sm font-data-mono text-body-sm">
-<div class="flex items-center gap-2 text-soft-gray">
-<span class="material-symbols-outlined text-cyber-blue text-[18px]">verified</span>
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm font-data-mono text-sm sm:text-base">
+<div class="flex items-center gap-2 text-slate-200 font-medium">
+<span class="material-symbols-outlined text-cyber-blue text-[20px]">verified</span>
 <span>NDA / IP Protection Guaranteed</span>
 </div>
-<div class="flex items-center gap-2 text-soft-gray">
-<span class="material-symbols-outlined text-cyber-blue text-[18px]">schedule</span>
+<div class="flex items-center gap-2 text-slate-200 font-medium">
+<span class="material-symbols-outlined text-cyber-blue text-[20px]">schedule</span>
 <span>24-Hour Turnaround</span>
 </div>
 </div>
 </div>
 <!-- Right Action Box -->
 <div class="lg:col-span-5 bg-dark-slate border border-rich-gold/30 p-space-xl rounded-xl shadow-xl flex flex-col gap-space-md">
-<h3 class="font-heading-gold text-headline-sm text-rich-gold font-bold">Direct Engineering Contact</h3>
-<p class="font-body-sm text-body-sm text-soft-gray/80">
+<h3 class="font-heading-gold text-2xl sm:text-3xl text-rich-gold font-bold">Direct Engineering Contact</h3>
+<p class="text-base sm:text-lg text-slate-200 font-normal leading-relaxed">
               Speak directly with our Chief Tooling Engineer for feasibility review or visit our Thirumudivakkam plant.
             </p>
 <div class="space-y-space-sm pt-space-xs">
 <!-- Direct WhatsApp Button -->
-<a class="w-full flex items-center justify-center gap-space-sm py-space-md bg-emerald-600 hover:bg-emerald-500 text-white font-headline-sm text-body-md font-semibold rounded shadow transition-colors" href="https://wa.me/919176729970?text=Hello%20Tripower%20Mold%20Tech,%20I%20would%20like%20to%20discuss%20a%20tooling%20project." rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[20px]">chat</span>
+<a class="w-full flex items-center justify-center gap-space-sm py-4 bg-emerald-600 hover:bg-emerald-500 text-white text-base sm:text-lg font-bold rounded-lg shadow-lg transition-colors" href="https://wa.me/919176729970?text=Hello%20Tripower%20Mold%20Tech,%20I%20would%20like%20to%20discuss%20a%20tooling%20project." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[22px]">chat</span>
 <span>Chat via WhatsApp (+91 9176729970)</span>
 </a>
 <!-- Direct Call Button: Cyber Blue -->
-<a class="w-full btn-cyber-blue flex items-center justify-center gap-space-sm py-space-md font-headline-sm text-body-md font-bold rounded shadow transition-all" href="tel:+919176729970">
-<span class="material-symbols-outlined text-[20px]">call</span>
+<a class="w-full btn-cyber-blue flex items-center justify-center gap-space-sm py-4 text-base sm:text-lg font-bold rounded-lg shadow-lg transition-all" href="tel:+919176729970">
+<span class="material-symbols-outlined text-[22px]">call</span>
 <span>Call Plant Direct: +91 9176729970</span>
 </a>
 </div>
 <div class="pt-space-xs text-center">
-<a class="text-cyber-blue hover:text-white font-data-mono text-label-caps uppercase transition-colors inline-flex items-center gap-1" href="/rfq">
+<a class="text-cyber-blue hover:text-white font-data-mono text-sm sm:text-base uppercase tracking-wider font-bold transition-colors inline-flex items-center gap-1.5" href="/rfq">
 <span>Or submit detailed CAD via Web RFQ Portal</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
 </div>
 </div>

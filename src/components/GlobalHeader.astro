@@ -6,11 +6,11 @@ export interface Props {
 const { currentPage = '' } = Astro.props;
 
 const navLinks = [
-  { href: '/', label: 'Home', page: 'home' },
-  { href: '/about-us', label: 'About Us', page: 'about-us' },
-  { href: '/services', label: 'Services & D3 Solutions', page: 'services' },
-  { href: '/capabilities', label: 'Capabilities & Portfolio', page: 'capabilities' },
-  { href: '/contact', label: 'Contact Us', page: 'contact' },
+  { href: '/', label: 'Home', page: 'home', icon: 'home' },
+  { href: '/about-us', label: 'About Us', page: 'about-us', icon: 'info' },
+  { href: '/services', label: 'Services & D3 Solutions', page: 'services', icon: 'settings_suggest' },
+  { href: '/capabilities', label: 'Capabilities & Portfolio', page: 'capabilities', icon: 'precision_manufacturing' },
+  { href: '/contact', label: 'Contact Us', page: 'contact', icon: 'support_agent' },
 ];
 ---
 
@@ -19,18 +19,18 @@ const navLinks = [
   <div class="bg-navy-deep text-slate-100">
     <div class="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20 h-9 flex items-center justify-between font-data-mono text-body-sm">
       <div class="flex items-center gap-space-lg">
-        <a class="flex items-center gap-space-xs text-soft-gray/90 hover:text-cyber-blue transition-colors" href="tel:+919176729970">
-          <span class="material-symbols-outlined text-[14px] text-cyber-blue">call</span>
+        <a class="flex items-center gap-space-xs text-white hover:text-cyber-blue transition-colors font-medium text-sm sm:text-base" href="tel:+919176729970">
+          <span class="material-symbols-outlined text-[16px] text-cyber-blue">call</span>
           <span>+91 9176729970</span>
         </a>
-        <span class="text-rich-gold/40 hidden sm:inline">|</span>
-        <a class="hidden sm:flex items-center gap-space-xs text-soft-gray/90 hover:text-cyber-blue transition-colors" href="mailto:Tripowermouldtec@gmail.com">
-          <span class="material-symbols-outlined text-[14px] text-cyber-blue">mail</span>
+        <span class="text-rich-gold/60 hidden sm:inline">|</span>
+        <a class="hidden sm:flex items-center gap-space-xs text-white hover:text-cyber-blue transition-colors font-medium text-sm sm:text-base" href="mailto:Tripowermouldtec@gmail.com">
+          <span class="material-symbols-outlined text-[16px] text-cyber-blue">mail</span>
           <span>Tripowermouldtec@gmail.com</span>
         </a>
       </div>
       <div class="flex items-center gap-space-md">
-        <span class="text-soft-gray/90 font-data-mono text-label-caps">CHENNAI, INDIA</span>
+        <span class="text-white font-data-mono text-xs sm:text-sm font-semibold tracking-wider">CHENNAI, INDIA</span>
       </div>
     </div>
   </div>
@@ -41,17 +41,17 @@ const navLinks = [
       <a href="/" class="flex items-center group py-1" aria-label="Tripower Mould Tech Home">
         <img
           alt="Tripower Mould Tech"
-          class="h-14 sm:h-16 lg:h-[64px] w-auto max-w-[280px] sm:max-w-none object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+          class="h-14 sm:h-16 lg:h-[70px] w-auto max-w-[280px] sm:max-w-none object-contain transition-transform duration-300 group-hover:scale-[1.02]"
           src="/images/tripower-logo-full.png"
         />
       </a>
       <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-space-xl h-20" data-active-classes="text-cyber-blue border-b-2 border-cyber-blue font-bold">
+      <nav class="hidden lg:flex items-center gap-space-lg xl:gap-space-xl h-20" data-active-classes="text-cyber-blue border-b-2 border-cyber-blue font-bold">
         {navLinks.map((link) => (
           <a
             class={currentPage === link.page
-              ? 'transition-colors py-2 text-cyber-blue border-b-2 border-cyber-blue font-rajdhani text-[14px] uppercase tracking-wider font-bold'
-              : 'text-soft-gray/90 hover:text-rich-gold transition-colors py-2 font-rajdhani text-[14px] uppercase tracking-wider font-semibold'}
+              ? 'transition-colors py-2 text-cyber-blue border-b-2 border-cyber-blue font-rajdhani text-[16px] xl:text-[17px] uppercase tracking-wider font-bold'
+              : 'text-white hover:text-rich-gold transition-colors py-2 font-rajdhani text-[16px] xl:text-[17px] uppercase tracking-wider font-bold'}
             href={link.href}
             aria-current={currentPage === link.page ? 'page' : undefined}
           >
@@ -59,13 +59,158 @@ const navLinks = [
           </a>
         ))}
       </nav>
-      <!-- Right Actions -->
-      <div class="flex items-center gap-space-md">
-        <a class="hidden sm:inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm btn-cyber-blue rounded shadow transition-all duration-200" href="/rfq">
-          <span class="material-symbols-outlined text-[16px]">request_quote</span>
+      <!-- Right Actions (Desktop & Mobile) -->
+      <div class="flex items-center gap-3">
+        <!-- Desktop RFQ Button -->
+        <a class="hidden sm:inline-flex items-center justify-center gap-space-xs px-5 py-2.5 btn-cyber-blue rounded-lg shadow transition-all duration-200 text-[15px] font-bold" href="/rfq">
+          <span class="material-symbols-outlined text-[18px]">request_quote</span>
           <span>RFQ Portal</span>
         </a>
+
+        <!-- 3-Line Mobile Hamburger Menu Button -->
+        <button
+          id="mobile-menu-toggle"
+          type="button"
+          class="lg:hidden flex items-center justify-center w-12 h-12 rounded-xl bg-navy-card border border-rich-gold/40 text-rich-gold hover:text-cyber-blue hover:border-cyber-blue focus:outline-none transition-all active:scale-95 shadow-md"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <!-- 3-Line Icon -->
+          <svg id="hamburger-icon" class="w-7 h-7 stroke-current" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <!-- Close X Icon -->
+          <svg id="close-icon" class="w-7 h-7 stroke-current hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Drawer Overlay -->
+  <div
+    id="mobile-menu-drawer"
+    class="lg:hidden fixed inset-x-0 top-[116px] h-[calc(100dvh-116px)] bg-navy-deep/98 backdrop-blur-2xl border-b border-rich-gold/30 shadow-2xl z-40 transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none overflow-y-auto flex flex-col justify-between"
+  >
+    <div class="px-6 py-6 space-y-3">
+      <div class="text-xs font-data-mono uppercase tracking-widest text-slate-300 mb-2 px-2 flex items-center justify-between font-bold">
+        <span>NAVIGATION MENU</span>
+        <span class="text-cyber-blue font-extrabold">TRIPOWER MOLD TECH</span>
+      </div>
+
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class={currentPage === link.page
+            ? "mobile-nav-link flex items-center justify-between px-4 py-3.5 rounded-xl bg-navy-surface border border-cyber-blue/50 text-cyber-blue font-rajdhani text-lg uppercase tracking-wider font-extrabold shadow-md"
+            : "mobile-nav-link flex items-center justify-between px-4 py-3.5 rounded-xl hover:bg-navy-surface/80 text-white hover:text-rich-gold font-rajdhani text-lg uppercase tracking-wider font-bold transition-colors"}
+        >
+          <span class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[22px] text-precision-teal">{link.icon}</span>
+            <span>{link.label}</span>
+          </span>
+          <span class="material-symbols-outlined text-[20px] text-rich-gold">chevron_right</span>
+        </a>
+      ))}
+
+      <!-- Mobile RFQ Portal CTA Button -->
+      <div class="pt-3">
+        <a
+          href="/rfq"
+          class="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-xl btn-cyber-blue font-extrabold text-center text-navy-deep shadow-lg uppercase tracking-wider font-rajdhani text-lg"
+        >
+          <span class="material-symbols-outlined text-[22px]">request_quote</span>
+          <span>RFQ Portal — Instant Quote</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Bottom Contact Info -->
+    <div class="px-6 py-5 bg-dark-slate border-t border-rich-gold/30 flex flex-col gap-2.5 font-data-mono text-xs sm:text-sm text-slate-200">
+      <div class="flex items-center justify-between">
+        <span class="text-slate-300 font-medium">PLANT PHONE</span>
+        <a href="tel:+919176729970" class="text-cyber-blue font-extrabold hover:underline text-sm sm:text-base">+91 9176729970</a>
+      </div>
+      <div class="flex items-center justify-between">
+        <span class="text-slate-300 font-medium">DIRECT EMAIL</span>
+        <a href="mailto:Tripowermouldtec@gmail.com" class="text-cyber-blue font-semibold hover:underline break-all">Tripowermouldtec@gmail.com</a>
+      </div>
+      <div class="flex items-center justify-between">
+        <span class="text-slate-300 font-medium">PLANT LOCATION</span>
+        <span class="text-rich-gold font-bold">Thirumudivakkam, Chennai</span>
       </div>
     </div>
   </div>
 </header>
+
+<script is:inline>
+  function initMobileMenu() {
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const drawer = document.getElementById('mobile-menu-drawer');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+    if (!toggleBtn || !drawer) return;
+
+    let isOpen = false;
+
+    function openMenu() {
+      isOpen = true;
+      drawer.classList.remove('opacity-0', '-translate-y-4', 'pointer-events-none');
+      drawer.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      if (hamburgerIcon) hamburgerIcon.classList.add('hidden');
+      if (closeIcon) closeIcon.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      isOpen = false;
+      drawer.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
+      drawer.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
+      if (closeIcon) closeIcon.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // Close when clicking any nav link inside drawer
+    drawer.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        closeMenu();
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen) {
+        closeMenu();
+      }
+    });
+
+    // Close when window resized to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024 && isOpen) {
+        closeMenu();
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileMenu);
+  } else {
+    initMobileMenu();
+  }
+</script>

@@ -9,46 +9,46 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-precision-teal/5 rounded-full blur-3xl pointer-events-none"></div>
 <div class="w-full flex flex-col md:flex-row md:items-end justify-between gap-space-lg relative z-10">
 <div>
-<div class="flex items-center gap-space-xs font-label-caps text-label-caps text-precision-teal mb-space-xs">
-<span class="w-2 h-2 rounded-full bg-precision-teal animate-pulse"></span>
+<div class="flex items-center gap-space-xs font-data-mono text-xs sm:text-sm text-precision-teal mb-space-xs font-bold tracking-wider">
+<span class="w-2.5 h-2.5 rounded-full bg-precision-teal animate-pulse"></span>
 <span>SYSTEM // PORTFOLIO MATRIX • PRECISION REGISTERED</span>
 </div>
-<h1 class="font-heading-gold text-display-hero lg:text-5xl text-white tracking-tight leading-tight uppercase font-bold">Precision Tooling Portfolio &amp; Industry Applications</h1>
-<p class="font-body-md text-body-md text-slate-400 mt-space-xs max-w-2xl leading-relaxed">
+<h1 class="font-heading-gold text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white tracking-tight leading-tight uppercase font-bold">Precision Tooling Portfolio &amp; Industry Applications</h1>
+<p class="text-base sm:text-lg lg:text-xl text-slate-100 mt-space-xs max-w-3xl leading-relaxed font-normal">
           High-yield micro-cavity injection molds, specialized vertical overmolding systems, and micro-metric validation tooling engineered for Tier-1 medical, automotive, and mission-critical assemblies.
         </p>
 </div>
 <!-- Real-Time Shopfloor Status Badge -->
-<div class="bg-navy-card p-space-md rounded shadow-md shrink-0 flex items-center gap-space-md">
-<div class="w-12 h-12 rounded bg-navy-surface flex items-center justify-center text-precision-teal">
-<span class="material-symbols-outlined text-[28px]">precision_manufacturing</span>
+<div class="bg-navy-card p-space-md rounded-xl border border-rich-gold/25 shadow-md shrink-0 flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-lg bg-navy-surface flex items-center justify-center text-precision-teal border border-cyber-blue/30 shadow-sm">
+<span class="material-symbols-outlined text-[32px]">precision_manufacturing</span>
 </div>
 <div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-slate-400">ACTIVE PRODUCTION TOLERANCE</span>
-<span class="font-data-mono text-body-md text-electric-cyan font-bold tracking-tight">±0.003 mm MICRO-EDM</span>
+<span class="font-data-mono text-xs sm:text-sm text-slate-300 font-bold uppercase tracking-wider">ACTIVE PRODUCTION TOLERANCE</span>
+<span class="font-data-mono text-base sm:text-lg text-electric-cyan font-extrabold tracking-tight">±0.003 mm MICRO-EDM</span>
 </div>
 </div>
 </div>
 </section>
 <!-- High-Precision Metric Spec Ticker -->
-<section class="w-full bg-navy-deep text-slate-100 py-space-sm px-6 lg:px-12">
-<div class="w-full flex flex-wrap items-center justify-between gap-space-md font-data-mono text-label-caps text-slate-400">
+<section class="w-full bg-navy-deep text-slate-100 py-space-sm px-6 lg:px-12 border-b border-rich-gold/20">
+<div class="w-full flex flex-wrap items-center justify-between gap-space-md font-data-mono text-xs sm:text-sm text-slate-200 font-semibold">
 <div class="flex items-center gap-space-xs text-electric-cyan">
-<span class="material-symbols-outlined text-[15px] text-precision-teal">verified</span>
+<span class="material-symbols-outlined text-[18px] text-precision-teal">verified</span>
 <span>Machining Accuracies to Micron Levels</span>
 </div>
-<div class="hidden md:block text-soft-gray/80">•</div>
-<div class="flex items-center gap-space-xs text-slate-300">
-<span class="material-symbols-outlined text-[15px] text-machined-gold">speed</span>
+<div class="hidden md:block text-rich-gold/50">•</div>
+<div class="flex items-center gap-space-xs text-slate-200">
+<span class="material-symbols-outlined text-[18px] text-machined-gold">speed</span>
 <span>Makino High-Speed Spindle Technology (12,000 RPM)</span>
 </div>
-<div class="hidden md:block text-soft-gray/80">•</div>
-<div class="flex items-center gap-space-xs text-slate-300">
-<span class="material-symbols-outlined text-[15px] text-precision-teal">csv</span>
+<div class="hidden md:block text-rich-gold/50">•</div>
+<div class="flex items-center gap-space-xs text-slate-200">
+<span class="material-symbols-outlined text-[18px] text-precision-teal">csv</span>
 <span>Optical &amp; Zeiss CMM Inspection Verification</span>
 </div>
 <div class="hidden lg:flex items-center gap-space-xs text-machined-gold">
-<span class="material-symbols-outlined text-[15px]">format_image_left</span>
+<span class="material-symbols-outlined text-[18px]">format_image_left</span>
 <span>100% Dimensional First Article Inspection</span>
 </div>
 </div>
@@ -59,16 +59,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <!-- Section Subhead and Filter Tabs -->
 <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
 <div>
-<span class="font-label-caps text-label-caps text-secondary font-semibold">TOOLING CATALOG &amp; PROVEN RUNS</span>
-<h2 class="font-headline-md text-headline-md text-white">Verified Tooling Deployments</h2>
+<span class="font-data-mono text-xs sm:text-sm text-cyber-blue font-bold uppercase tracking-wider block mb-1">TOOLING CATALOG &amp; PROVEN RUNS</span>
+<h2 class="font-heading-gold text-2xl sm:text-3xl lg:text-4xl text-white font-bold">Verified Tooling Deployments</h2>
 </div>
 <!-- Filter Buttons Tabbed Control -->
-<div class="flex flex-wrap items-center gap-space-xs bg-navy-card/90 p-1.5 rounded-lg border border-rich-gold/25 shadow-md" id="portfolio-filters">
-<button class="filter-btn px-4 py-2 rounded-md font-rajdhani text-[14px] uppercase tracking-wider font-bold bg-cyber-blue text-navy-deep shadow-md transition-all cursor-pointer" data-filter="all">All Projects</button>
-<button class="filter-btn px-4 py-2 rounded-md font-rajdhani text-[14px] uppercase tracking-wider font-semibold text-soft-gray/80 hover:text-white hover:bg-navy-surface transition-all cursor-pointer" data-filter="medical">Medical Devices</button>
-<button class="filter-btn px-4 py-2 rounded-md font-rajdhani text-[14px] uppercase tracking-wider font-semibold text-soft-gray/80 hover:text-white hover:bg-navy-surface transition-all cursor-pointer" data-filter="automotive">Automotive</button>
-<button class="filter-btn px-4 py-2 rounded-md font-rajdhani text-[14px] uppercase tracking-wider font-semibold text-soft-gray/80 hover:text-white hover:bg-navy-surface transition-all cursor-pointer" data-filter="overmolding">Cable Overmolding</button>
-<button class="filter-btn px-4 py-2 rounded-md font-rajdhani text-[14px] uppercase tracking-wider font-semibold text-soft-gray/80 hover:text-white hover:bg-navy-surface transition-all cursor-pointer" data-filter="die-cast">Packaging &amp; Die-Cast</button>
+<div class="flex flex-wrap items-center gap-space-xs bg-navy-card/90 p-2 rounded-xl border border-rich-gold/30 shadow-md" id="portfolio-filters">
+<button class="filter-btn px-4 sm:px-5 py-2.5 rounded-lg font-rajdhani text-sm sm:text-base uppercase tracking-wider font-bold bg-cyber-blue text-navy-deep shadow-md transition-all cursor-pointer" data-filter="all">All Projects</button>
+<button class="filter-btn px-4 sm:px-5 py-2.5 rounded-lg font-rajdhani text-sm sm:text-base uppercase tracking-wider font-bold text-slate-200 hover:text-white hover:bg-navy-surface transition-all cursor-pointer" data-filter="medical">Medical Devices</button>
+<button class="filter-btn px-4 sm:px-5 py-2.5 rounded-lg font-rajdhani text-sm sm:text-base uppercase tracking-wider font-bold text-slate-200 hover:text-white hover:bg-navy-surface transition-all cursor-pointer" data-filter="automotive">Automotive</button>
+<button class="filter-btn px-4 sm:px-5 py-2.5 rounded-lg font-rajdhani text-sm sm:text-base uppercase tracking-wider font-bold text-slate-200 hover:text-white hover:bg-navy-surface transition-all cursor-pointer" data-filter="overmolding">Cable Overmolding</button>
+<button class="filter-btn px-4 sm:px-5 py-2.5 rounded-lg font-rajdhani text-sm sm:text-base uppercase tracking-wider font-bold text-slate-200 hover:text-white hover:bg-navy-surface transition-all cursor-pointer" data-filter="die-cast">Packaging &amp; Die-Cast</button>
 </div>
 </div>
 <!-- Bento-Style Project Cards Gallery (Immediately Under Switching Tabs) -->
@@ -333,72 +333,72 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </div>
 </section>
 <!-- Technical Machining Capabilities & High-Speed CNC Matrix (Inspired by Floor Image) -->
-<section class="w-full py-space-2xl px-6 lg:px-12 bg-navy-deep/80 border border-rich-gold/15">
+<section class="w-full py-space-3xl px-6 lg:px-12 bg-navy-deep/80 border border-rich-gold/20">
 <div class="w-full flex flex-col gap-space-xl">
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
 <div>
-<span class="font-label-caps text-label-caps text-secondary font-semibold">INFRASTRUCTURE • MACHINE INVENTORY</span>
-<h2 class="font-headline-lg text-headline-lg text-white">Floor Capabilities &amp; Machining Envelope</h2>
+<span class="font-data-mono text-xs sm:text-sm text-cyber-blue font-bold uppercase tracking-wider block mb-1">INFRASTRUCTURE • MACHINE INVENTORY</span>
+<h2 class="font-heading-gold text-3xl sm:text-4xl lg:text-5xl text-white font-bold">Floor Capabilities &amp; Machining Envelope</h2>
 </div>
-<p class="font-body-sm text-body-sm text-soft-gray/85 max-w-md">
+<p class="text-base sm:text-lg text-slate-200 max-w-lg leading-relaxed font-normal">
           Direct investment in top-tier Japanese CNC and Swiss EDM centers guarantees uncompromised repeatability across small, medium, and massive tooling blocks.
         </p>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
 <!-- Visual of the High Speed Bay -->
-<div class="lg:col-span-5 rounded-xl overflow-hidden shadow-lg bg-navy-deep relative h-96 lg:h-full min-h-[380px]">
+<div class="lg:col-span-5 rounded-xl overflow-hidden shadow-xl bg-navy-deep relative h-96 lg:h-full min-h-[380px] border border-rich-gold/30">
 <img class="w-full h-full object-cover" data-alt="High angle view of a pristine industrial tool and die machine shop lined with black and white Makino high precision CNC milling machines, with glowing blue indicator screens and an operator in clean uniform monitoring the console." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY-L3AFPv4i1F9BgLs4P3P7tl5RI3Lc_z5Ug1YxdpVoPnpIzEcqb5v4cYJKa2gdyLBdtPF9RJ4S3gMpe0AK2AfRq4l3iplCDuNe8PSg3j9-uGbGuSZCYykh-4d73A2TO-hg5BGYqD7lYWOZ9ytrKiYW1OVmImOLTt-d7QgxCyVvYqhtET6U7WyKXHn7YTN9UVSLAqyXK4YUM5ebigo-3tF_QreLKAfD5exMY_s_evf">
 <div class="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-transparent"></div>
 <div class="absolute bottom-6 left-6 right-6">
-<span class="font-label-caps text-label-caps text-precision-teal">SPINDLE ROOM ALPHA</span>
-<h4 class="font-headline-sm text-headline-sm text-white mt-1">Makino F5 &amp; V33 Precision Milling Cell</h4>
-<p class="font-body-sm text-body-sm text-slate-300 mt-1">Continuous thermal stabilization systems ensure constant micron-level tool paths over 72-hour continuous cycles.</p>
+<span class="font-data-mono text-xs sm:text-sm text-precision-teal font-bold tracking-wider">SPINDLE ROOM ALPHA</span>
+<h4 class="font-heading-gold text-xl sm:text-2xl text-white font-bold mt-1">Makino F5 &amp; V33 Precision Milling Cell</h4>
+<p class="text-sm sm:text-base text-slate-200 mt-1.5 leading-relaxed font-normal">Continuous thermal stabilization systems ensure constant micron-level tool paths over 72-hour continuous cycles.</p>
 </div>
 </div>
 <!-- Capability Spec Matrix -->
 <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
-<div class="p-space-lg bg-dark-slate border border-rich-gold/25 rounded-xl shadow-sm">
-<div class="w-10 h-10 rounded bg-navy-surface flex items-center justify-center text-precision-teal mb-space-sm">
-<span class="material-symbols-outlined text-[20px]">router</span>
+<div class="p-space-lg bg-dark-slate border border-rich-gold/30 rounded-xl shadow-md">
+<div class="w-12 h-12 rounded-lg bg-navy-surface flex items-center justify-center text-precision-teal mb-space-sm border border-cyber-blue/30 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">router</span>
 </div>
-<h4 class="font-headline-sm text-headline-sm text-white mb-1">3-Axis High-Speed CNC</h4>
-<p class="font-body-sm text-body-sm text-soft-gray/85 mb-space-sm">Up to 12,000 RPM graphite and hard-steel machining with laser tool-wear compensation.</p>
-<div class="font-data-mono text-label-caps text-slate-500 space-y-0.5">
+<h4 class="font-heading-gold text-xl sm:text-2xl text-white font-bold mb-1.5">3-Axis High-Speed CNC</h4>
+<p class="text-sm sm:text-base text-slate-200 mb-2.5 leading-relaxed font-normal">Up to 12,000 RPM graphite and hard-steel machining with laser tool-wear compensation.</p>
+<div class="font-data-mono text-xs sm:text-sm text-slate-200 space-y-1 bg-navy-deep/80 p-2.5 rounded border border-rich-gold/20">
 <div>MAX TRAVEL: 1300 x 700 x 700 mm</div>
-<div class="text-secondary font-bold">POSITION REPEATABILITY: ±0.0015 mm</div>
+<div class="text-cyber-blue font-bold">POSITION REPEATABILITY: ±0.0015 mm</div>
 </div>
 </div>
-<div class="p-space-lg bg-dark-slate border border-rich-gold/25 rounded-xl shadow-sm">
-<div class="w-10 h-10 rounded bg-navy-surface flex items-center justify-center text-machined-gold mb-space-sm">
-<span class="material-symbols-outlined text-[20px]">electric_bolt</span>
+<div class="p-space-lg bg-dark-slate border border-rich-gold/30 rounded-xl shadow-md">
+<div class="w-12 h-12 rounded-lg bg-navy-surface flex items-center justify-center text-machined-gold mb-space-sm border border-rich-gold/30 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">electric_bolt</span>
 </div>
-<h4 class="font-headline-sm text-headline-sm text-white mb-1">Sub-Micron Wire EDM</h4>
-<p class="font-body-sm text-body-sm text-soft-gray/85 mb-space-sm">Ultra-fine 0.05 mm wire diameter capability for sharp internal radii and tight slot geometry.</p>
-<div class="font-data-mono text-label-caps text-slate-500 space-y-0.5">
+<h4 class="font-heading-gold text-xl sm:text-2xl text-white font-bold mb-1.5">Sub-Micron Wire EDM</h4>
+<p class="text-sm sm:text-base text-slate-200 mb-2.5 leading-relaxed font-normal">Ultra-fine 0.05 mm wire diameter capability for sharp internal radii and tight slot geometry.</p>
+<div class="font-data-mono text-xs sm:text-sm text-slate-200 space-y-1 bg-navy-deep/80 p-2.5 rounded border border-rich-gold/20">
 <div>BEST SURFACE FINISH: Ra 0.08 μm</div>
-<div class="text-secondary font-bold">CORNER RADIUS CAPABILITY: 0.025 mm</div>
+<div class="text-cyber-blue font-bold">CORNER RADIUS CAPABILITY: 0.025 mm</div>
 </div>
 </div>
-<div class="p-space-lg bg-dark-slate border border-rich-gold/25 rounded-xl shadow-sm">
-<div class="w-10 h-10 rounded bg-navy-surface flex items-center justify-center text-precision-teal mb-space-sm">
-<span class="material-symbols-outlined text-[20px]">compress</span>
+<div class="p-space-lg bg-dark-slate border border-rich-gold/30 rounded-xl shadow-md">
+<div class="w-12 h-12 rounded-lg bg-navy-surface flex items-center justify-center text-precision-teal mb-space-sm border border-cyber-blue/30 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">compress</span>
 </div>
-<h4 class="font-headline-sm text-headline-sm text-white mb-1">CNC Sinker EDM</h4>
-<p class="font-body-sm text-body-sm text-soft-gray/85 mb-space-sm">Equipped with 32-position tool changers for lights-out electrode machining and micro-sparking.</p>
-<div class="font-data-mono text-label-caps text-slate-500 space-y-0.5">
+<h4 class="font-heading-gold text-xl sm:text-2xl text-white font-bold mb-1.5">CNC Sinker EDM</h4>
+<p class="text-sm sm:text-base text-slate-200 mb-2.5 leading-relaxed font-normal">Equipped with 32-position tool changers for lights-out electrode machining and micro-sparking.</p>
+<div class="font-data-mono text-xs sm:text-sm text-slate-200 space-y-1 bg-navy-deep/80 p-2.5 rounded border border-rich-gold/20">
 <div>SPARK GAP MONITOR: Real-Time Adaptive</div>
-<div class="text-secondary font-bold">ELECTRODE WEAR RATIO: &lt; 0.1%</div>
+<div class="text-cyber-blue font-bold">ELECTRODE WEAR RATIO: &lt; 0.1%</div>
 </div>
 </div>
-<div class="p-space-lg bg-dark-slate border border-rich-gold/25 rounded-xl shadow-sm">
-<div class="w-10 h-10 rounded bg-navy-surface flex items-center justify-center text-machined-gold mb-space-sm">
-<span class="material-symbols-outlined text-[20px]">view_in_ar</span>
+<div class="p-space-lg bg-dark-slate border border-rich-gold/30 rounded-xl shadow-md">
+<div class="w-12 h-12 rounded-lg bg-navy-surface flex items-center justify-center text-machined-gold mb-space-sm border border-rich-gold/30 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">view_in_ar</span>
 </div>
-<h4 class="font-headline-sm text-headline-sm text-white mb-1">Insert &amp; Sampling Presses</h4>
-<p class="font-body-sm text-body-sm text-soft-gray/85 mb-space-sm">In-house cleanroom sampling from 30T vertical insert shuttle presses to 350T toggle machines.</p>
-<div class="font-data-mono text-label-caps text-slate-500 space-y-0.5">
+<h4 class="font-heading-gold text-xl sm:text-2xl text-white font-bold mb-1.5">Insert &amp; Sampling Presses</h4>
+<p class="text-sm sm:text-base text-slate-200 mb-2.5 leading-relaxed font-normal">In-house cleanroom sampling from 30T vertical insert shuttle presses to 350T toggle machines.</p>
+<div class="font-data-mono text-xs sm:text-sm text-slate-200 space-y-1 bg-navy-deep/80 p-2.5 rounded border border-rich-gold/20">
 <div>SAMPLING CAPACITY: 30T to 350T</div>
-<div class="text-secondary font-bold">VALIDATION: T0, T1, FAI, CpK &gt; 1.67</div>
+<div class="text-cyber-blue font-bold">VALIDATION: T0, T1, FAI, CpK &gt; 1.67</div>
 </div>
 </div>
 </div>
@@ -409,126 +409,126 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <section class="w-full py-space-3xl px-6 lg:px-12 bg-background">
 <div class="w-full flex flex-col gap-space-2xl">
 <div class="text-center max-w-3xl mx-auto">
-<span class="font-label-caps text-label-caps text-precision-teal font-semibold">METROLOGICAL RIGOR • ZERO DEFECT PROTOCOL</span>
-<h2 class="font-headline-lg text-headline-lg text-white mt-space-xs">Quality Process &amp; Verification Workflow</h2>
-<p class="font-body-md text-body-md text-soft-gray/85 mt-space-sm leading-relaxed">
+<span class="font-data-mono text-xs sm:text-sm text-precision-teal font-bold uppercase tracking-wider">METROLOGICAL RIGOR • ZERO DEFECT PROTOCOL</span>
+<h2 class="font-heading-gold text-3xl sm:text-4xl lg:text-5xl text-white font-bold mt-space-xs">Quality Process &amp; Verification Workflow</h2>
+<p class="text-base sm:text-lg text-slate-200 mt-space-sm leading-relaxed font-normal">
           From first billet cut to final multi-shot signoff, our calibrated metrology loop delivers comprehensive GD&amp;T reporting and verified process stability.
         </p>
 </div>
 <!-- Process Stepper Grid -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <!-- Step 1 -->
-<div class="bg-dark-slate border border-rich-gold/25 p-space-xl rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div class="bg-dark-slate border border-rich-gold/30 p-space-xl rounded-xl shadow-md flex flex-col justify-between relative group hover:shadow-xl transition-all">
 <div>
 <div class="flex items-center justify-between mb-space-md">
-<span class="font-data-mono text-headline-sm text-precision-teal font-bold">01</span>
-<span class="px-2 py-0.5 rounded font-label-caps text-[10px] bg-surface-container text-soft-gray/80">IN-PROCESS</span>
+<span class="font-data-mono text-2xl text-precision-teal font-extrabold">01</span>
+<span class="px-2.5 py-1 rounded font-data-mono text-xs bg-surface-container text-slate-200 font-bold">IN-PROCESS</span>
 </div>
-<h4 class="font-headline-sm text-headline-sm text-white mb-space-xs">In-Process Optical &amp; CMM Inspection</h4>
-<p class="font-body-sm text-body-sm text-soft-gray/85 mb-space-md leading-relaxed">
+<h4 class="font-heading-gold text-xl sm:text-2xl text-white font-bold mb-space-xs">In-Process Optical &amp; CMM Inspection</h4>
+<p class="text-sm sm:text-base text-slate-200 mb-space-md leading-relaxed font-normal">
               Every critical steel core and cavity insert is laser-scanned and validated against 3D CAD step models on a climate-stabilized Zeiss CMM prior to mold base assembly.
             </p>
 </div>
-<ul class="font-data-mono text-body-sm text-soft-gray/90 space-y-2 pt-space-sm">
+<ul class="font-data-mono text-sm sm:text-base text-slate-200 space-y-2.5 pt-space-sm border-t border-rich-gold/20">
 <li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[16px] text-precision-teal">check_circle</span>
+<span class="material-symbols-outlined text-[18px] text-precision-teal">check_circle</span>
 <span>Point cloud deviation analysis</span>
 </li>
 <li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[16px] text-precision-teal">check_circle</span>
+<span class="material-symbols-outlined text-[18px] text-precision-teal">check_circle</span>
 <span>100% Core concentricity audit</span>
 </li>
 </ul>
 </div>
 <!-- Step 2 -->
-<div class="bg-dark-slate border border-rich-gold/25 p-space-xl rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div class="bg-dark-slate border border-rich-gold/30 p-space-xl rounded-xl shadow-md flex flex-col justify-between relative group hover:shadow-xl transition-all">
 <div>
 <div class="flex items-center justify-between mb-space-md">
-<span class="font-data-mono text-headline-sm text-precision-teal font-bold">02</span>
-<span class="px-2 py-0.5 rounded font-label-caps text-[10px] bg-surface-container text-soft-gray/80">SAMPLING PHASE</span>
+<span class="font-data-mono text-2xl text-precision-teal font-extrabold">02</span>
+<span class="px-2.5 py-1 rounded font-data-mono text-xs bg-surface-container text-slate-200 font-bold">SAMPLING PHASE</span>
 </div>
-<h4 class="font-headline-sm text-headline-sm text-white mb-space-xs">Sample Dimensional &amp; CpK Reporting</h4>
-<p class="font-body-sm text-body-sm text-soft-gray/85 mb-space-md leading-relaxed">
+<h4 class="font-heading-gold text-xl sm:text-2xl text-white font-bold mb-space-xs">Sample Dimensional &amp; CpK Reporting</h4>
+<p class="text-sm sm:text-base text-slate-200 mb-space-md leading-relaxed font-normal">
               T0 and T1 plastic sample parts undergo complete 32-point dimensional analysis, material shrink characterization, and tensile verification against client drawing prints.
             </p>
 </div>
-<ul class="font-data-mono text-body-sm text-soft-gray/90 space-y-2 pt-space-sm">
+<ul class="font-data-mono text-sm sm:text-base text-slate-200 space-y-2.5 pt-space-sm border-t border-rich-gold/20">
 <li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[16px] text-precision-teal">check_circle</span>
+<span class="material-symbols-outlined text-[18px] text-precision-teal">check_circle</span>
 <span>AS9102 / PPAP Level 3 documentation</span>
 </li>
 <li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[16px] text-precision-teal">check_circle</span>
+<span class="material-symbols-outlined text-[18px] text-precision-teal">check_circle</span>
 <span>Micro-CT void and porosity inspection</span>
 </li>
 </ul>
 </div>
 <!-- Step 3 -->
-<div class="bg-dark-slate border border-rich-gold/25 p-space-xl rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div class="bg-dark-slate border border-rich-gold/30 p-space-xl rounded-xl shadow-md flex flex-col justify-between relative group hover:shadow-xl transition-all">
 <div>
 <div class="flex items-center justify-between mb-space-md">
-<span class="font-data-mono text-headline-sm text-machined-gold font-bold">03</span>
-<span class="px-2 py-0.5 rounded font-label-caps text-[10px] bg-surface-container text-machined-gold font-bold">FINAL AUDIT</span>
+<span class="font-data-mono text-2xl text-machined-gold font-extrabold">03</span>
+<span class="px-2.5 py-1 rounded font-data-mono text-xs bg-surface-container text-machined-gold font-bold">FINAL AUDIT</span>
 </div>
-<h4 class="font-headline-sm text-headline-sm text-white mb-space-xs">Full Trial Run &amp; Plant Sign-Off</h4>
-<p class="font-body-sm text-body-sm text-soft-gray/85 mb-space-md leading-relaxed">
+<h4 class="font-heading-gold text-xl sm:text-2xl text-white font-bold mb-space-xs">Full Trial Run &amp; Plant Sign-Off</h4>
+<p class="text-sm sm:text-base text-slate-200 mb-space-md leading-relaxed font-normal">
               A continuous 4-hour uninterrupted dry-cycle and wet-cycle production trial ensures balanced thermal stabilization, smooth part ejection, and zero hydraulic drift.
             </p>
 </div>
-<ul class="font-data-mono text-body-sm text-soft-gray/90 space-y-2 pt-space-sm">
+<ul class="font-data-mono text-sm sm:text-base text-slate-200 space-y-2.5 pt-space-sm border-t border-rich-gold/20">
 <li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[16px] text-machined-gold">check_circle</span>
+<span class="material-symbols-outlined text-[18px] text-machined-gold">check_circle</span>
 <span>Mold maintenance manual &amp; spare spares kit</span>
 </li>
 <li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[16px] text-machined-gold">check_circle</span>
+<span class="material-symbols-outlined text-[18px] text-machined-gold">check_circle</span>
 <span>Final client buy-off certification</span>
 </li>
 </ul>
 </div>
 </div>
 <!-- Live Inspection Data Benchmark Table -->
-<div class="bg-dark-slate border border-rich-gold/25 p-space-lg rounded-xl shadow-sm overflow-x-auto">
+<div class="bg-dark-slate border border-rich-gold/30 p-space-lg rounded-xl shadow-md overflow-x-auto">
 <div class="flex items-center justify-between mb-space-md">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-precision-teal text-[20px]">insights</span>
-<span class="font-headline-sm text-body-md text-white font-semibold">Standard Metrological Quality Thresholds</span>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-precision-teal text-[24px]">insights</span>
+<h3 class="font-heading-gold text-xl sm:text-2xl text-white font-bold">Standard Metrological Quality Thresholds</h3>
 </div>
-<span class="font-data-mono text-label-caps text-slate-500">CALIBRATION STANDARD: SUB-MICRON TRACEABLE</span>
+<span class="font-data-mono text-xs sm:text-sm text-slate-300 font-semibold">CALIBRATION STANDARD: SUB-MICRON TRACEABLE</span>
 </div>
-<table class="w-full text-left font-data-mono text-body-sm border-collapse">
+<table class="w-full text-left font-data-mono text-sm sm:text-base border-collapse">
 <thead>
-<tr class="bg-surface-container text-white font-semibold">
-<th class="py-space-sm px-space-md">FEATURE / PARAMETER</th>
-<th class="py-space-sm px-space-md">MACHINING CAPABILITY</th>
-<th class="py-space-sm px-space-md">INSPECTION INSTRUMENT</th>
-<th class="py-space-sm px-space-md text-right">STANDARD GUARANTEE</th>
+<tr class="bg-surface-container text-white font-bold">
+<th class="py-3 px-4">FEATURE / PARAMETER</th>
+<th class="py-3 px-4">MACHINING CAPABILITY</th>
+<th class="py-3 px-4">INSPECTION INSTRUMENT</th>
+<th class="py-3 px-4 text-right">STANDARD GUARANTEE</th>
 </tr>
 </thead>
 <tbody class="divide-y divide-surface-container">
 <tr class="hover:bg-navy-deep/80 border border-rich-gold/15 transition-colors">
-<td class="py-space-sm px-space-md text-rich-gold font-semibold">Core / Cavity Position Shift</td>
-<td class="py-space-sm px-space-md text-soft-gray/90">± 0.002 mm</td>
-<td class="py-space-sm px-space-md text-soft-gray/90">Zeiss Contura Bridge CMM</td>
-<td class="py-space-sm px-space-md text-right text-secondary font-bold">± 0.003 mm</td>
+<td class="py-3 px-4 text-rich-gold font-bold">Core / Cavity Position Shift</td>
+<td class="py-3 px-4 text-slate-200">± 0.002 mm</td>
+<td class="py-3 px-4 text-slate-200">Zeiss Contura Bridge CMM</td>
+<td class="py-3 px-4 text-right text-cyber-blue font-bold">± 0.003 mm</td>
 </tr>
 <tr class="hover:bg-navy-deep/80 border border-rich-gold/15 transition-colors">
-<td class="py-space-sm px-space-md text-rich-gold font-semibold">Parting Line Flatness &amp; Seal</td>
-<td class="py-space-sm px-space-md text-soft-gray/90">± 0.0015 mm / 100mm</td>
-<td class="py-space-sm px-space-md text-soft-gray/90">Optical Laser Interferometer</td>
-<td class="py-space-sm px-space-md text-right text-secondary font-bold">± 0.002 mm</td>
+<td class="py-3 px-4 text-rich-gold font-bold">Parting Line Flatness &amp; Seal</td>
+<td class="py-3 px-4 text-slate-200">± 0.0015 mm / 100mm</td>
+<td class="py-3 px-4 text-slate-200">Optical Laser Interferometer</td>
+<td class="py-3 px-4 text-right text-cyber-blue font-bold">± 0.002 mm</td>
 </tr>
 <tr class="hover:bg-navy-deep/80 border border-rich-gold/15 transition-colors">
-<td class="py-space-sm px-space-md text-rich-gold font-semibold">Cavity Polish (Optical Grade)</td>
-<td class="py-space-sm px-space-md text-soft-gray/90">Ra 0.015 μm</td>
-<td class="py-space-sm px-space-md text-soft-gray/90">Mitutoyo Surftest Profilometer</td>
-<td class="py-space-sm px-space-md text-right text-secondary font-bold">Ra ≤ 0.02 μm</td>
+<td class="py-3 px-4 text-rich-gold font-bold">Cavity Polish (Optical Grade)</td>
+<td class="py-3 px-4 text-slate-200">Ra 0.015 μm</td>
+<td class="py-3 px-4 text-slate-200">Mitutoyo Surftest Profilometer</td>
+<td class="py-3 px-4 text-right text-cyber-blue font-bold">Ra ≤ 0.02 μm</td>
 </tr>
 <tr class="hover:bg-navy-deep/80 border border-rich-gold/15 transition-colors">
-<td class="py-space-sm px-space-md text-rich-gold font-semibold">Insert Overmold Concentricity</td>
-<td class="py-space-sm px-space-md text-soft-gray/90">± 0.005 mm</td>
-<td class="py-space-sm px-space-md text-soft-gray/90">Keyence Automated Vision System</td>
-<td class="py-space-sm px-space-md text-right text-secondary font-bold">± 0.008 mm</td>
+<td class="py-3 px-4 text-rich-gold font-bold">Insert Overmold Concentricity</td>
+<td class="py-3 px-4 text-slate-200">± 0.005 mm</td>
+<td class="py-3 px-4 text-slate-200">Keyence Automated Vision System</td>
+<td class="py-3 px-4 text-right text-cyber-blue font-bold">± 0.008 mm</td>
 </tr>
 </tbody>
 </table>
@@ -536,36 +536,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </div>
 </section>
 <!-- Interactive RFQ Conversion Callout -->
-<section class="w-full bg-navy-surface text-white py-space-2xl px-6 lg:px-12 relative overflow-hidden">
+<section class="w-full bg-navy-surface text-white py-space-3xl px-6 lg:px-12 relative overflow-hidden border-t border-rich-gold/20">
 <div class="w-full flex flex-col md:flex-row items-center justify-between gap-space-xl relative z-10">
 <div class="max-w-2xl">
-<span class="font-label-caps text-label-caps text-machined-gold">HAVE A TIGHT TOLERANCE PROJECT?</span>
-<h3 class="font-headline-lg text-headline-lg text-white mt-1">Accelerate Tool Build With Our D3 Engineering Team</h3>
-<p class="font-body-md text-body-md text-slate-300 mt-space-sm leading-relaxed">
+<span class="font-data-mono text-xs sm:text-sm text-machined-gold font-bold uppercase tracking-wider">HAVE A TIGHT TOLERANCE PROJECT?</span>
+<h3 class="font-heading-gold text-3xl sm:text-4xl lg:text-5xl text-white font-bold mt-1.5">Accelerate Tool Build With Our D3 Engineering Team</h3>
+<p class="text-base sm:text-lg text-slate-100 mt-space-sm leading-relaxed font-normal">
           Upload your 3D CAD files (.STEP, .IGES, .X_T). Our tooling engineers provide automated DFM, mold-flow assessment, and guaranteed turnaround quotes within 24 hours.
         </p>
-<div class="flex flex-wrap items-center gap-space-lg mt-space-md font-data-mono text-label-caps text-slate-400">
-<div class="flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px] text-precision-teal">lock</span>
-<span>STRICT NDA GUARANTEED</span>
+<div class="flex flex-wrap items-center gap-space-lg mt-space-md font-data-mono text-xs sm:text-sm text-slate-200">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-precision-teal">lock</span>
+<span class="font-semibold">STRICT NDA GUARANTEED</span>
 </div>
-<div class="flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px] text-precision-teal">schedule</span>
-<span>&lt;24HR DFM ANALYSIS</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-precision-teal">schedule</span>
+<span class="font-semibold">&lt;24HR DFM ANALYSIS</span>
 </div>
-<div class="flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px] text-precision-teal">verified</span>
-<span>PRECISION QUALITY AUDITED</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-precision-teal">verified</span>
+<span class="font-semibold">PRECISION QUALITY AUDITED</span>
 </div>
 </div>
 </div>
 <div class="flex flex-col sm:flex-row gap-space-md shrink-0 w-full md:w-auto">
-<a class="px-space-xl py-space-md bg-precision-teal hover:bg-electric-cyan text-primary font-headline-sm text-body-md font-bold rounded shadow-lg transition-colors flex items-center justify-center gap-space-xs text-center" href="/rfq">
-<span class="material-symbols-outlined text-[20px]">upload_file</span>
+<a class="px-7 py-4 btn-cyber-blue text-base sm:text-lg font-bold rounded-lg shadow-xl transition-all flex items-center justify-center gap-space-xs text-center" href="/rfq">
+<span class="material-symbols-outlined text-[22px]">upload_file</span>
 <span>Upload CAD / Request Quote</span>
 </a>
-<a class="px-space-lg py-space-md bg-navy-card hover:bg-navy-deep text-white font-headline-sm text-body-md rounded transition-colors flex items-center justify-center gap-space-xs text-center" href="/contact">
-<span class="material-symbols-outlined text-[20px]">support_agent</span>
+<a class="px-7 py-4 bg-navy-card hover:bg-navy-deep text-white text-base sm:text-lg font-bold rounded-lg transition-colors flex items-center justify-center gap-space-xs text-center border border-rich-gold/30 shadow-md" href="/contact">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
 <span>Toolroom Consult</span>
 </a>
 </div>
